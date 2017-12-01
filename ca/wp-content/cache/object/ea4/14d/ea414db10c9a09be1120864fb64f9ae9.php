@@ -1,0 +1,1 @@
+"fºX<?php exit; ?>a:1:{s:7:"content";s:161:"a:2:{s:25:"go_pricing/go_pricing.php";a:2:{i:0;s:12:"GW_GoPricing";i:1;s:9:"uninstall";}s:27:"LayerSlider/layerslider.php";s:29:"layerslider_uninstall_scripts";}";}

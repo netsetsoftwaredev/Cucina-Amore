@@ -1,0 +1,186 @@
+[04-Dec-2016 09:35:24 UTC] PHP Fatal error:  Call to undefined function wpcf7_add_form_tag() in /home6/tempsit1/public_html/wp-content/plugins/contact-form-7/modules/acceptance.php on line 11
+[06-Dec-2016 20:44:18 UTC] PHP Warning:  require_once(/home6/tempsit1/public_html/wp-content/plugins/jetpack/modules/module-headings.php): failed to open stream: No such file or directory in /home6/tempsit1/public_html/wp-content/plugins/jetpack/jetpack.php on line 91
+[06-Dec-2016 20:44:18 UTC] PHP Fatal error:  require_once(): Failed opening required '/home6/tempsit1/public_html/wp-content/plugins/jetpack/modules/module-headings.php' (include_path='.:/usr/php/56/usr/lib64:/usr/php/56/usr/share/pear') in /home6/tempsit1/public_html/wp-content/plugins/jetpack/jetpack.php on line 91
+[07-Dec-2016 23:06:20 UTC] PHP Warning:  include_once(includes/wc-template-functions.php): failed to open stream: No such file or directory in /home6/tempsit1/public_html/wp-content/plugins/woocommerce/woocommerce.php on line 305
+[07-Dec-2016 23:06:20 UTC] PHP Warning:  include_once(): Failed opening 'includes/wc-template-functions.php' for inclusion (include_path='.:/usr/php/56/usr/lib64:/usr/php/56/usr/share/pear') in /home6/tempsit1/public_html/wp-content/plugins/woocommerce/woocommerce.php on line 305
+[07-Dec-2016 23:06:20 UTC] PHP Fatal error:  Class 'WC_Order_Factory' not found in /home6/tempsit1/public_html/wp-content/plugins/woocommerce/woocommerce.php on line 320
+[07-Dec-2016 23:06:21 UTC] WordPress database error Duplicate key name 'location_type_code' for query ALTER TABLE wp_t8d0ez1_woocommerce_tax_rate_locations ADD KEY `location_type_code` (`location_type`(40),`location_code`(90)) made by require('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, WC_Install::check_version, WC_Install::install, WC_Install::create_tables, dbDelta
+[07-Dec-2016 23:06:21 UTC] WordPress database error Duplicate key name 'location_type_code' for query ALTER TABLE wp_t8d0ez1_woocommerce_shipping_zone_locations ADD KEY `location_type_code` (`location_type`(40),`location_code`(90)) made by require('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, WC_Install::check_version, WC_Install::install, WC_Install::create_tables, dbDelta
+[12-Dec-2016 18:40:35 UTC] PHP Warning:  Illegal string offset 'width' in /home6/tempsit1/public_html/wp-content/themes/dt-the7/inc/helpers/template-config.php on line 417
+[12-Dec-2016 18:40:35 UTC] PHP Warning:  Illegal string offset 'height' in /home6/tempsit1/public_html/wp-content/themes/dt-the7/inc/helpers/template-config.php on line 418
+[12-Dec-2016 18:40:35 UTC] PHP Warning:  Illegal string offset 'width' in /home6/tempsit1/public_html/wp-content/themes/dt-the7/inc/helpers/template-config.php on line 428
+[12-Dec-2016 18:40:35 UTC] PHP Warning:  Illegal string offset 'height' in /home6/tempsit1/public_html/wp-content/themes/dt-the7/inc/helpers/template-config.php on line 429
+[12-Dec-2016 18:40:36 UTC] PHP Warning:  current() expects parameter 1 to be array, string given in /home6/tempsit1/public_html/wp-content/themes/dt-the7/inc/template-hooks.php on line 826
+[17-Dec-2016 09:30:22 UTC] PHP Fatal error:  Class 'WPBakeryShortCode_VC_Basic_Grid' not found in /home6/tempsit1/public_html/wp-content/plugins/js_composer/include/classes/shortcodes/vc-masonry-grid.php on line 8
+[17-Dec-2016 09:30:31 UTC] PHP Fatal error:  Class 'WPBakeryShortCode_VC_Basic_Grid' not found in /home6/tempsit1/public_html/wp-content/plugins/js_composer/include/classes/shortcodes/vc-masonry-grid.php on line 8
+[17-Dec-2016 09:46:08 UTC] PHP Parse error:  syntax error, unexpected ''load' (T_ENCAPSED_AND_WHITESPACE), expecting ')' in /home6/tempsit1/public_html/wp-content/plugins/js_composer/include/autoload/hook-vc-grid.php on line 235
+[26-Dec-2016 20:15:24 UTC] WordPress database error Duplicate key name 'location_type_code' for query ALTER TABLE wp_t8d0ez1_woocommerce_tax_rate_locations ADD KEY `location_type_code` (`location_type`(40),`location_code`(90)) made by require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, WC_Install::check_version, WC_Install::install, WC_Install::create_tables, dbDelta
+[26-Dec-2016 20:15:24 UTC] WordPress database error Duplicate key name 'location_type_code' for query ALTER TABLE wp_t8d0ez1_woocommerce_shipping_zone_locations ADD KEY `location_type_code` (`location_type`(40),`location_code`(90)) made by require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, WC_Install::check_version, WC_Install::install, WC_Install::create_tables, dbDelta
+[26-Dec-2016 20:15:26 UTC] PHP Fatal error:  Out of memory (allocated 24117248) (tried to allocate 128 bytes) in /home6/tempsit1/public_html/wp-includes/cache.php on line 674
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  include_once(/home/commer62/public_html/wp-content/plugins/velvet-blues-update-urls/velvet-blues-update-urls.php): failed to open stream: No such file or directory in /home/commer62/public_html/wp-settings.php on line 304
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  include_once(): Failed opening '/home/commer62/public_html/wp-content/plugins/velvet-blues-update-urls/velvet-blues-update-urls.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/commer62/public_html/wp-settings.php on line 304
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[28-Dec-2016 06:52:46 UTC] PHP Warning:  strpos(): Empty needle in /home/commer62/public_html/wp-includes/plugin.php on line 649
+[12-Jan-2017 20:36:36 UTC] WordPress database error Duplicate key name 'location_type_code' for query ALTER TABLE wp_t8d0ez1_woocommerce_tax_rate_locations ADD KEY `location_type_code` (`location_type`(40),`location_code`(90)) made by require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, WC_Install::check_version, WC_Install::install, WC_Install::create_tables, dbDelta
+[12-Jan-2017 20:36:36 UTC] WordPress database error Duplicate key name 'location_type_code' for query ALTER TABLE wp_t8d0ez1_woocommerce_shipping_zone_locations ADD KEY `location_type_code` (`location_type`(40),`location_code`(90)) made by require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, WC_Install::check_version, WC_Install::install, WC_Install::create_tables, dbDelta
+[18-Jan-2017 20:38:01 UTC] WordPress database error Duplicate key name 'location_type_code' for query ALTER TABLE wp_t8d0ez1_woocommerce_tax_rate_locations ADD KEY `location_type_code` (`location_type`(40),`location_code`(90)) made by require('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, WC_Install::check_version, WC_Install::install, WC_Install::create_tables, dbDelta
+[18-Jan-2017 20:38:01 UTC] WordPress database error Duplicate key name 'location_type_code' for query ALTER TABLE wp_t8d0ez1_woocommerce_shipping_zone_locations ADD KEY `location_type_code` (`location_type`(40),`location_code`(90)) made by require('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, WC_Install::check_version, WC_Install::install, WC_Install::create_tables, dbDelta
+[03-Feb-2017 08:37:20 UTC] WordPress database error Duplicate key name 'location_type_code' for query ALTER TABLE wp_t8d0ez1_woocommerce_tax_rate_locations ADD KEY `location_type_code` (`location_type`(40),`location_code`(90)) made by require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, WC_Install::check_version, WC_Install::install, WC_Install::create_tables, dbDelta
+[03-Feb-2017 08:37:20 UTC] WordPress database error Duplicate key name 'location_type_code' for query ALTER TABLE wp_t8d0ez1_woocommerce_shipping_zone_locations ADD KEY `location_type_code` (`location_type`(40),`location_code`(90)) made by require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, WC_Install::check_version, WC_Install::install, WC_Install::create_tables, dbDelta

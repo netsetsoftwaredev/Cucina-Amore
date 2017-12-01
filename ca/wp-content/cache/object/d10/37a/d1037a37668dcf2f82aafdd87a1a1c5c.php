@@ -1,0 +1,1 @@
+n»X<?php exit; ?>a:1:{s:7:"content";O:8:"stdClass":2:{s:3:"url";s:54:"http://leadbrite.appspot.com/service/leadpages/latest/";s:7:"version";s:7:"1.2.0.5";}}

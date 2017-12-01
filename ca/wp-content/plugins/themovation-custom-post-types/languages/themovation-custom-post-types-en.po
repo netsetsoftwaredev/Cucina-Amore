@@ -1,0 +1,661 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Themovation Custom Post Types\n"
+"POT-Creation-Date: 2015-11-06 10:09-0800\n"
+"PO-Revision-Date: 2015-11-06 10:09-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: themovation-custom-post-types.php\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: themovation-custom-post-types.php:31
+msgctxt "Post Type General Name"
+msgid "Projects"
+msgstr ""
+
+#: themovation-custom-post-types.php:32
+msgctxt "Post Type Singular Name"
+msgid "Project"
+msgstr ""
+
+#: themovation-custom-post-types.php:33 themovation-custom-post-types.php:60
+msgid "Portfolio"
+msgstr ""
+
+#: themovation-custom-post-types.php:34
+msgid "Parent Project:"
+msgstr ""
+
+#: themovation-custom-post-types.php:35
+msgid "All Projects"
+msgstr ""
+
+#: themovation-custom-post-types.php:36
+msgid "View Project"
+msgstr ""
+
+#: themovation-custom-post-types.php:37
+msgid "Add New Project"
+msgstr ""
+
+#: themovation-custom-post-types.php:38 themovation-custom-post-types.php:157
+#: themovation-custom-post-types.php:206
+#: themovation-custom-post-types.php:260
+#: themovation-custom-post-types.php:314
+#: themovation-custom-post-types.php:368
+#: themovation-custom-post-types.php:422
+#: themovation-custom-post-types.php:476
+#: themovation-custom-post-types.php:531
+#: themovation-custom-post-types.php:586
+#: themovation-custom-post-types.php:644
+#: themovation-custom-post-types.php:702
+msgid "Add New"
+msgstr ""
+
+#: themovation-custom-post-types.php:39
+msgid "Edit Project"
+msgstr ""
+
+#: themovation-custom-post-types.php:40
+msgid "Update Project"
+msgstr ""
+
+#: themovation-custom-post-types.php:41
+msgid "Search Project"
+msgstr ""
+
+#: themovation-custom-post-types.php:42 themovation-custom-post-types.php:161
+#: themovation-custom-post-types.php:210
+#: themovation-custom-post-types.php:264
+#: themovation-custom-post-types.php:318
+#: themovation-custom-post-types.php:372
+#: themovation-custom-post-types.php:426
+#: themovation-custom-post-types.php:480
+#: themovation-custom-post-types.php:535
+#: themovation-custom-post-types.php:590
+#: themovation-custom-post-types.php:648
+#: themovation-custom-post-types.php:706
+msgid "Not found"
+msgstr ""
+
+#: themovation-custom-post-types.php:43 themovation-custom-post-types.php:162
+#: themovation-custom-post-types.php:211
+#: themovation-custom-post-types.php:265
+#: themovation-custom-post-types.php:319
+#: themovation-custom-post-types.php:373
+#: themovation-custom-post-types.php:427
+#: themovation-custom-post-types.php:481
+#: themovation-custom-post-types.php:536
+#: themovation-custom-post-types.php:591
+#: themovation-custom-post-types.php:649
+#: themovation-custom-post-types.php:707
+msgid "Not found in Trash"
+msgstr ""
+
+#: themovation-custom-post-types.php:59
+msgid "themo_portfolio"
+msgstr ""
+
+#: themovation-custom-post-types.php:98
+msgctxt "Taxonomy General Name"
+msgid "Project Types"
+msgstr ""
+
+#: themovation-custom-post-types.php:99
+msgctxt "Taxonomy Singular Name"
+msgid "Project Type"
+msgstr ""
+
+#: themovation-custom-post-types.php:100
+msgid "Project Types"
+msgstr ""
+
+#: themovation-custom-post-types.php:101
+msgid "All Project Types"
+msgstr ""
+
+#: themovation-custom-post-types.php:102
+msgid "Parent Project Type"
+msgstr ""
+
+#: themovation-custom-post-types.php:103
+msgid "Parent Project Type:"
+msgstr ""
+
+#: themovation-custom-post-types.php:104
+msgid "New Project Type Name"
+msgstr ""
+
+#: themovation-custom-post-types.php:105
+msgid "Add New Project Type"
+msgstr ""
+
+#: themovation-custom-post-types.php:106
+msgid "Edit Project Type"
+msgstr ""
+
+#: themovation-custom-post-types.php:107
+msgid "Update Project Type"
+msgstr ""
+
+#: themovation-custom-post-types.php:108
+msgid "Separate Project Type with commas"
+msgstr ""
+
+#: themovation-custom-post-types.php:109
+msgid "Search Project Types"
+msgstr ""
+
+#: themovation-custom-post-types.php:110
+msgid "Add or remove project type"
+msgstr ""
+
+#: themovation-custom-post-types.php:111
+msgid "Choose from the most project types"
+msgstr ""
+
+#: themovation-custom-post-types.php:112
+#: themovation-custom-post-types.php:757
+msgid "Not Found"
+msgstr ""
+
+#: themovation-custom-post-types.php:150
+msgctxt "Post Type General Name"
+msgid "Accordions"
+msgstr ""
+
+#: themovation-custom-post-types.php:151
+msgctxt "Post Type Singular Name"
+msgid "Accordion"
+msgstr ""
+
+#: themovation-custom-post-types.php:152
+msgid "Accordion"
+msgstr ""
+
+#: themovation-custom-post-types.php:153
+#: themovation-custom-post-types.php:202
+#: themovation-custom-post-types.php:256
+#: themovation-custom-post-types.php:310
+#: themovation-custom-post-types.php:364
+#: themovation-custom-post-types.php:418
+#: themovation-custom-post-types.php:472
+#: themovation-custom-post-types.php:527
+#: themovation-custom-post-types.php:582
+#: themovation-custom-post-types.php:640
+#: themovation-custom-post-types.php:698
+msgid "Parent Item:"
+msgstr ""
+
+#: themovation-custom-post-types.php:154
+#: themovation-custom-post-types.php:203
+#: themovation-custom-post-types.php:257
+#: themovation-custom-post-types.php:311
+#: themovation-custom-post-types.php:365
+#: themovation-custom-post-types.php:419
+#: themovation-custom-post-types.php:473
+#: themovation-custom-post-types.php:528
+#: themovation-custom-post-types.php:583
+#: themovation-custom-post-types.php:641
+#: themovation-custom-post-types.php:699
+msgid "All Items"
+msgstr ""
+
+#: themovation-custom-post-types.php:155
+#: themovation-custom-post-types.php:204
+#: themovation-custom-post-types.php:258
+#: themovation-custom-post-types.php:312
+#: themovation-custom-post-types.php:366
+#: themovation-custom-post-types.php:420
+#: themovation-custom-post-types.php:474
+#: themovation-custom-post-types.php:529
+#: themovation-custom-post-types.php:584
+#: themovation-custom-post-types.php:642
+#: themovation-custom-post-types.php:700
+msgid "View Item"
+msgstr ""
+
+#: themovation-custom-post-types.php:156
+#: themovation-custom-post-types.php:205
+#: themovation-custom-post-types.php:259
+#: themovation-custom-post-types.php:313
+#: themovation-custom-post-types.php:367
+#: themovation-custom-post-types.php:421
+#: themovation-custom-post-types.php:475
+#: themovation-custom-post-types.php:530
+#: themovation-custom-post-types.php:585
+#: themovation-custom-post-types.php:643
+#: themovation-custom-post-types.php:701
+msgid "Add New Item"
+msgstr ""
+
+#: themovation-custom-post-types.php:158
+#: themovation-custom-post-types.php:207
+#: themovation-custom-post-types.php:261
+#: themovation-custom-post-types.php:315
+#: themovation-custom-post-types.php:369
+#: themovation-custom-post-types.php:423
+#: themovation-custom-post-types.php:477
+#: themovation-custom-post-types.php:532
+#: themovation-custom-post-types.php:587
+#: themovation-custom-post-types.php:645
+#: themovation-custom-post-types.php:703
+msgid "Edit Item"
+msgstr ""
+
+#: themovation-custom-post-types.php:159
+#: themovation-custom-post-types.php:208
+#: themovation-custom-post-types.php:262
+#: themovation-custom-post-types.php:316
+#: themovation-custom-post-types.php:370
+#: themovation-custom-post-types.php:424
+#: themovation-custom-post-types.php:478
+#: themovation-custom-post-types.php:533
+#: themovation-custom-post-types.php:588
+#: themovation-custom-post-types.php:646
+#: themovation-custom-post-types.php:704
+msgid "Update Item"
+msgstr ""
+
+#: themovation-custom-post-types.php:160
+#: themovation-custom-post-types.php:209
+#: themovation-custom-post-types.php:263
+#: themovation-custom-post-types.php:317
+#: themovation-custom-post-types.php:371
+#: themovation-custom-post-types.php:425
+#: themovation-custom-post-types.php:479
+#: themovation-custom-post-types.php:534
+#: themovation-custom-post-types.php:589
+#: themovation-custom-post-types.php:647
+#: themovation-custom-post-types.php:705
+msgid "Search Item"
+msgstr ""
+
+#: themovation-custom-post-types.php:165
+msgid "themo_accordion"
+msgstr ""
+
+#: themovation-custom-post-types.php:166
+msgid "Accordion Box"
+msgstr ""
+
+#: themovation-custom-post-types.php:199
+msgctxt "Post Type General Name"
+msgid "Brands"
+msgstr ""
+
+#: themovation-custom-post-types.php:200
+msgctxt "Post Type Singular Name"
+msgid "Brand"
+msgstr ""
+
+#: themovation-custom-post-types.php:201
+#: themovation-custom-post-types.php:215
+msgid "Brand"
+msgstr ""
+
+#: themovation-custom-post-types.php:214
+msgid "themo_brands"
+msgstr ""
+
+#: themovation-custom-post-types.php:253
+msgctxt "Post Type General Name"
+msgid "Faqs"
+msgstr ""
+
+#: themovation-custom-post-types.php:254
+msgctxt "Post Type Singular Name"
+msgid "Faq"
+msgstr ""
+
+#: themovation-custom-post-types.php:255
+msgid "Faq"
+msgstr ""
+
+#: themovation-custom-post-types.php:268
+msgid "themo_faq"
+msgstr ""
+
+#: themovation-custom-post-types.php:269
+msgid "Faq Box"
+msgstr ""
+
+#: themovation-custom-post-types.php:307
+msgctxt "Post Type General Name"
+msgid "Featured"
+msgstr ""
+
+#: themovation-custom-post-types.php:308
+msgctxt "Post Type Singular Name"
+msgid "Featured"
+msgstr ""
+
+#: themovation-custom-post-types.php:309
+#: themovation-custom-post-types.php:793
+#: themovation-custom-post-types.php:819
+msgid "Featured"
+msgstr ""
+
+#: themovation-custom-post-types.php:322
+msgid "themo_featured"
+msgstr ""
+
+#: themovation-custom-post-types.php:323
+msgid "Featured Box"
+msgstr ""
+
+#: themovation-custom-post-types.php:361
+msgctxt "Post Type General Name"
+msgid "Pricing Plans"
+msgstr ""
+
+#: themovation-custom-post-types.php:362
+msgctxt "Post Type Singular Name"
+msgid "Pricing Plan"
+msgstr ""
+
+#: themovation-custom-post-types.php:363
+msgid "Pricing Plan"
+msgstr ""
+
+#: themovation-custom-post-types.php:376
+msgid "themo_pricing_plans"
+msgstr ""
+
+#: themovation-custom-post-types.php:377
+msgid "Pricing Plan Box"
+msgstr ""
+
+#: themovation-custom-post-types.php:415
+msgctxt "Post Type General Name"
+msgid "Sliders"
+msgstr ""
+
+#: themovation-custom-post-types.php:416
+msgctxt "Post Type Singular Name"
+msgid "Slider"
+msgstr ""
+
+#: themovation-custom-post-types.php:417
+msgid "Slider"
+msgstr ""
+
+#: themovation-custom-post-types.php:430
+msgid "themo_slider"
+msgstr ""
+
+#: themovation-custom-post-types.php:431
+msgid "Slider Box"
+msgstr ""
+
+#: themovation-custom-post-types.php:469
+msgctxt "Post Type General Name"
+msgid "Teams"
+msgstr ""
+
+#: themovation-custom-post-types.php:470
+msgctxt "Post Type Singular Name"
+msgid "Team"
+msgstr ""
+
+#: themovation-custom-post-types.php:471
+msgid "Team"
+msgstr ""
+
+#: themovation-custom-post-types.php:484
+msgid "themo_team"
+msgstr ""
+
+#: themovation-custom-post-types.php:485
+msgid "Team Box"
+msgstr ""
+
+#: themovation-custom-post-types.php:524
+msgctxt "Post Type General Name"
+msgid "Testimonials"
+msgstr ""
+
+#: themovation-custom-post-types.php:525
+msgctxt "Post Type Singular Name"
+msgid "Testimonial"
+msgstr ""
+
+#: themovation-custom-post-types.php:526
+msgid "Testimonial"
+msgstr ""
+
+#: themovation-custom-post-types.php:539
+msgid "themo_testimonials"
+msgstr ""
+
+#: themovation-custom-post-types.php:540
+msgid "Testimonial Box"
+msgstr ""
+
+#: themovation-custom-post-types.php:579
+msgctxt "Post Type General Name"
+msgid "Thumbnail Sliders"
+msgstr ""
+
+#: themovation-custom-post-types.php:580
+msgctxt "Post Type Singular Name"
+msgid "Thumbnail Slider"
+msgstr ""
+
+#: themovation-custom-post-types.php:581
+msgid "Thumbnail Slider"
+msgstr ""
+
+#: themovation-custom-post-types.php:594
+msgid "themo_thumb_slider"
+msgstr ""
+
+#: themovation-custom-post-types.php:595
+msgid "Thumbnail Slider Box"
+msgstr ""
+
+#: themovation-custom-post-types.php:637
+msgctxt "Post Type General Name"
+msgid "Tours"
+msgstr ""
+
+#: themovation-custom-post-types.php:638
+msgctxt "Post Type Singular Name"
+msgid "Tour"
+msgstr ""
+
+#: themovation-custom-post-types.php:639
+msgid "Tour"
+msgstr ""
+
+#: themovation-custom-post-types.php:652
+msgid "themo_tour"
+msgstr ""
+
+#: themovation-custom-post-types.php:653
+msgid "Tour Box"
+msgstr ""
+
+#: themovation-custom-post-types.php:695
+msgctxt "Post Type General Name"
+msgid "Service Block & Showcase"
+msgstr ""
+
+#: themovation-custom-post-types.php:696
+msgctxt "Post Type Singular Name"
+msgid "Service Block & Showcase"
+msgstr ""
+
+#: themovation-custom-post-types.php:697
+#: themovation-custom-post-types.php:800
+#: themovation-custom-post-types.php:826
+msgid "Service Block & Showcase"
+msgstr ""
+
+#: themovation-custom-post-types.php:710
+msgid "themo_service_block"
+msgstr ""
+
+#: themovation-custom-post-types.php:711
+msgid "Service Block & Showcase Box"
+msgstr ""
+
+#: themovation-custom-post-types.php:743
+msgctxt "Taxonomy General Name"
+msgid "Groups"
+msgstr ""
+
+#: themovation-custom-post-types.php:744
+msgctxt "Taxonomy Singular Name"
+msgid "Group"
+msgstr ""
+
+#: themovation-custom-post-types.php:745
+#: themovation-custom-post-types.php:801
+msgid "Groups"
+msgstr ""
+
+#: themovation-custom-post-types.php:746
+msgid "All Groups"
+msgstr ""
+
+#: themovation-custom-post-types.php:747
+msgid "Parent Group"
+msgstr ""
+
+#: themovation-custom-post-types.php:748
+msgid "Parent Group:"
+msgstr ""
+
+#: themovation-custom-post-types.php:749
+msgid "New Group Name"
+msgstr ""
+
+#: themovation-custom-post-types.php:750
+msgid "Add New Group"
+msgstr ""
+
+#: themovation-custom-post-types.php:751
+msgid "Edit Group"
+msgstr ""
+
+#: themovation-custom-post-types.php:752
+msgid "Update Group"
+msgstr ""
+
+#: themovation-custom-post-types.php:753
+msgid "Separate group with commas"
+msgstr ""
+
+#: themovation-custom-post-types.php:754
+msgid "Search groups"
+msgstr ""
+
+#: themovation-custom-post-types.php:755
+msgid "Add or remove group"
+msgstr ""
+
+#: themovation-custom-post-types.php:756
+msgid "Choose from the most used groups"
+msgstr ""
+
+#: themovation-custom-post-types.php:787
+msgid "themovation-custom-post-types"
+msgstr ""
+
+#: themovation-custom-post-types.php:790
+#: themovation-custom-post-types.php:816
+msgid "Accordions"
+msgstr ""
+
+#: themovation-custom-post-types.php:791
+#: themovation-custom-post-types.php:817
+msgid "Brands"
+msgstr ""
+
+#: themovation-custom-post-types.php:792
+#: themovation-custom-post-types.php:818
+msgid "FAQs"
+msgstr ""
+
+#: themovation-custom-post-types.php:794
+#: themovation-custom-post-types.php:820
+msgid "Pricing Plans"
+msgstr ""
+
+#: themovation-custom-post-types.php:795
+#: themovation-custom-post-types.php:821
+msgid "Sliders"
+msgstr ""
+
+#: themovation-custom-post-types.php:796
+#: themovation-custom-post-types.php:822
+msgid "Teams"
+msgstr ""
+
+#: themovation-custom-post-types.php:797
+#: themovation-custom-post-types.php:823
+msgid "Testimonials"
+msgstr ""
+
+#: themovation-custom-post-types.php:798
+#: themovation-custom-post-types.php:824
+msgid "Thumbnail Sliders"
+msgstr ""
+
+#: themovation-custom-post-types.php:799
+#: themovation-custom-post-types.php:825
+msgid "Tours"
+msgstr ""
+
+#: themovation-custom-post-types.php:809
+msgid "Welcome to Stratus"
+msgstr ""
+
+#: themovation-custom-post-types.php:811
+msgid "Theme Options"
+msgstr ""
+
+#: themovation-custom-post-types.php:814
+msgid "Add / Manage Content"
+msgstr ""
+
+#: themovation-custom-post-types.php:827
+msgid "Content Groups"
+msgstr ""
+
+#: themovation-custom-post-types.php:871
+#, php-format
+msgid "Show All %1$s"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Themovation Custom Post Types"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://themovation.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"This is a plugin comes bundled with most Themovation themes. It adds the "
+"custom post types required to run most themes."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Themovation"
+msgstr ""

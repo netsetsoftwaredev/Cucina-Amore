@@ -1,0 +1,2 @@
+[29-Dec-2016 04:38:55 America/Los_Angeles] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/commer62/public_html/wp-includes/registration-functions.php on line 7
+[09-Feb-2017 19:31:28 America/Los_Angeles] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/commer62/public_html/wp-includes/rss-functions.php on line 8

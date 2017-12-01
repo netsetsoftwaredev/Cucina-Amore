@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<!--[if lt IE 10 ]>
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#" class="old-ie no-js">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#" class="no-js">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+<meta name="google-site-verification" content="_6z8t3TCmP4Da_sYBZYIg4w3TR7BntceKwMEgVPg5Qw" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="http://commerceacceleration.devsitepro.com/xmlrpc.php" />
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	<title>Accelerate Agency - Top Digital Marketing Agency San Diego, CA</title>
+
+<!-- SEO Ultimate (http://www.seodesignsolutions.com/wordpress-seo/) -->
+	<meta name="description" content="Accelerate your growth with proven digital marketing, branding, mobile app and web development services in San Diego by the leading full service digital marketing agency." />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Accelerate Agency - Top Digital Marketing Agency San Diego, CA" />
+	<meta property="og:description" content="Accelerate your growth with proven digital marketing, branding, mobile app and web development services in San Diego by the leading full service digital marketing agency." />
+	<meta property="og:url" content="http://commerceacceleration.devsitepro.com/" />
+	<meta property="article:published_time" content="2016-12-03" />
+	<meta property="article:modified_time" content="2017-01-06" />
+	<meta property="og:site_name" content="Accelerate" />
+	<meta name="twitter:card" content="summary" />
+<!-- /SEO Ultimate -->
+
+<script type="text/javascript">
+function createCookie(a,d,b){if(b){var c=new Date;c.setTime(c.getTime()+864E5*b);b="; expires="+c.toGMTString()}else b="";document.cookie=a+"="+d+b+"; path=/"}function readCookie(a){a+="=";for(var d=document.cookie.split(";"),b=0;b<d.length;b++){for(var c=d[b];" "==c.charAt(0);)c=c.substring(1,c.length);if(0==c.indexOf(a))return c.substring(a.length,c.length)}return null}function eraseCookie(a){createCookie(a,"",-1)}
+function areCookiesEnabled(){var a=!1;createCookie("testing","Hello",1);null!=readCookie("testing")&&(a=!0,eraseCookie("testing"));return a}(function(a){var d=readCookie("devicePixelRatio"),b=void 0===a.devicePixelRatio?1:a.devicePixelRatio;areCookiesEnabled()&&null==d&&(createCookie("devicePixelRatio",b,7),1!=b&&a.location.reload(!0))})(window);
+</script><link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Accelerate &raquo; Feed" href="http://commerceacceleration.devsitepro.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Accelerate &raquo; Comments Feed" href="http://commerceacceleration.devsitepro.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/commerceacceleration.devsitepro.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='layerslider-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/LayerSlider/static/layerslider/css/layerslider.css?ver=6.0.6' type='text/css' media='all' />
+<link rel='stylesheet' id='ls-google-fonts-css'  href='http://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700%7CRoboto+Slab:regular:400%7CRoboto:regular:400&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='go-pricing-styles-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/go_pricing/assets/css/go_pricing_styles.css?ver=3.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='optinforms-googleFont-css'  href='//fonts.googleapis.com/css?family=Damion&#038;ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='optinforms-stylesheet-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/optin-forms/css/optinforms.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tp_twitter_plugin_css-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/recent-tweets-widget/tp_twitter_plugin.css?ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.3.0.2' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' id='inbound-shortcodes-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/cta/shared/shortcodes/css/frontend-render.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=5.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-web-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C400italic%2C600%2C800%7CRoboto%3A400%2C500%2C700&#038;ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-main-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/themes/dt-the7/css/main.min.css?ver=4.2.0' type='text/css' media='all' />
+<style id='dt-main-inline-css' type='text/css'>
+body #load {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 9901;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all .35s ease-out;
+  transition: all .35s ease-out;
+}
+body #load.loader-removed {
+  opacity: 0;
+  visibility: hidden;
+}
+.load-wrap {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.load-wrap > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+#load {
+  background-color: #ffffff;
+}
+.uil-default rect:not(.bk) {
+  fill: #c4c4c4;
+}
+.uil-ring > path {
+  fill: #c4c4c4;
+}
+.ring-loader .circle {
+  fill: #c4c4c4;
+}
+.ring-loader .moving-circle {
+  fill: #c4c4c4;
+}
+.uil-hourglass .glass {
+  stroke: #c4c4c4;
+}
+.uil-hourglass .sand {
+  fill: #c4c4c4;
+}
+.spinner-loader .load-wrap {
+  background-image: url("data:image/svg+xml,%3Csvg width='75px' height='75px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid' class='uil-default'%3E%3Crect x='0' y='0' width='100' height='100' fill='none' class='bk'%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23c4c4c4' transform='rotate(0 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23c4c4c4' transform='rotate(30 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.08333333333333333s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23c4c4c4' transform='rotate(60 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.16666666666666666s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23c4c4c4' transform='rotate(90 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.25s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23c4c4c4' transform='rotate(120 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.3333333333333333s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23c4c4c4' transform='rotate(150 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.4166666666666667s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23c4c4c4' transform='rotate(180 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23c4c4c4' transform='rotate(210 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5833333333333334s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23c4c4c4' transform='rotate(240 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.6666666666666666s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23c4c4c4' transform='rotate(270 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.75s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23c4c4c4' transform='rotate(300 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.8333333333333334s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23c4c4c4' transform='rotate(330 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.9166666666666666s' repeatCount='indefinite'/%3E%3C/rect%3E%3C/svg%3E");
+}
+.ring-loader .load-wrap {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='72' height='72' fill='%23c4c4c4'%3E   %3Cpath opacity='.25' d='M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4'/%3E   %3Cpath d='M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z'%3E     %3CanimateTransform attributeName='transform' type='rotate' from='0 16 16' to='360 16 16' dur='0.8s' repeatCount='indefinite' /%3E   %3C/path%3E %3C/svg%3E");
+}
+.hourglass-loader .load-wrap {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='72' height='72' fill='%23c4c4c4'%3E   %3Cpath transform='translate(2)' d='M0 12 V20 H4 V12z'%3E      %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline'  /%3E   %3C/path%3E   %3Cpath transform='translate(8)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.2' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline'  /%3E   %3C/path%3E   %3Cpath transform='translate(14)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.4' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline' /%3E   %3C/path%3E   %3Cpath transform='translate(20)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.6' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline' /%3E   %3C/path%3E   %3Cpath transform='translate(26)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.8' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline' /%3E   %3C/path%3E %3C/svg%3E");
+}
+
+</style>
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='dt-old-ie-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/themes/dt-the7/css/old-ie.css?ver=4.2.0' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='dt-awsome-fonts-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/themes/dt-the7/fonts/FontAwesome/css/font-awesome.min.css?ver=4.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-fontello-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/themes/dt-the7/fonts/fontello/css/fontello.min.css?ver=4.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='the7pt-static-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/themes/dt-the7/css/post-type.css?ver=4.2.0' type='text/css' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='dt-custom-old-ie.less-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/themes/dt-the7/css/compiled/custom-old-ie-skin11r.css?ver=4.2.0' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='dt-custom.less-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/themes/dt-the7/css/compiled/custom-skin11r.css?ver=4.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='wc-dt-custom.less-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/themes/dt-the7/css/compiled/compatibility/wc-dt-custom-skin11r.css?ver=4.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-media.less-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/themes/dt-the7/css/compiled/media-skin11r.css?ver=4.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='the7pt.less-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/uploads/wp-less/dt-the7/css/post-type-dynamic-368f57b95a.css' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/themes/dt-the7/style.css?ver=4.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bsf-Defaults-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/uploads/smile_fonts/Defaults/Defaults.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cp-perfect-scroll-style-css'  href='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/convertplug/modules/slide_in/../../admin/assets/css/perfect-scrollbar.min.css?ver=4.7.2' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var slide_in = {"demo_dir":"http:\/\/commerceacceleration.devsitepro.com\/wp-content\/plugins\/convertplug\/modules\/slide_in\/assets\/demos"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/LayerSlider/static/layerslider/js/greensock.js?ver=1.19.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var LS_Meta = {"v":"6.0.6"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/LayerSlider/static/layerslider/js/layerslider.kreaturamedia.jquery.js?ver=6.0.6'></script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/LayerSlider/static/layerslider/js/layerslider.transitions.js?ver=6.0.6'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.2/TweenMax.min.js'></script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/optin-forms/js/placeholder.js?ver=4.7.2'></script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.3.0.2'></script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.3.0.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"http:\/\/commerceacceleration.devsitepro.com","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=2.6.14'></script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart.js?ver=5.0.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var dtLocal = {"themeUrl":"http:\/\/commerceacceleration.devsitepro.com\/wp-content\/themes\/dt-the7","passText":"To view this protected post, enter the password below:","moreButtonText":{"loading":"Loading..."},"postID":"5","ajaxurl":"http:\/\/commerceacceleration.devsitepro.com\/wp-admin\/admin-ajax.php","contactNonce":"7a029845fd","ajaxNonce":"b683015f7a","pageData":{"type":"page","template":"page","layout":null},"themeSettings":{"smoothScroll":"off","lazyLoading":false,"accentColor":{"mode":"gradient","color":["#a659a0","#a659a0"]},"floatingHeader":{"showAfter":94,"showMenu":true,"height":56,"logo":{"showLogo":true,"html":"<img class=\" preload-me\" src=\"http:\/\/commerceacceleration.devsitepro.com\/wp-content\/uploads\/2016\/12\/mob_logo1.png\" srcset=\"http:\/\/commerceacceleration.devsitepro.com\/wp-content\/uploads\/2016\/12\/mob_logo1.png 243w, http:\/\/commerceacceleration.devsitepro.com\/wp-content\/uploads\/2016\/12\/mob_logo1.png 243w\" width=\"243\" height=\"50\"   sizes=\"243px\" alt=\"Accelerate\" \/>"}},"mobileHeader":{"firstSwitchPoint":990,"secondSwitchPoint":500},"content":{"responsivenessTreshold":970,"textColor":"#787d85","headerColor":"#3b3f4a"},"stripes":{"stripe1":{"textColor":"#787d85","headerColor":"#3b3f4a"},"stripe2":{"textColor":"#8b9199","headerColor":"#ffffff"},"stripe3":{"textColor":"#ffffff","headerColor":"#ffffff"}}},"VCMobileScreenWidth":"768"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/themes/dt-the7/js/above-the-fold.min.js?ver=4.2.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var cta_variation = {"cta_id":null,"admin_url":"http:\/\/commerceacceleration.devsitepro.com\/wp-admin\/admin-ajax.php","home_url":"http:\/\/commerceacceleration.devsitepro.com","disable_ajax":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/cta/assets/js/cta-variation.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var inbound_settings = {"post_id":"5","variation_id":"0","ip_address":"27.109.11.50","wp_lead_data":{"lead_id":null,"lead_email":null,"lead_uid":null},"admin_url":"http:\/\/commerceacceleration.devsitepro.com\/wp-admin\/admin-ajax.php","track_time":"2017\/03\/04 4:52:32","post_type":"page","page_tracking":"on","search_tracking":"on","comment_tracking":"on","custom_mapping":[],"inbound_track_exclude":"","inbound_track_include":"","is_admin":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/cta/shared/assets/js/frontend/analytics/inboundAnalytics.min.js'></script>
+<meta name="generator" content="Powered by LayerSlider 6.0.6 - Multi-Purpose, Responsive, Parallax, Mobile-Friendly Slider Plugin for WordPress." />
+<!-- LayerSlider updates and docs at: https://layerslider.kreaturamedia.com -->
+<link rel='https://api.w.org/' href='http://commerceacceleration.devsitepro.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://commerceacceleration.devsitepro.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.7.2" />
+<meta name="generator" content="WooCommerce 2.6.14" />
+<link rel="canonical" href="http://commerceacceleration.devsitepro.com/" />
+<link rel='shortlink' href='http://commerceacceleration.devsitepro.com/' />
+<link rel="alternate" type="application/json+oembed" href="http://commerceacceleration.devsitepro.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcommerceacceleration.devsitepro.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://commerceacceleration.devsitepro.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcommerceacceleration.devsitepro.com%2F&#038;format=xml" />
+
+<!-- Call Now Button 0.1.3 by Jerry Rietveld (callnowbutton.com) -->
+<style>#callnowbutton {display:none;} @media screen and (max-width:650px){#callnowbutton {display:block; width:100px;right:0;border-bottom-left-radius:40px; border-top-left-radius:40px; height:80px; position:fixed; bottom:-20px; border-top:2px solid #d386cd; background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNjAgNjAiPjxwYXRoIGQ9Ik03LjEwNCAxNC4wMzJsMTUuNTg2IDEuOTg0YzAgMC0wLjAxOSAwLjUgMCAwLjk1M2MwLjAyOSAwLjc1Ni0wLjI2IDEuNTM0LTAuODA5IDIuMSBsLTQuNzQgNC43NDJjMi4zNjEgMy4zIDE2LjUgMTcuNCAxOS44IDE5LjhsMTYuODEzIDEuMTQxYzAgMCAwIDAuNCAwIDEuMSBjLTAuMDAyIDAuNDc5LTAuMTc2IDAuOTUzLTAuNTQ5IDEuMzI3bC02LjUwNCA2LjUwNWMwIDAtMTEuMjYxIDAuOTg4LTI1LjkyNS0xMy42NzRDNi4xMTcgMjUuMyA3LjEgMTQgNy4xIDE0IiBmaWxsPSIjNzQyNzZlIi8+PHBhdGggZD0iTTcuMTA0IDEzLjAzMmw2LjUwNC02LjUwNWMwLjg5Ni0wLjg5NSAyLjMzNC0wLjY3OCAzLjEgMC4zNWw1LjU2MyA3LjggYzAuNzM4IDEgMC41IDIuNTMxLTAuMzYgMy40MjZsLTQuNzQgNC43NDJjMi4zNjEgMy4zIDUuMyA2LjkgOS4xIDEwLjY5OWMzLjg0MiAzLjggNy40IDYuNyAxMC43IDkuMSBsNC43NC00Ljc0MmMwLjg5Ny0wLjg5NSAyLjQ3MS0xLjAyNiAzLjQ5OC0wLjI4OWw3LjY0NiA1LjQ1NWMxLjAyNSAwLjcgMS4zIDIuMiAwLjQgMy4xMDVsLTYuNTA0IDYuNSBjMCAwLTExLjI2MiAwLjk4OC0yNS45MjUtMTMuNjc0QzYuMTE3IDI0LjMgNy4xIDEzIDcuMSAxMyIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==) center 2px no-repeat #a659a0; text-decoration:none; box-shadow:0 0 5px #888; z-index:9999;background-size:58px 58px}}</style>
+<script type='text/javascript' data-cfasync='false'>var _mmunch = {'front': false, 'page': false, 'post': false, 'category': false, 'author': false, 'search': false, 'attachment': false, 'tag': false};_mmunch['front'] = true;_mmunch['page'] = true; _mmunch['pageData'] = {"ID":5,"post_name":"home-page","post_title":"Home Page","post_type":"page","post_author":"1","post_status":"publish"};</script><script data-cfasync="false" src="//a.mailmunch.co/app/v1/site.js" id="mailmunch-script" data-plugin="mc_mm" data-mailmunch-site-id="314627" async></script><meta property="og:site_name" content="Accelerate" />
+<meta property="og:title" content="Home Page" />
+<meta property="og:url" content="http://commerceacceleration.devsitepro.com/" />
+<meta property="og:type" content="website" />
+<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><meta name="generator" content="Powered by Slider Revolution 5.3.0.2 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) { 
+	var $load = document.getElementById("load");
+	
+	var removeLoading = setTimeout(function() {
+		$load.className += " loader-removed";
+	}, 500);
+});
+</script>
+<!-- icon -->
+<link rel="icon" href="http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/uploads/2016/12/cag-favicon.png" type="image/png" />
+<link rel="shortcut icon" href="http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/uploads/2016/12/cag-favicon.png" type="image/png" />
+<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1481626185205{background-color: #a756a2 !important;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49089957-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+    adroll_adv_id = "X74AWRN6CVB6THOJEAD2GA";
+    adroll_pix_id = "S7NNJEEMHVHZ3DZ2CLHO64";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username@example.com"; */
+    (function () {
+        var _onload = function(){
+            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+            var scr = document.createElement("script");
+            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+            scr.setAttribute('async', 'true');
+            scr.type = "text/javascript";
+            scr.src = host + "/j/roundtrip.js";
+            ((document.getElementsByTagName('head') || [null])[0] ||
+                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+        };
+        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+        else {window.attachEvent('onload', _onload)}
+    }());
+</script></head>
+<body class="home page-template-default page page-id-5 slideshow-on image-blur large-hover-icons overlay-cursor-on accent-gradient srcset-enabled btn-flat custom-btn-color custom-btn-hover-color contact-form-minimal accent-bullets bold-icons phantom-fade phantom-line-decoration phantom-custom-logo-on floating-mobile-menu-icon top-header first-switch-logo-left first-switch-menu-right second-switch-logo-left second-switch-menu-right right-mobile-menu layzr-loading-on wpb-js-composer js-comp-ver-5.0.1 vc_responsive accent-portfolio-icons album-minuatures-style-2">
+<div id="load" class="spinner-loader">
+	<div class="load-wrap"></div>
+</div>
+<div id="page">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+<div class="masthead inline-header right widgets full-height line-decoration" role="banner">
+
+	
+	<header class="header-bar">
+
+						<div class="branding">
+
+					<a href="http://commerceacceleration.devsitepro.com/"><img class=" preload-me" src="http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/uploads/2016/12/mob_logo1.png" srcset="http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/uploads/2016/12/mob_logo1.png 243w, http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/uploads/2016/12/mob_logo1.png 243w" width="243" height="50"   sizes="243px" alt="Accelerate" /></a>
+					<div id="site-title" class="assistive-text">Accelerate</div>
+					<div id="site-description" class="assistive-text">San Diego Digital Agency, San Diego Web Design</div>
+
+					
+					
+				</div>
+		<ul id="primary-menu" class="main-nav underline-decoration l-to-r-line outside-item-remove-margin" role="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-393 first"><a href='http://commerceacceleration.devsitepro.com/about-us/' data-level='1'><span class="menu-item-text"><span class="menu-text">About us</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a href='http://commerceacceleration.devsitepro.com/projects/' data-level='1'><span class="menu-item-text"><span class="menu-text">Our Work</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-451 has-children dt-mega-menu mega-full-width mega-column-5"><a href='#' class='not-clickable-item' data-level='1'><span class="menu-item-text"><span class="menu-text">Services</span></span></a><div class="dt-mega-menu-wrap"><ul class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-450 first has-children no-link dt-mega-parent wf-1-5"><a href='http://commerceacceleration.devsitepro.com/web/' class='not-clickable-item' data-level='2'><span class="menu-item-text"><span class="menu-text">Web</span></span></a><ul class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-215 first"><a href='http://commerceacceleration.com/web/' data-level='3'><span class="menu-item-text"><span class="menu-text">WordPress</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-216"><a href='http://commerceacceleration.com/web/' data-level='3'><span class="menu-item-text"><span class="menu-text">Maintenance &#038; Support</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-217"><a href='http://commerceacceleration.com/web/' data-level='3'><span class="menu-item-text"><span class="menu-text">Custom Application Development</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-218"><a href='http://commerceacceleration.com/web/' data-level='3'><span class="menu-item-text"><span class="menu-text">Lead Gen Sites</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-214"><a href='http://commerceacceleration.com/web/' data-level='3'><span class="menu-item-text"><span class="menu-text">Ecommerce</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-205 has-children no-link dt-mega-parent wf-1-5"><a href='http://commerceacceleration.devsitepro.com/mobile/' class='not-clickable-item' data-level='2'><span class="menu-item-text"><span class="menu-text">Mobile</span></span></a><ul class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-219 first"><a href='http://commerceacceleration.com/mobile/' data-level='3'><span class="menu-item-text"><span class="menu-text">iPhone Applications</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-220"><a href='http://commerceacceleration.com/mobile/' data-level='3'><span class="menu-item-text"><span class="menu-text">Android Applications</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-221"><a href='http://commerceacceleration.com/mobile/' data-level='3'><span class="menu-item-text"><span class="menu-text">Responsive Sites</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-222"><a href='http://commerceacceleration.com/mobile/' data-level='3'><span class="menu-item-text"><span class="menu-text">Mobile Sites</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-206 has-children no-link dt-mega-parent wf-1-5"><a href='http://commerceacceleration.devsitepro.com/marketing/' class='not-clickable-item' data-level='2'><span class="menu-item-text"><span class="menu-text">Marketing</span></span></a><ul class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-223 first"><a href='http://commerceacceleration.com/marketing/' data-level='3'><span class="menu-item-text"><span class="menu-text">Paid Media</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-224"><a href='http://commerceacceleration.com/marketing/' data-level='3'><span class="menu-item-text"><span class="menu-text">Earned Media</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-225"><a href='http://commerceacceleration.com/marketing/' data-level='3'><span class="menu-item-text"><span class="menu-text">Email Marketing</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-226"><a href='http://commerceacceleration.com/marketing/' data-level='3'><span class="menu-item-text"><span class="menu-text">Analytics</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-227"><a href='http://commerceacceleration.com/marketing/' data-level='3'><span class="menu-item-text"><span class="menu-text">Consulting &#038; Coaching</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-228"><a href='http://commerceacceleration.com/marketing/' data-level='3'><span class="menu-item-text"><span class="menu-text">Conversion Optimization</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-229"><a href='http://commerceacceleration.com/marketing/' data-level='3'><span class="menu-item-text"><span class="menu-text">Social Media</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-207 has-children no-link dt-mega-parent wf-1-5"><a href='http://commerceacceleration.devsitepro.com/creative/' class='not-clickable-item' data-level='2'><span class="menu-item-text"><span class="menu-text">Creative</span></span></a><ul class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-208 first"><a href='http://commerceacceleration.com/creative/' data-level='3'><span class="menu-item-text"><span class="menu-text">Branding</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-212"><a href='http://commerceacceleration.com/creative/' data-level='3'><span class="menu-item-text"><span class="menu-text">Web Design</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-209"><a href='http://commerceacceleration.com/creative/' data-level='3'><span class="menu-item-text"><span class="menu-text">Photography</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-210"><a href='http://commerceacceleration.com/creative/' data-level='3'><span class="menu-item-text"><span class="menu-text">Video</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-213"><a href='http://commerceacceleration.com/creative/' data-level='3'><span class="menu-item-text"><span class="menu-text">Mobile Design</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-230 has-children no-link dt-mega-parent wf-1-5"><a href='http://commerceacceleration.com/technology/' class='not-clickable-item' data-level='2'><span class="menu-item-text"><span class="menu-text">Technology</span></span></a><ul class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-235 first"><a href='http://commerceacceleration.com/technology/' data-level='3'><span class="menu-item-text"><span class="menu-text">Virtual Reality</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-236"><a href='http://commerceacceleration.com/technology/' data-level='3'><span class="menu-item-text"><span class="menu-text">Game Development</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-231"><a href='http://commerceacceleration.com/technology/' data-level='3'><span class="menu-item-text"><span class="menu-text">Hosting &#038; Network Admin</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-232"><a href='http://commerceacceleration.com/technology/' data-level='3'><span class="menu-item-text"><span class="menu-text">Database Support</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-233"><a href='http://commerceacceleration.com/technology/' data-level='3'><span class="menu-item-text"><span class="menu-text">Site Speed Optimization</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-234"><a href='http://commerceacceleration.com/technology/' data-level='3'><span class="menu-item-text"><span class="menu-text">Consulting Services</span></span></a></li> </ul></li> </ul></div></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242"><a href='http://commerceacceleration.devsitepro.com/blog/' data-level='1'><span class="menu-item-text"><span class="menu-text">Get Accelerated</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-240"><a href='http://commerceacceleration.devsitepro.com/contact-us/' data-level='1'><span class="menu-item-text"><span class="menu-text">Contact Us</span></span></a></li> </ul>
+		<div class="mini-widgets"><div class="mini-search show-on-desktop near-logo-first-switch near-logo-second-switch">	<form class="searchform" role="search" method="get" action="http://commerceacceleration.devsitepro.com/">
+		<input type="text" class="field searchform-s" name="s" value="" placeholder="Type and hit enter &hellip;" />
+				<input type="submit" class="assistive-text searchsubmit" value="Go!" />
+		<a href="#go" id="trigger-overlay" class="submit icon-off">&nbsp;</a>
+	</form></div><span class="mini-contacts phone show-on-desktop near-logo-first-switch in-menu-second-switch">858.430.8323</span></div>
+	</header>
+
+</div><div class='dt-close-mobile-menu-icon'><span></span></div>
+<div class='dt-mobile-header'>
+	<ul id="mobile-menu" class="mobile-main-nav" role="menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-393 first"><a href='http://commerceacceleration.devsitepro.com/about-us/' data-level='1'><span class="menu-item-text"><span class="menu-text">About us</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a href='http://commerceacceleration.devsitepro.com/projects/' data-level='1'><span class="menu-item-text"><span class="menu-text">Our Work</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-451 has-children dt-mega-menu mega-full-width mega-column-5"><a href='#' class='not-clickable-item' data-level='1'><span class="menu-item-text"><span class="menu-text">Services</span></span></a><div class="dt-mega-menu-wrap"><ul class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-450 first has-children no-link dt-mega-parent wf-1-5"><a href='http://commerceacceleration.devsitepro.com/web/' class='not-clickable-item' data-level='2'><span class="menu-item-text"><span class="menu-text">Web</span></span></a><ul class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-215 first"><a href='http://commerceacceleration.com/web/' data-level='3'><span class="menu-item-text"><span class="menu-text">WordPress</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-216"><a href='http://commerceacceleration.com/web/' data-level='3'><span class="menu-item-text"><span class="menu-text">Maintenance &#038; Support</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-217"><a href='http://commerceacceleration.com/web/' data-level='3'><span class="menu-item-text"><span class="menu-text">Custom Application Development</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-218"><a href='http://commerceacceleration.com/web/' data-level='3'><span class="menu-item-text"><span class="menu-text">Lead Gen Sites</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-214"><a href='http://commerceacceleration.com/web/' data-level='3'><span class="menu-item-text"><span class="menu-text">Ecommerce</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-205 has-children no-link dt-mega-parent wf-1-5"><a href='http://commerceacceleration.devsitepro.com/mobile/' class='not-clickable-item' data-level='2'><span class="menu-item-text"><span class="menu-text">Mobile</span></span></a><ul class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-219 first"><a href='http://commerceacceleration.com/mobile/' data-level='3'><span class="menu-item-text"><span class="menu-text">iPhone Applications</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-220"><a href='http://commerceacceleration.com/mobile/' data-level='3'><span class="menu-item-text"><span class="menu-text">Android Applications</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-221"><a href='http://commerceacceleration.com/mobile/' data-level='3'><span class="menu-item-text"><span class="menu-text">Responsive Sites</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-222"><a href='http://commerceacceleration.com/mobile/' data-level='3'><span class="menu-item-text"><span class="menu-text">Mobile Sites</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-206 has-children no-link dt-mega-parent wf-1-5"><a href='http://commerceacceleration.devsitepro.com/marketing/' class='not-clickable-item' data-level='2'><span class="menu-item-text"><span class="menu-text">Marketing</span></span></a><ul class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-223 first"><a href='http://commerceacceleration.com/marketing/' data-level='3'><span class="menu-item-text"><span class="menu-text">Paid Media</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-224"><a href='http://commerceacceleration.com/marketing/' data-level='3'><span class="menu-item-text"><span class="menu-text">Earned Media</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-225"><a href='http://commerceacceleration.com/marketing/' data-level='3'><span class="menu-item-text"><span class="menu-text">Email Marketing</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-226"><a href='http://commerceacceleration.com/marketing/' data-level='3'><span class="menu-item-text"><span class="menu-text">Analytics</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-227"><a href='http://commerceacceleration.com/marketing/' data-level='3'><span class="menu-item-text"><span class="menu-text">Consulting &#038; Coaching</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-228"><a href='http://commerceacceleration.com/marketing/' data-level='3'><span class="menu-item-text"><span class="menu-text">Conversion Optimization</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-229"><a href='http://commerceacceleration.com/marketing/' data-level='3'><span class="menu-item-text"><span class="menu-text">Social Media</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-207 has-children no-link dt-mega-parent wf-1-5"><a href='http://commerceacceleration.devsitepro.com/creative/' class='not-clickable-item' data-level='2'><span class="menu-item-text"><span class="menu-text">Creative</span></span></a><ul class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-208 first"><a href='http://commerceacceleration.com/creative/' data-level='3'><span class="menu-item-text"><span class="menu-text">Branding</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-212"><a href='http://commerceacceleration.com/creative/' data-level='3'><span class="menu-item-text"><span class="menu-text">Web Design</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-209"><a href='http://commerceacceleration.com/creative/' data-level='3'><span class="menu-item-text"><span class="menu-text">Photography</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-210"><a href='http://commerceacceleration.com/creative/' data-level='3'><span class="menu-item-text"><span class="menu-text">Video</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-213"><a href='http://commerceacceleration.com/creative/' data-level='3'><span class="menu-item-text"><span class="menu-text">Mobile Design</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-230 has-children no-link dt-mega-parent wf-1-5"><a href='http://commerceacceleration.com/technology/' class='not-clickable-item' data-level='2'><span class="menu-item-text"><span class="menu-text">Technology</span></span></a><ul class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-235 first"><a href='http://commerceacceleration.com/technology/' data-level='3'><span class="menu-item-text"><span class="menu-text">Virtual Reality</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-236"><a href='http://commerceacceleration.com/technology/' data-level='3'><span class="menu-item-text"><span class="menu-text">Game Development</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-231"><a href='http://commerceacceleration.com/technology/' data-level='3'><span class="menu-item-text"><span class="menu-text">Hosting &#038; Network Admin</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-232"><a href='http://commerceacceleration.com/technology/' data-level='3'><span class="menu-item-text"><span class="menu-text">Database Support</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-233"><a href='http://commerceacceleration.com/technology/' data-level='3'><span class="menu-item-text"><span class="menu-text">Site Speed Optimization</span></span></a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-234"><a href='http://commerceacceleration.com/technology/' data-level='3'><span class="menu-item-text"><span class="menu-text">Consulting Services</span></span></a></li> </ul></li> </ul></div></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242"><a href='http://commerceacceleration.devsitepro.com/blog/' data-level='1'><span class="menu-item-text"><span class="menu-text">Get Accelerated</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-240"><a href='http://commerceacceleration.devsitepro.com/contact-us/' data-level='1'><span class="menu-item-text"><span class="menu-text">Contact Us</span></span></a></li> 	</ul>
+	<div class='mobile-mini-widgets-in-menu'></div>
+</div>
+	<div id="main-slideshow">
+<div id="rev_slider_2_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+<!-- START REVOLUTION SLIDER 5.3.0.2 fullwidth mode -->
+	<div id="rev_slider_2_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
+<ul>	<!-- SLIDE  -->
+	<li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/revslider/admin/assets/images/dummy.png"  alt="" title="01_Home_Hero_V1"  width="1024" height="510" data-lazyload="http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/uploads/2017/01/01_Home_Hero_V1-1024x510.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption   tp-resizeme" 
+			 id="slide-2-layer-2" 
+			 data-x="['center','center','center','center']" data-hoffset="['-3','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-111','-77','-79','-72']" 
+						data-fontsize="['90','70','55','33']"
+			data-lineheight="['','22','22','22']"
+			data-fontweight="['600','400','400','400']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":0,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5; white-space: nowrap; font-size: 90px; line-height: px; font-weight: 600; color: rgba(255, 255, 255, 1.00);font-family:'GothamBold';">GROWTH <span style="color:#a756a2; font-weight:300">|</span> ACCELERATED </div>
+
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption   tp-resizeme" 
+			 id="slide-2-layer-3" 
+			 data-x="['center','center','center','center']" data-hoffset="['-1','-1','0','-1']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['5','2','-3','-7']" 
+						data-fontsize="['24','25','22','20']"
+			data-lineheight="['24','44','25','25']"
+			data-width="['1000','837','800','500']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":0,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['center','center','center','center']"
+			data-paddingtop="[,0,0,0]"
+			data-paddingright="[,15,15,0]"
+			data-paddingbottom="[,0,0,0]"
+			data-paddingleft="[,15,15,0]"
+
+			style="z-index: 6; min-width: 1000px; max-width: 1000px; white-space: normal; font-size: 24px; line-height: 24px; font-weight: 100; color: rgba(255, 255, 255, 1.00);font-family:'GothamMedium';">We specialize in growing companies through creative, marketing and technology.  </div>
+
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption   tp-resizeme" 
+			 id="slide-2-layer-6" 
+			 data-x="['center','center','center','center']" data-hoffset="['4','0','0','-1']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['48','59','50','52']" 
+						data-fontsize="['24','25','22','20']"
+			data-lineheight="['24','44','25','25']"
+			data-width="['1000','837','800','500']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":0,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['center','center','center','center']"
+			data-paddingtop="[,0,0,0]"
+			data-paddingright="[,15,15,0]"
+			data-paddingbottom="[,0,0,0]"
+			data-paddingleft="[,15,15,0]"
+
+			style="z-index: 7; min-width: 1000px; max-width: 1000px; white-space: normal; font-size: 24px; line-height: 24px; font-weight: 100; color: rgba(255, 255, 255, 1.00);font-family:'GothamMedium';">Request a no cost analysis to grow your business. </div>
+
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption rev-btn " 
+			 id="slide-2-layer-8" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','1','1','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['119','132','129','117']" 
+						data-fontsize="['24','24','20','20']"
+			data-lineheight="['24','24','20','20']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="button" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":0,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","force":true,"to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bg:rgba(167, 86, 162, 0.75);bs:solid;bw:0 0 0 0;"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[12,12,12,12]"
+			data-paddingright="[35,35,35,35]"
+			data-paddingbottom="[12,12,12,12]"
+			data-paddingleft="[35,35,35,35]"
+
+			style="z-index: 8; white-space: nowrap; font-size: 24px; line-height: 24px; font-weight: 500; color: rgba(255, 255, 255, 1.00);font-family:'GothamMedium';background-color:rgba(167, 86, 162, 1.00);border-color:rgba(167, 86, 162, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><a class="call2action-btn" target="_blank" href="http://commerceacceleration.com/contact-us/">GET STARTED</a> </div>
+	</li>
+</ul>
+<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+<script>var htmlDiv = document.getElementById("rs-plugin-settings-inline-css"); var htmlDivCss="";
+				if(htmlDiv) {
+					htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+				}else{
+					var htmlDiv = document.createElement("div");
+					htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+					document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+				}
+			</script>
+		<script type="text/javascript">
+						/******************************************
+				-	PREPARE PLACEHOLDER FOR SLIDER	-
+			******************************************/
+
+			var setREVStartSize=function(){
+				try{var e=new Object,i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
+					e.c = jQuery('#rev_slider_2_1');
+					e.responsiveLevels = [1240,1024,778,480];
+					e.gridwidth = [1240,1024,778,480];
+					e.gridheight = [868,768,960,720];
+							
+					e.sliderLayout = "fullwidth";
+					if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})
+					
+				}catch(d){console.log("Failure at Presize of Slider:"+d)}
+			};
+			
+			setREVStartSize();
+			
+						var tpj=jQuery;
+			
+			var revapi2;
+			tpj(document).ready(function() {
+				if(tpj("#rev_slider_2_1").revolution == undefined){
+					revslider_showDoubleJqueryError("#rev_slider_2_1");
+				}else{
+					revapi2 = tpj("#rev_slider_2_1").show().revolution({
+						sliderType:"standard",
+jsFileLocation:"//commerceacceleration.devsitepro.com/wp-content/plugins/revslider/public/assets/js/",
+						sliderLayout:"fullwidth",
+						dottedOverlay:"none",
+						delay:9000,
+						navigation: {
+							onHoverStop:"off",
+						},
+						responsiveLevels:[1240,1024,778,480],
+						visibilityLevels:[1240,1024,778,480],
+						gridwidth:[1240,1024,778,480],
+						gridheight:[868,768,960,720],
+						lazyType:"smart",
+						shadow:0,
+						spinner:"off",
+						stopLoop:"off",
+						stopAfterLoops:-1,
+						stopAtSlide:-1,
+						shuffle:"off",
+						autoHeight:"off",
+						disableProgressBar:"on",
+						hideThumbsOnMobile:"on",
+						hideSliderAtLimit:0,
+						hideCaptionAtLimit:0,
+						hideAllCaptionAtLilmit:0,
+						debugMode:false,
+						fallbacks: {
+							simplifyAll:"off",
+							nextSlideOnWindowFocus:"off",
+							disableFocusListener:false,
+						}
+					});
+				}
+			});	/*ready*/
+		</script>
+		</div><!-- END REVOLUTION SLIDER --></div>
+	
+	<div id="main" class="sidebar-none"  >
+
+		
+		<div class="main-gradient"></div>
+		<div class="wf-wrap">
+			<div class="wf-container-main">
+
+				
+	
+		
+			<div id="content" class="content" role="main">
+
+			
+					
+					<div class='mailmunch-forms-before-post' style='display: none !important;'></div><div class="vc_row wpb_row vc_row-fluid home-content-main full-width-wrap dt-default" style="padding-left: 0px;padding-right: 0px;margin-top: 0px;margin-bottom: 0px"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element  vc_custom_1481626185205 as-long-above">
+		<div class="wpb_wrapper">
+			<p style="text-align: center; color: #fff; font-size: 28px; padding: 15px 0;">A long way from Madison Avenue</p>
+<div class='mailmunch-forms-in-post-middle' style='display: none !important;'></div>
+
+		</div>
+	</div>
+<link href="http://fonts.googleapis.com/css?family=Merriweather%3A300%2C700" rel="stylesheet" property="stylesheet" type="text/css" media="all" />
+<div id="rev_slider_3_2_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+<!-- START REVOLUTION SLIDER 5.3.0.2 fullwidth mode -->
+	<div id="rev_slider_3_2" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
+<ul>	<!-- SLIDE  -->
+	<li data-index="rs-4" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/revslider/admin/assets/images/transparent.png"  alt="" title="Home Page"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption   tp-resizeme" 
+			 id="slide-4-layer-1" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-205','-205','-180','-148']" 
+						data-fontsize="['97','97','85','50']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":0,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5; white-space: nowrap; font-size: 97px; line-height: px; font-weight: 600; color: rgba(10, 10, 10, 1.00);font-family:'GothamBold';">A NEW<span style="color:#a756a2;"> KIND</span> OF </div>
+
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption   tp-resizeme" 
+			 id="slide-4-layer-2" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['152','153','133','97']" 
+						data-fontsize="['20','20','20','19']"
+			data-lineheight="['38','38','34','27']"
+			data-width="['860','800','700','450']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":0,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['center','center','center','center']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; min-width: 860px; max-width: 860px; white-space: normal; font-size: 20px; line-height: 38px; font-weight: 300; color: rgba(38, 38, 38, 1.00);font-family:Merriweather;">We believe you should run away from Agencies that talk about awards. Digital changes daily, unless the award is for future work, it means nothing. We spend our time executing for our clients instead of filling out awards applications. </div>
+
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption   tp-resizeme" 
+			 id="slide-4-layer-3" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-62','-62','-60','-77']" 
+						data-fontsize="['187','187','159','100']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":0,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; white-space: nowrap; font-size: 187px; line-height: px; font-weight: 600; color: rgba(10, 10, 10, 1.00);font-family:'GothamBold';"><span class="agncy-class-rotat">AGENCY</span> </div>
+
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption   tp-resizeme" 
+			 id="slide-4-layer-4" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['67','67','42','-3']" 
+						data-fontsize="['30','30','30','20']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":0,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','center']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 8; white-space: nowrap; font-size: 30px; line-height: px; font-weight: 700; color: rgba(38, 38, 38, 1.00);font-family:Merriweather;">We are not your 1960’s Advertising Agency. </div>
+	</li>
+</ul>
+<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+<script>var htmlDiv = document.getElementById("rs-plugin-settings-inline-css"); var htmlDivCss="";
+				if(htmlDiv) {
+					htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+				}else{
+					var htmlDiv = document.createElement("div");
+					htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+					document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+				}
+			</script>
+		<script type="text/javascript">
+						/******************************************
+				-	PREPARE PLACEHOLDER FOR SLIDER	-
+			******************************************/
+
+			var setREVStartSize=function(){
+				try{var e=new Object,i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
+					e.c = jQuery('#rev_slider_3_2');
+					e.responsiveLevels = [1240,1024,778,480];
+					e.gridwidth = [1240,1024,778,480];
+					e.gridheight = [600,600,500,400];
+							
+					e.sliderLayout = "fullwidth";
+					if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})
+					
+				}catch(d){console.log("Failure at Presize of Slider:"+d)}
+			};
+			
+			setREVStartSize();
+			
+						var tpj=jQuery;
+			
+			var revapi3;
+			tpj(document).ready(function() {
+				if(tpj("#rev_slider_3_2").revolution == undefined){
+					revslider_showDoubleJqueryError("#rev_slider_3_2");
+				}else{
+					revapi3 = tpj("#rev_slider_3_2").show().revolution({
+						sliderType:"standard",
+jsFileLocation:"//commerceacceleration.devsitepro.com/wp-content/plugins/revslider/public/assets/js/",
+						sliderLayout:"fullwidth",
+						dottedOverlay:"none",
+						delay:9000,
+						navigation: {
+							keyboardNavigation:"off",
+							keyboard_direction: "horizontal",
+							mouseScrollNavigation:"off",
+ 							mouseScrollReverse:"default",
+							onHoverStop:"on",
+							touch:{
+								touchenabled:"on",
+								swipe_threshold: 75,
+								swipe_min_touches: 50,
+								swipe_direction: "horizontal",
+								drag_block_vertical: false
+							}
+						},
+						responsiveLevels:[1240,1024,778,480],
+						visibilityLevels:[1240,1024,778,480],
+						gridwidth:[1240,1024,778,480],
+						gridheight:[600,600,500,400],
+						lazyType:"none",
+						parallax: {
+							type:"mouse",
+							origo:"slidercenter",
+							speed:2000,
+							levels:[2,3,4,5,6,7,12,16,10,50,47,48,49,50,51,55],
+							type:"mouse",
+						},
+						shadow:0,
+						spinner:"off",
+						stopLoop:"on",
+						stopAfterLoops:0,
+						stopAtSlide:1,
+						shuffle:"off",
+						autoHeight:"off",
+						disableProgressBar:"on",
+						hideThumbsOnMobile:"off",
+						hideSliderAtLimit:0,
+						hideCaptionAtLimit:0,
+						hideAllCaptionAtLilmit:0,
+						debugMode:false,
+						fallbacks: {
+							simplifyAll:"off",
+							nextSlideOnWindowFocus:"off",
+							disableFocusListener:false,
+						}
+					});
+				}
+			});	/*ready*/
+		</script>
+		<script>
+					var htmlDivCss = unescape("%40font-face%20%7B%0A%20%20font-family%3A%20%27GothamMedium%27%3B%0A%20%20src%3A%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGothamMedium.eot%27%29%20format%28%27embedded-opentype%27%29%3B%0A%20%20font-weight%3A%20normal%3B%0A%20%20font-style%3A%20normal%3B%0A%7D%0A%40font-face%20%7B%0A%20%20font-family%3A%20%27GothamMedium%27%3B%0A%20%20src%3A%20%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2Fdata%3Aapplication%2Fx-font-woff%27%29%20format%28%27woff%27%29%2C%0A%20%20%20%20%20%20%20%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGothamMedium.ttf%27%29%20%20format%28%27truetype%27%29%2C%0A%20%20%20%20%20%20%20%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGothamMedium.svg%23GothamMedium%27%29%20format%28%27svg%27%29%3B%0A%20%20font-weight%3A%20normal%3B%0A%20%20font-style%3A%20normal%3B%0A%7D%0A%40font-face%20%7B%0A%09font-family%3A%20%27GothamBold%27%3B%0A%09src%3A%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGothamBold.eot%27%29%3B%0A%09src%3A%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGothamBold.eot%3F%23iefix%27%29%20format%28%27embedded-opentype%27%29%2C%0A%09%09url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGothamBold.woff%27%29%20format%28%27woff%27%29%2C%0A%09%09url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGothamBold.ttf%27%29%20format%28%27truetype%27%29%3B%0A%09font-weight%3A%20bold%3B%0A%09font-style%3A%20normal%3B%0A%7D%0A%40font-face%20%7B%0A%20%20font-family%3A%20%27Glyphicons%20Halflings%27%3B%0A%20%20src%3A%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2Fglyphicons-halflings-regular.eot%27%29%3B%0A%20%20src%3A%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2Fglyphicons-halflings-regular.eot%3F%23iefix%27%29%20format%28%27embedded-opentype%27%29%2C%0A%20%20%20%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2Fglyphicons-halflings-regular.woff2%27%29%20format%28%27woff2%27%29%2C%0A%20%20%20%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2Fglyphicons-halflings-regular.woff%27%29%20format%28%27woff%27%29%2C%0A%20%20%20%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2Fglyphicons-halflings-regular.ttf%27%29%20format%28%27truetype%27%29%2C%0A%20%20%20%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2Fglyphicons-halflings-regular.svg%23glyphicons_halflingsregular%27%29%20format%28%27svg%27%29%3B%0A%7D%0A%40font-face%20%7B%0A%09font-family%3A%20%27GothamLight%27%3B%0A%09src%3A%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGothamLight.eot%27%29%3B%0A%09src%3A%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGothamLight.eot%3F%23iefix%27%29%20format%28%27embedded-opentype%27%29%2C%0A%09%09url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGothamLight.woff%27%29%20format%28%27woff%27%29%2C%0A%09%09url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGothamLight.ttf%27%29%20format%28%27truetype%27%29%3B%0A%09font-weight%3A%20300%3B%0A%09font-style%3A%20normal%3B%0A%7D%0A%40font-face%20%7B%0A%09font-family%3A%20%27Gotham-Book%27%3B%0A%09src%3A%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGotham-Book.eot%27%29%3B%0A%09src%3A%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGotham-Book.eot%3F%23iefix%27%29%20format%28%27embedded-opentype%27%29%2C%0A%09%09url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGotham-Book.woff%27%29%20format%28%27woff%27%29%2C%0A%09%09url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGotham-Book.ttf%27%29%20format%28%27truetype%27%29%3B%0A%09font-weight%3A%20500%3B%0A%09font-style%3A%20normal%3B%0A%7D%0A%40font-face%20%7B%0A%09font-family%3A%20%27Gotham-Book%27%3B%0A%09src%3A%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGotham-Book.eot%27%29%3B%0A%09src%3A%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGotham-Book.eot%3F%23iefix%27%29%20format%28%27embedded-opentype%27%29%2C%0A%09%09url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGotham-Book.woff%27%29%20format%28%27woff%27%29%2C%0A%09%09url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2FGotham-Book.ttf%27%29%20format%28%27truetype%27%29%3B%0A%09font-weight%3A%20500%3B%0A%09font-style%3A%20normal%3B%0A%7D%0A%40font-face%20%7B%0A%20%20%20%20font-family%3A%20%27gotham_mediumregular%27%3B%0A%20%20%20%20src%3A%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2Ffonts%2Fgotham_medium_regular-webfont.woff2%27%29%20format%28%27woff2%27%29%2C%0A%20%20%20%20%20%20%20%20%20url%28%27http%3A%2F%2Fcommerceacceleration.com%2Fwp-content%2Fthemes%2Fdt-the7%2Ffonts%2Ffonts%2Fgotham_medium_regular-webfont.woff%27%29%20format%28%27woff%27%29%3B%0A%20%20%20%20font-weight%3A%20normal%3B%0A%20%20%20%20font-style%3A%20normal%3B%0A%7D");
+					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+					if(htmlDiv) {
+						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+					}
+					else{
+						var htmlDiv = document.createElement('div');
+						htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+						document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+					}
+				  </script></div><!-- END REVOLUTION SLIDER --></div></div></div></div><section class="vc_section"></section><section class="vc_section"></section>
+<span class="cp-load-after-post"></span></p><div class='mailmunch-forms-after-post' style='display: none !important;'></div>
+					
+					
+					
+				
+			
+			</div><!-- #content -->
+
+			
+		
+
+			</div><!-- .wf-container -->
+		</div><!-- .wf-wrap -->
+	</div><!-- #main -->
+
+	
+	<!-- !Footer -->
+	<footer id="footer" class="footer solid-bg">
+
+		
+<!-- !Bottom-bar -->
+<div id="bottom-bar"  role="contentinfo">
+	<div class="wf-wrap">
+		<div class="wf-container-bottom">
+			<div class="wf-table wf-mobile-collapsed">
+
+				<div id="branding-bottom" class="wf-td"><a href="http://commerceacceleration.devsitepro.com/"><img class=" preload-me" src="http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/uploads/2016/12/Accelerate-white-s-e1481669772629.png" srcset="http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/uploads/2016/12/Accelerate-white-s-e1481669772629.png 150w, http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/uploads/2016/12/Accelerate-white-s-e1481669772629.png 150w" width="150" height="32"   sizes="150px" alt="Accelerate" /></a></div>
+					<div class="wf-td">
+						<div class="wf-float-left">
+
+							© 2016 All Rights Reserved | Accelerate Agency
+						</div>
+					</div>
+
+				
+				<div class="wf-td">
+
+					
+				</div>
+
+				
+			</div>
+		</div><!-- .wf-container-bottom -->
+	</div><!-- .wf-wrap -->
+</div><!-- #bottom-bar -->
+	</footer><!-- #footer -->
+
+
+
+	<a href="#" class="scroll-top"></a>
+
+</div><!-- #page -->
+<a href="tel:8584308323" id="callnowbutton" >&nbsp;</a>	            <script type="text/javascript" id="modal">
+				jQuery(window).on( 'load', function(){
+					startclock();
+				});
+				function stopclock (){
+				  if(timerRunning) clearTimeout(timerID);
+				  timerRunning = false;
+				  document.cookie="time=0";
+				}
+				function showtime () {
+				  var now = new Date();
+				  var my = now.getTime() ;
+				  now = new Date(my-diffms) ;
+				  document.cookie="time="+now.toLocaleString();
+				  timerID = setTimeout('showtime()',10000);
+				  timerRunning = true;
+				}
+				function startclock () {
+				  stopclock();
+				  showtime();
+				}
+				var timerID = null;
+				var timerRunning = false;
+				var x = new Date() ;
+				var now = x.getTime() ;
+				var gmt = 1488603153 * 1000 ;
+				var diffms = (now - gmt) ;
+				</script>
+	            	            <script type="text/javascript" id="info-bar">
+				jQuery(window).on( 'load', function(){
+					startclock();
+				});
+				function stopclock (){
+				  if(timerRunning) clearTimeout(timerID);
+				  timerRunning = false;
+				  document.cookie="time=0";
+				}
+				function showtime () {
+				  var now = new Date();
+				  var my = now.getTime() ;
+				  now = new Date(my-diffms) ;
+				  document.cookie="time="+now.toLocaleString();
+				  timerID = setTimeout('showtime()',10000);
+				  timerRunning = true;
+				}
+				function startclock () {
+				  stopclock();
+				  showtime();
+				}
+				var timerID = null;
+				var timerRunning = false;
+				var x = new Date() ;
+				var now = x.getTime() ;
+				var gmt = 1488603153 * 1000 ;
+				var diffms = (now - gmt) ;
+				</script>
+	            	            <script type="text/javascript" id="slidein">
+				jQuery(window).on( 'load', function(){
+					startclock();
+				});
+				function stopclock (){
+				  if(timerRunning) clearTimeout(timerID);
+				  timerRunning = false;
+				  document.cookie="time=0";
+				}
+
+				function showtime () {
+				  var now = new Date();
+				  var my = now.getTime() ;
+				  now = new Date(my-diffms) ;
+				  document.cookie="time="+now.toLocaleString();
+				  timerID = setTimeout('showtime()',10000);
+				  timerRunning = true;
+				}
+
+				function startclock () {
+				  stopclock();
+				  showtime();
+				}
+				var timerID = null;
+				var timerRunning = false;
+				var x = new Date() ;
+				var now = x.getTime() ;
+				var gmt = 1488603153 * 1000 ;
+				var diffms = (now - gmt) ;
+				</script>
+	            <div id="su-footer-links" style="text-align: center;"></div>		<script type="text/javascript">
+			function revslider_showDoubleJqueryError(sliderID) {
+				var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+				errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+				errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+				errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+				errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+					jQuery(sliderID).show().html(errorMessage);
+			}
+		</script>
+				<script type="text/javascript">
+			function revslider_showDoubleJqueryError(sliderID) {
+				var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+				errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+				errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+				errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+				errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+					jQuery(sliderID).show().html(errorMessage);
+			}
+		</script>
+		<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/themes/dt-the7/js/main.min.js?ver=4.2.0'></script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/cta/shared//shortcodes/js/spin.min.js'></script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/go_pricing/assets/js/go_pricing_scripts.js?ver=3.3.3'></script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=2.6.14'></script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","fragment_name":"wc_fragments"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=2.6.14'></script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/themes/dt-the7/js/post-type.js?ver=4.2.0'></script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-includes/js/wp-embed.min.js?ver=4.7.2'></script>
+<script type='text/javascript' src='http://d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.0.1'></script>
+</body>
+</html>
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Object Caching 5708/6091 objects using disk
+Page Caching using disk: enhanced
+Content Delivery Network via d31411cf81b8e0cad3b7111f.commerceaccelera.netdna-cdn.com
+
+ Served from: commerceacceleration.devsitepro.com @ 2017-03-04 04:52:33 by W3 Total Cache -->

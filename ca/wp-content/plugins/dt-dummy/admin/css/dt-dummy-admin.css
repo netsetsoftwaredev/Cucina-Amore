@@ -1,0 +1,123 @@
+.dt-alertify-response {
+	max-height: 200px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	text-align: left;
+}
+
+.dt-dummy-content {
+	background: #fff;
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+}
+
+.dt-dummy-content > h3 {
+	font-size: 18px;
+	font-weight: normal;
+	cursor: default;
+	background-color: #F9F9F9;
+	padding: 10px 15px;
+}
+
+.dt-dummy-import-item {
+	overflow: hidden;
+	padding: 0 18px 18px 18px;
+}
+
+.dt-dummy-screenshot {
+	width: 215px;
+	float: left;
+}
+
+.dt-dummy-screenshot a {
+	display: block;
+}
+
+.dt-dummy-screenshot img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.dt-dummy-controls {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-left: 251px;
+}
+
+.dt-dummy-controls-block {
+	padding-bottom: 1.33em;
+}
+
+.dt-dummy-controls-block:last-child {
+	padding-bottom: 0;
+}
+
+.dt-dummy-controls-block p:first-child {
+	margin-top: 0;
+}
+
+.dt-dummy-controls-block label,
+.dt-dummy-controls-block .dt-dummy-checkbox-desc
+{
+	padding: 0px 10px 10px 0px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.dt-dummy-controls-block h4 {
+	margin-top: 0em;
+}
+
+.dt-dummy-controls-block.dt-dummy-info-content {
+	padding: 0px;
+}
+
+.dt-dummy-button-wrap {
+	display: inline-block;
+}
+
+.dt-dummy-button-wrap .spinner {
+	margin-top: 4px;
+}
+
+.dt-dummy-button-wrap .button-primary.button--importing,
+.dt-dummy-button-wrap .button-primary.button--importing:hover
+{
+	cursor: default;
+}
+
+.dt-dummy-alertify-loading .alertify-buttons{
+	display: none;
+}
+
+.dt-dummy-alertify-loading .dt-dummy-spinner {
+	display: block;
+	height: 32px;
+	background: url(../images/spinner.gif) no-repeat;
+	background-position: center center;
+	opacity: 0.7;
+}
+
+/* PHP status table */
+table.dt-dummy-php-status h2 {
+	font-size: 14px;
+	margin: 0
+}
+
+table.dt-dummy-php-status tr:nth-child(2n) td {
+	background: #fcfcfc
+}
+
+table.dt-dummy-php-status td mark {
+	background: 0 0;
+}
+
+table.dt-dummy-php-status td mark.yes {
+	color: #7ad03a;
+}
+
+table.dt-dummy-php-status td mark.error {
+	color: #a00;
+}
