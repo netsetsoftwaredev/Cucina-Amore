@@ -1,0 +1,1 @@
+/var/www/html/app/design/frontend/Smartwave/porto/web/fancybox/js/jquery.fancybox.js

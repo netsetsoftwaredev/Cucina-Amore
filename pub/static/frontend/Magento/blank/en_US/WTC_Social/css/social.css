@@ -1,0 +1,853 @@
+.social_bannerarea
+{
+    /*background: url(../images/banner_3.jpg) top center no-repeat;
+    background-size: 100%;
+    background-size: cover;*/
+    height:665px;
+    overflow: hidden;
+}
+.instagram_images ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.instagram_images ul li {
+    float: left;
+    width: 20%;
+    padding: 2px;
+    margin: 0;
+    max-height: 324px;
+    overflow: hidden;
+}
+.instagram_images ul li img {
+    width: 100%;
+    height: auto !important;
+}
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+.career_banner
+{
+    height: 530px;
+}
+.work_culturebg
+{
+    height: 450px;
+}
+.career_banner .container
+{
+    height: 100%;
+}
+ .career-page .page-main {
+    max-width: 100%;
+    padding: 0;
+}
+ .career-page .bushead {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 15px;
+    text-align:center;
+}    
+ .career-page .business.social_bannerarea .container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;   
+    padding: 0;
+    background:rgba(12,12,12,0.7);
+}
+.career-page .bushead h1{text-align:center;font-size: 46px;font-family: 'gotham_mediumregular';text-transform: uppercase;}
+.career-page .business.social_bannerarea .bushead p {
+   font-family: 'GothamBook';
+    color: #fff;
+    font-size: 18px;
+    line-height: 36px;
+    margin: 40px 0;
+}
+.career-page .business.social_bannerarea .bushead a, .friends_cucinabox .border_btn {
+    border: 2px solid #fff;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 20px;
+    padding: 13px 32px;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'gotham_mediumregular';
+}
+.career-page .business.social_bannerarea .bushead a:hover {
+    background: #fff;
+    color:#bb9469;
+}
+.passionate{text-align:center;padding: 90px 0;}
+.work-culture{padding-top: 75px;
+padding-bottom: 75px;}
+
+.category_heading{text-transform: uppercase;padding-bottom: 0;font-size: 34px;}
+.job-content{background:#fff;padding:10px 35px;margin-top: 50px;}
+#job_list {
+    margin: 0;
+    padding: 0 40px 0 0;
+}
+.job-list li{margin-bottom:55px;list-style:none;}
+.job-list li:last-child{margin-bottom:0px;}
+.job-list li h4 {
+    background: #fff none repeat scroll 0 0;
+    
+    font-size: 26px;
+    font-family: 'gotham_mediumregular';
+    margin-bottom: 3px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-top: 25px;
+}
+.career-page .thank_ful{margin-top: 35px;margin-bottom: 80px;font-size: 19px;}
+.career-page p.location {
+    border-top: 2px solid #f5f4f0;
+        font-size: 20px;
+        color: #000;
+        padding-bottom: 10px;
+        padding-top: 40px;
+        margin: 0 -35px 0 -35px;
+        padding-left: 35px;
+        padding-right: 35px;
+}
+.description h4 {
+    font-size: 18px;
+    line-height: 36px;
+    color: #555555;
+}
+.headoffice h2{padding-bottom:30px;margin-bottom: 40px;}
+.work-culture .family-div{margin-top: 20px;}
+.career-page .headoffice{background:#f5f4f0 none repeat scroll 0 0;padding-bottom: 60px;}
+.bfooter{margin-top:60px;}
+.job-list-section{margin-top:30px;}
+.job-list .info a {
+    background: #bb9469 none repeat scroll 0 0;
+    border-radius: 6px;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'gotham_mediumregular';
+    text-shadow: none;
+    padding: 14px 32px;
+    border: none;
+    box-shadow: none;
+    display: inline-block;
+    min-width: 300px;
+}
+.job-list .info .location{ padding-left: 20px;position: relative;top: 7px;}
+.job-list .info {
+    background: #fff none repeat scroll 0 0;
+    font-size: 22px;
+    padding: 15px 16px 15px 5px;
+    min-height: 87px;
+}
+
+.career-page .breadcrumbs {
+    background: transparent none repeat scroll 0 0;
+    padding: 0;
+    position: absolute;
+    top: 160px;
+    z-index: 1;
+}
+.career-page .breadcrumbs .items li {
+    font-size: 18px;
+}
+.career-page .breadcrumbs .items li strong
+{
+    font-family: 'gotham_boldregular';
+}
+.passionate_bg
+{
+    height:430px;
+}
+.passionate h4
+{
+    font-size: 34px;
+    line-height: 50px;
+}
+.passionate p {
+    font-size: 20px;
+    line-height: 34px;
+    margin: 30px auto 0;
+    width: 77%;
+}
+.business > img > img {
+    padding: 42px 0;
+    position: relative;
+}
+.small {
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 30px;
+}
+.work-culture h3 {
+    font-size: 32px;
+    line-height: 48px;
+}
+.headoffice h2 
+{
+    font-family: 'gotham_mediumregular';
+    padding-bottom: 30px;
+    padding-top: 60px;
+    font-size: 34px;
+    line-height: 50px;
+}
+.headoffice h2 sup {
+    vertical-align: top;
+    line-height: 44px;
+    font-size: 34px;
+}
+.job-content > h4 {
+    font-size: 26px;
+    font-family: 'gotham_mediumregular';
+    padding: 20px 0 26px;
+}
+.description > p {
+    color: #555;
+    font-size: 18px;
+    line-height: 36px;
+}
+.description li {
+    font-size: 18px;
+    line-height: 36px;
+     color: #555;
+     margin:0;
+}
+.description h4 {
+    color: #555;
+}
+.description > ul {
+    margin-top: 45px;
+}
+.business.bfooter p {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 0;
+}
+.business.bfooter {
+    background: #fff none repeat scroll 0 0;
+    padding: 120px 0;
+    margin: 0;
+}
+.business.bfooter p a {
+    color: #222ecb;
+    text-decoration: underline;
+}
+.contact-us {
+    font-size: 20px;
+    padding-bottom: 70px;
+    padding-top: 25px;
+}
+.career-page select {
+    -moz-appearance: none; 
+    background: transparent url("../images/career_dropdown.png") no-repeat scroll 100% 48% / 30px 60px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    text-indent: 0.01em;
+    text-overflow: "";
+    background-size: 54px;
+    height: 54px;
+    max-width: 410px;
+    font-size: 18px;
+    padding: 12px 60px 12px 15px;
+}  
+#job_category option {
+    font-size: 14px;
+    padding: 3px;
+}
+.career-page .columns .column.main{padding: 0px !important;}
+.career-page .footer-top {
+    padding: 0;
+}
+._keyfocus :focus, input:focus:not([disabled]), textarea:focus:not([disabled]), select:focus:not([disabled]) {
+    box-shadow: 0 0 3px 1px #bb9469;
+}
+.contact-us > a {
+    color: #000;
+    font-family: 'gotham_mediumregular';
+    text-decoration: underline !important;
+}
+.col-md-12 > .col-md-12 {
+    padding: 0;
+}
+.career-page .breadcrumbs .items li.Home a
+{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -100px;
+    padding: 0;
+    vertical-align: middle;
+    position: relative;
+}
+.career-page .breadcrumbs .items li.Home a::after
+{
+    content: "";
+    background: transparent url("../images/home_icon.png") no-repeat center center;
+    position: absolute;
+    left: 0;
+    top: -4px;
+    color: #fff;
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    text-indent: 1px;
+    text-align: center;
+    background-size: 20px;
+}
+.healthy
+{
+    background: #f5f4f0;
+    padding-top: 120px;
+}
+.healthy .container
+{
+    padding: 0 30px;
+}
+.healthy .container .hc1, .healthy .container .hc2
+{
+    padding: 0;
+}
+
+.hc1 h3{font-size: 30px; font-family: 'GothamBook';}
+.hc1 p {
+    font-family: 'GothamBook';
+    color: #000;
+    font-size: 18px;
+    line-height: 36px;
+    margin: 50px 0 70px;
+    max-width: 88%;
+}
+.hc1 a.submit-button {
+    border:none;
+    border-radius: 6px;
+    color: #fff;
+    background:#bb9469;
+    font-size: 18px;
+    padding: 13px 41px;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'gotham_mediumregular';
+    text-shadow:none;
+}
+.hc1 a.submit-button:hover {
+    background: #846746;
+    color:#fff;
+}
+.inner_whitebox {
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    padding: 90px 35px 35px 35px;
+    border-radius: 2px;
+    min-height: 550px;
+}
+.iglogo
+{
+    padding: 0 25px;
+}
+.iglogo img
+{
+    height: 55px;
+    margin-right: 10px;
+}
+.iglogo a {
+    color: #1da1f2;
+    font-size: 18px;
+    font-family: 'gotham_boldregular';
+}
+.iglogo a:hover {
+    text-decoration: underline !important;
+}
+.latest_videos, .whats-cooking
+{
+    background: #f5f4f0;
+    padding-top: 90px;
+}
+.latest_videos h1, .get_knowbox h1
+{
+    font-size: 30px; font-family: 'GothamBook';
+}
+.what-you-eat .hc1 .inner_whitebox
+{
+    padding-top: 60px;
+}
+.what-you-eat .hc1 p
+{
+    font-family: 'GothamBook';
+    margin: 20px 0;
+}
+.box4
+{
+    float: left;
+    width: 25%;
+    height: 400px;
+    overflow: hidden;
+    background: #000;
+}
+.cooking_imagebox img
+{
+    width: 100%;
+    min-height: 400px;
+    min-width: 400px;
+}
+.social-share h1
+{
+    font-size: 54px;
+    color: #fff;
+    font-family: 'gotham_boldregular';
+    text-align: left;
+    display: inline-block;
+    max-width: 280px;
+    line-height: 68px;
+}
+.social-share
+{
+    padding: 40px;
+}
+.social_share a {
+    display: inline-block;
+    margin: 0 12px;
+}
+.twitter-feed
+{
+    padding: 35px 35px 125px 35px;
+    background: #fff;
+    position: relative;
+}
+.twitter-feed .foot_text
+{
+    font-size: 18px;
+    line-height: 30px;
+}
+.twitter-feed .foot_text a
+{
+    color: #4883a4 !important;
+    font-family: 'gotham_boldregular';
+    display: block;
+    margin-top: 15px;
+}  
+.twitter-feed .foot_text a:hover
+{
+    text-decoration: underline !important;
+}
+.twitter-feed img
+{
+    height: 62px;
+    margin-bottom: 20px;
+}
+.vide_outer
+{
+    position: relative;
+}
+.play_icon
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+.twitter-feed img.small_logo
+{
+    height: auto;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    margin: 0;
+}
+.what-you-eat
+{
+    padding-bottom: 90px;
+}
+.right-padding
+{
+    padding-right: 0;
+}
+.latest_videos .no-padding
+{
+    padding: 5px;
+}
+.vide_outer + .vide_outer {
+    margin-top: 7px;
+}
+.left_videos .vide_outer > img
+{
+    max-height: 248px;
+    width: 100%;
+}
+.cooking_imagebox img
+{
+    transform:scale(1);
+    -moz-transform:scale(1);
+    -webkit-transform:scale(1);
+    -ms-transform:scale(1);
+    -o-transform:scale(1);
+    transition:0.3s ease-in all;
+    -moz-transition:0.3s ease-in all;
+    -webkit-transition:0.3s ease-in all;
+    -ms-transition:0.3s ease-in all;
+    -o-transition:0.3s ease-in all;
+}
+.cooking_imagebox:hover img
+{
+    transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    -ms-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    opacity: 0.8;
+    transition:0.3s ease-in all;
+    -moz-transition:0.3s ease-in all;
+    -webkit-transition:0.3s ease-in all;
+    -ms-transition:0.3s ease-in all;
+    -o-transition:0.3s ease-in all;
+}
+.get_knowbox
+{
+    background: url(../images/get_know_bg-min.png) bottom center no-repeat #f5f4f0;
+    background-size: 100%;
+    padding-bottom: 110px;
+}
+.get_knowbox h1
+{
+    text-transform: uppercase;
+}
+.outer_getknowbox
+{
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.outer_getknowbox .vide_outer
+{
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.outer_getknowbox .vide_outer > img
+{
+    width: 100%;
+}
+.outer_getknowbox h3
+{
+    font-size: 30px;
+    text-align: center;
+    margin: 40px 15px;
+	font-family: 'GothamBook';
+}
+.outer_getknowbox .fb-comments
+{
+    display: block;
+    padding: 15px;
+    min-height: 330px;
+}
+.friends_cucinabox
+{
+    background: url(../images/wooden.jpg) top center no-repeat #c49a6c;
+    background-size: 100%;
+    background-size: cover;
+    padding: 80px 0 100px;
+    text-align: center;
+}
+.friends_cucinabox h1
+{
+    font-family: 'GothamBook';
+    font-size: 30px;
+    color:#fff;
+}
+.friends_cucinabox p
+{
+    font-family: 'GothamBook';
+    font-size: 18px;
+    color:#fff;
+    line-height: 32px;
+    margin: 0 0 40px;
+}
+.friends_cucinabox .border_btn
+{
+    background: none;
+    padding: 13px 50px;
+}
+.friends_cucinabox .container img
+{
+    position: absolute;
+    top: -130px;
+    right: -110px;
+}
+.friends_cucinabox .container {
+    position: relative;
+    padding: 0 275px;
+}
+.outer_getknowbox .fb-comments > span, .outer_getknowbox .fb-comments > span iframe
+{
+    width: 100% !important;
+}
+.friends_cucinabox p i
+{
+    margin-right: 5px;
+}
+button.close
+{
+    color: #fff !important;
+    opacity: 1;
+    text-shadow: none;
+    font-size: 50px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+.iglogo.social a {
+    color: #0054a6;
+}
+
+@media screen and (max-width: 1420px)
+{
+    .social-share
+    {
+        padding: 40px 25px;
+    }
+    .social-share h1
+    {
+        font-size: 44px;
+        line-height: 55px;
+    }
+    .social_share a
+    {
+       margin: 0 8px 0 -5px;
+    }
+    .friends_cucinabox .container img
+    {
+        right: 0;
+        height: 260px;
+    }
+     .instagram_images ul li
+    {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 1200px)
+{
+    .instagram_images ul li
+    {
+        width: 33.333%;
+    }
+    .friends_cucinabox .container img
+    {
+        position: inherit;
+        top: 0;
+    }
+    .friends_cucinabox .container
+    {
+        padding: 0 15px;
+    }
+    .career-page .columns
+    {
+        padding: 0 !important;
+    }
+    .hc1 h3
+    {
+        font-size: 32px;
+    }
+    .hc1 p
+    {
+        font-size: 18px;
+        line-height: 29px;
+        margin: 30px 0;
+        max-width: 100%;
+    }
+    .inner_whitebox
+    {
+         padding: 60px 35px 35px 35px;
+         min-height: 485px;
+    }
+    .box4
+    {
+        width: 50%;
+    }
+}
+ 
+@media screen and (max-width: 992px)
+{
+    .left_videos .vide_outer
+    {
+        float: left;
+        width: 50%;
+        margin: 0;
+    }
+     .left_videos:after
+    {
+        clear: both;
+        content: "";
+        display: block;
+    }
+    .vide_outer > img
+    {
+        width: 100%;
+    }
+    .career-page .breadcrumbs
+    {
+        top: 115px;
+    }
+    .bushead > h1
+    {
+        font-size: 32px;
+    }
+    .career-page .business.social_bannerarea .bushead p
+    {
+        font-size: 16px;
+    }
+    .career-page .business.social_bannerarea .bushead p br
+    {
+        display: none;
+    }
+    .career-page .bushead a
+    {
+        font-size:16px;
+    }
+    .social_bannerarea
+    {
+        height: 440px;
+    }
+    .inner_whitebox
+    {
+        padding: 35px;
+        min-height: inherit;
+    }
+    .healthy, .latest_videos, .whats-cooking
+    {
+        padding-top: 60px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+     .instagram_images ul li
+    {
+        width: 50%;
+    }
+    .modal-body iframe
+    {
+        width: 100%;
+        margin-top: 18px;
+    }
+    .passionate p
+    {
+        width: 100%;
+    }
+    .friends_cucinabox .border_btn 
+    {
+        padding: 13px 20px;
+        font-size: 18px;
+    }
+    .friends_cucinabox p br
+    {
+        display: none;
+    }
+    .box4
+    {
+        width: 100%;
+    }
+    .career-page .business .social-share img
+    {
+        height: auto;
+        width: auto;
+        margin-top:20px;
+    }
+.headoffice h2 {
+    font-size: 24px;
+    line-height: 40px;
+}
+.work-culture h3 {
+    font-size: 20px;
+     line-height: 30px;
+}
+.job-list .info a 
+{
+    font-size: 16px;
+    min-width: inherit;
+    width: 100%;
+    margin-top: 20px;
+    float: none !important;
+}
+.career_banner {
+    height: 400px;
+}
+.career-page .bushead h1
+{
+    font-size: 26px;
+}
+.passionate h4
+{
+    font-size: 22px;
+    line-height: 36px;
+}
+.passionate p, .small, .description h4, .description > p, .description li, .contact-us {
+    font-size: 16px;
+    line-height: 26px;
+}
+.category_heading
+{
+    font-size: 24px;
+}
+.job-list-section .col-md-5, .job-list-section .col-md-7, #job_list
+{
+    padding: 0;
+}
+.job-content
+{
+    padding: 10px 15px;
+}
+}
+@media screen and (max-width:600px)
+{
+    .inner_whitebox
+    {
+        padding: 25px 10px;
+    }
+    .play_icon img
+    {
+        height: 60px;
+    }
+    .left_videos .vide_outer 
+    {
+        width: 100%;
+        margin: 10px 0 0px 0;
+    }
+	.box4{height: 270px;}
+}
+@media screen and (max-width: 480px){
+    .career-page .business img {
+    height: 180px;
+    width: 100%;
+}
+    .career-page .bushead a {
+    font-size: 14px;
+    top: 30px;
+}
+.job-list .info
+{
+      padding: 5px 5px 20px 5px;
+}
+.business.bfooter p {
+    font-size: 16px;
+    line-height: 30px;
+}
+.job-list.col-md-6 > ul {
+    padding: 0;
+}
+.job-list li h4{font-size: 17px;}
+.job-list .info {
+    font-size: 16px;
+}
+.business.bfooter{padding: 50px;}
+.career-page select {
+    font-size: 14px;
+}
+} 

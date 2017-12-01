@@ -1,0 +1,39 @@
+
+.page-main {
+    max-width: 100%;
+    padding: 0;
+}
+.business .container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;   
+    padding: 0;  
+}
+.bushead {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 15px;
+	text-align:center;
+}    
+.bushead h1{text-align:center;}
+.bushead a{border: 1px solid #fff;color: #fff;font-size: 18px;margin-top: 22px;padding: 5px 30px;position: relative;text-align: center;top: 30px;}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+.catUl{
+	display:inline;
+	list-style-type:none; 
+	width: 100%;
+	padding-left: 30px;
+}
+.catUl li {
+    display: inline-block;
+    float: left;
+    width: 250px;
+}
+

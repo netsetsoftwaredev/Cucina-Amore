@@ -1,0 +1,348 @@
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+.career_banner
+{
+    height: 530px;
+}
+.work_culturebg
+{
+    height: 450px;
+}
+.career_banner .container
+{
+    height: 100%;
+}
+ .career-page .page-main {
+    max-width: 100%;
+    padding: 0;
+}
+ .career-page .bushead {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 15px;
+	text-align:center;
+}    
+.career-page .bushead h1{text-align:center;font-size: 46px;font-family: 'gotham_mediumregular';margin-top: 30px;}
+.career-page .bushead a {
+    border: 2px solid #fff;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 50px;
+    padding: 13px 32px;
+    display: inline-block;
+    text-align: center;
+	text-transform: uppercase;
+	font-family: 'gotham_mediumregular';
+}
+.career-page .bushead a:hover {
+    background: #fff;
+    color:#bb9469;
+}
+.passionate{text-align:center;padding: 90px 0;}
+.work-culture{padding-top: 75px;
+padding-bottom: 75px;}
+
+.category_heading{text-transform: uppercase;padding-bottom: 0;font-size: 30px;}
+.job-content{background:#fff;padding:10px 35px;margin-top: 50px;}
+#job_list {
+    margin: 0;
+    padding: 0 40px 0 0;
+}
+.job-list li{margin-bottom:55px;list-style:none;}
+.job-list li:last-child{margin-bottom:0px;}
+.job-list li h4 {
+    background: #fff none repeat scroll 0 0;
+    
+    font-size: 30px;
+    font-family: 'gotham_mediumregular';
+    margin-bottom: 3px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-top: 25px;
+}
+.career-page .thank_ful{margin-top: 35px;margin-bottom: 80px;font-size: 18px;}
+.career-page p.location {
+    border-top: 2px solid #f5f4f0;
+        font-size: 20px;
+        color: #000;
+        padding-bottom: 10px;
+        padding-top: 40px;
+        margin: 0 -35px 0 -35px;
+        padding-left: 35px;
+        padding-right: 35px;
+}
+.description h4 {
+    font-size: 18px;
+    line-height: 36px;
+    color: #555555;
+}
+.headoffice h2{padding-bottom:30px;margin-bottom: 40px;}
+.work-culture .family-div{margin-top: 20px;}
+.career-page .headoffice{background:#f5f4f0 none repeat scroll 0 0;padding-bottom: 60px;}
+.bfooter{margin-top:60px;}
+.job-list-section{margin-top:30px;}
+.job-list .info a {
+    background: #bb9469 none repeat scroll 0 0;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'gotham_mediumregular';
+    text-shadow: none;
+    padding: 14px 32px;
+    border: none;
+    box-shadow: none;
+    display: inline-block;
+    min-width: 300px;
+}
+.job-list .info .location{ padding-left: 20px;position: relative;top: 7px;}
+.job-list .info {
+    background: #fff none repeat scroll 0 0;
+    font-size: 18px;
+    padding: 15px 16px 15px 5px;
+    min-height: 87px;
+}
+
+.career-page .breadcrumbs {
+    background: transparent none repeat scroll 0 0;
+    padding: 0;
+    position: absolute;
+    top: 160px;
+    z-index: 1;
+}
+.career-page .breadcrumbs .items li {
+    font-size: 18px;
+}
+.passionate_bg
+{
+    height:430px;
+}
+.passionate h4
+{
+    font-size: 30px;
+    line-height: 50px;
+}
+.passionate p {
+    font-size: 18px;
+    line-height: 34px;
+    margin: 30px auto 0;
+    width: 77%;
+}
+.business > img > img {
+    padding: 42px 0;
+    position: relative;
+}
+.small {
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 30px;
+}
+.work-culture h3 {
+    font-size: 30px;
+    line-height: 48px;
+}
+.headoffice h2 
+{
+    font-family: 'gotham_mediumregular';
+    padding-bottom: 30px;
+    padding-top: 60px;
+    font-size: 30px;
+    line-height: 50px;
+}
+.headoffice h2 sup {
+    vertical-align: top;
+    line-height: 44px;
+    font-size: 34px;
+}
+.job-content > h4 {
+    font-size: 26px;
+    font-family: 'gotham_mediumregular';
+    padding: 20px 0 26px;
+}
+.description > p {
+    color: #555;
+    font-size: 18px;
+    line-height: 36px;
+}
+.description li {
+    font-size: 18px;
+    line-height: 36px;
+	 color: #555;
+     margin:0;
+}
+.description h4 {
+    color: #555;
+}
+.description > ul {
+    margin-top: 45px;
+}
+.business.bfooter p {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0;
+}
+.business.bfooter {
+    background: #fff none repeat scroll 0 0;
+    padding: 120px 0;
+    margin: 0;
+}
+.business.bfooter p a {
+    color: #222ecb;
+    text-decoration: underline;
+}
+.contact-us {
+    font-size: 20px;
+    padding-bottom: 70px;
+    padding-top: 25px;
+}
+.career-page select {
+    -moz-appearance: none; 
+    background: transparent url("../images/career_dropdown.png") no-repeat scroll 100% 48% / 30px 60px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    text-indent: 0.01em;
+    text-overflow: "";
+    background-size: 54px;
+    height: 54px;
+    max-width: 410px;
+    font-size: 18px;
+    padding: 12px 60px 12px 15px;
+} 
+#job_category option {
+    font-size: 14px;
+    padding: 3px;
+}
+.career-page .columns .column.main{padding: 0px !important;}
+.career-page .footer-top {
+    padding: 0;
+}
+._keyfocus :focus, input:focus:not([disabled]), textarea:focus:not([disabled]), select:focus:not([disabled]) {
+    box-shadow: 0 0 3px 1px #bb9469;
+}
+.contact-us > a {
+    color: #000;
+    font-family: 'gotham_mediumregular';
+    text-decoration: underline;
+}
+.col-md-12 > .col-md-12 {
+    padding: 0;
+}
+.career-page .breadcrumbs .items li.Home a
+{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -100px;
+    padding: 0;
+    vertical-align: middle;
+    position: relative;
+}
+.career-page .breadcrumbs .items li.Home a::after
+{
+    content: "";
+    background: transparent url("../images/home_icon.png") no-repeat center center;
+    position: absolute;
+    left: 0;
+    top: -4px;
+    color: #fff;
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    text-indent: 1px;
+    text-align: center;
+    background-size: 20px;
+}
+
+
+@media screen and (max-width: 1200px){.career-page .columns {
+    padding: 0 !important;
+}}
+ 
+@media screen and (max-width: 992px){
+.bushead > h1 {
+ font-size: 32px;
+}
+.career-page .bushead a{font-size:16px; top: 45px;}
+}
+@media screen and (max-width: 768px){
+	.passionate p {
+    width: 100%;
+}
+.headoffice h2 {
+    font-size: 24px;
+    line-height: 40px;
+}
+.work-culture h3 {
+    font-size: 20px;
+	 line-height: 30px;
+}
+.job-list .info a 
+{
+    font-size: 16px;
+    min-width: inherit;
+    width: 100%;
+    margin-top: 20px;
+    float: none !important;
+}
+.career_banner {
+    height: 400px;
+}
+.career-page .bushead h1
+{
+    font-size: 26px;
+}
+.passionate h4
+{
+    font-size: 22px;
+    line-height: 36px;
+}
+.passionate p, .small, .description h4, .description > p, .description li, .contact-us {
+    font-size: 16px;
+    line-height: 26px;
+}
+.category_heading
+{
+    font-size: 24px;
+}
+.job-list-section .col-md-5, .job-list-section .col-md-7, #job_list
+{
+    padding: 0;
+}
+.job-content
+{
+    padding: 10px 15px;
+}
+}
+@media screen and (max-width: 480px){
+	.career-page .business img {
+    height: 180px;
+    width: 100%;
+}
+	.career-page .bushead a {
+    font-size: 14px;
+    top: 30px;
+}
+.job-list .info
+{
+      padding: 5px 5px 20px 5px;
+}
+.business.bfooter p {
+    font-size: 16px;
+    line-height: 30px;
+}
+.job-list.col-md-6 > ul {
+    padding: 0;
+}
+.job-list li h4{font-size: 17px;}
+.job-list .info {
+    font-size: 16px;
+}
+.business.bfooter{padding: 50px;}
+.career-page select {
+    font-size: 14px;
+}
+} 

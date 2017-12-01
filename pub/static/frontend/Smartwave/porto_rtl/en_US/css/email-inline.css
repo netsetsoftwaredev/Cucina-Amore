@@ -1,0 +1,611 @@
+@import url("{{base_url_path}}frontend/Smartwave/porto_rtl/{{locale}}/css/email-fonts.css");
+body {
+  margin: 0;
+  padding: 0;
+}
+img {
+  border: 0;
+  height: auto;
+  line-height: 100%;
+  outline: none;
+  text-decoration: none;
+}
+table {
+  border-collapse: collapse;
+}
+table td {
+  vertical-align: top;
+}
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size-adjust: 100%;
+}
+body {
+  color: #777777;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 13px;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #cccccc;
+}
+b,
+strong {
+  font-weight: 700;
+}
+em,
+i {
+  font-style: italic;
+}
+mark {
+  background: #f6f6f6;
+  color: #1e1e1e;
+}
+small,
+.small {
+  font-size: 12px;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin-bottom: 18px;
+  margin-top: 18px;
+}
+sub,
+sup {
+  font-size: 69.23076923000001%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -.5em;
+}
+sub {
+  bottom: -.25em;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-weight: 300;
+  line-height: 1.1;
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+h2 {
+  font-weight: 300;
+  line-height: 1.1;
+  font-size: 25px;
+  margin-top: 22.5px;
+  margin-bottom: 18px;
+}
+h3 {
+  font-weight: 300;
+  line-height: 1.1;
+  font-size: 17px;
+  margin-top: 18px;
+  margin-bottom: 9px;
+}
+h4 {
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 13px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+h5 {
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 12px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+h6 {
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 10px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small {
+  color: #777777;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+}
+a,
+.alink {
+  color: #0088cc;
+  text-decoration: none;
+}
+a:visited,
+.alink:visited {
+  color: #0088cc;
+  text-decoration: none;
+}
+a:hover,
+.alink:hover {
+  color: #0088cc;
+  text-decoration: underline;
+}
+a:active,
+.alink:active {
+  color: #0088cc;
+  text-decoration: underline;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 22.5px;
+}
+ul > li,
+ol > li {
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
+}
+dl {
+  margin-bottom: 18px;
+  margin-top: 0;
+}
+dt {
+  font-weight: 700;
+  margin-bottom: 4.5px;
+  margin-top: 0;
+}
+dd {
+  margin-bottom: 9px;
+  margin-top: 0;
+  margin-left: 0;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+code {
+  background: #f6f6f6;
+  color: #555555;
+  padding: 2px 4px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+kbd {
+  background: #f6f6f6;
+  color: #555555;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+pre {
+  background: #f6f6f6;
+  border: 1px solid #cccccc;
+  color: #555555;
+  line-height: 1.4;
+  margin: 0 0 9px;
+  padding: 9px;
+  font-size: 12px;
+  display: block;
+  word-wrap: break-word;
+}
+pre code {
+  background-color: transparent;
+  border-radius: 0;
+  color: inherit;
+  font-size: inherit;
+  padding: 0;
+  white-space: pre-wrap;
+}
+blockquote {
+  border-left: 0 solid #cccccc;
+  margin: 0 0 18px 36px;
+  padding: 0;
+  color: #777777;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 13px;
+}
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+  margin-bottom: 0;
+}
+blockquote footer,
+blockquote small,
+blockquote .small {
+  color: #777777;
+  line-height: 1.4;
+  font-size: 9px;
+  display: block;
+}
+blockquote footer:before,
+blockquote small:before,
+blockquote .small:before {
+  content: '\2014 \00A0';
+}
+blockquote cite {
+  font-style: normal;
+}
+blockquote:before,
+blockquote:after {
+  content: '';
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+cite {
+  font-style: normal;
+}
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-align: left;
+}
+th,
+td {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+a {
+  color: #0088cc;
+  text-decoration: none;
+}
+html,
+body {
+  background-color: #f5f5f5;
+}
+.wrapper {
+  margin: 0 auto;
+}
+.wrapper-inner {
+  padding-bottom: 27px;
+  width: 100%;
+}
+.main {
+  margin: 0 auto;
+  text-align: left;
+  width: 660px;
+}
+.header {
+  padding: 22.5px 22.5px 0;
+}
+.main-content {
+  background-color: #ffffff;
+  padding: 22.5px;
+}
+.footer {
+  padding: 0 22.5px 22.5px;
+}
+.button > tr > td {
+  padding-bottom: 9px;
+}
+.button .inner-wrapper td {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #0088cc;
+}
+.button .inner-wrapper td a {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #0088cc;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 7px 15px;
+  text-decoration: none;
+}
+.message-info,
+.message-gift {
+  width: 100%;
+}
+.message-info td,
+.message-gift td {
+  background-color: #fdf0d5;
+  border: 1px solid false;
+  color: #777777;
+  margin: 0;
+  padding: 9px;
+}
+.message-info td a,
+.message-gift td a {
+  color: #0088cc;
+}
+.message-info td h1,
+.message-gift td h1,
+.message-info td h2,
+.message-gift td h2,
+.message-info td h3,
+.message-gift td h3,
+.message-info td h4,
+.message-gift td h4,
+.message-info td h5,
+.message-gift td h5,
+.message-info td h6,
+.message-gift td h6 {
+  margin-top: 0;
+}
+.header {
+  background-color: #f5f5f5;
+  padding: 22.5px;
+}
+.footer {
+  background-color: #f5f5f5;
+  padding: 22.5px;
+}
+.footer table {
+  width: 100%;
+}
+.footer table td {
+  padding-bottom: 22.5px;
+  width: 33%;
+}
+.footer table td p {
+  margin-bottom: 0;
+}
+.footer table td p.phone {
+  font-size: 17px;
+}
+.footer table td p.phone a {
+  color: inherit;
+}
+.email-items .bundle-option-label > td {
+  padding: 0 9px 0 27px;
+}
+.email-items .bundle-option-value > td {
+  padding: 0 9px 9px;
+}
+.email-items .bundle-option-value > td.item-info {
+  padding: 0 9px 9px 36px;
+}
+.email-items tr.bundle-option-value + tr > td.item-extra {
+  padding-top: 9px;
+}
+.email-credentials {
+  width: 100%;
+}
+.email-credentials th {
+  text-align: right;
+}
+.email-credentials tr + tr th,
+.email-credentials tr + tr td {
+  padding-bottom: 9px;
+}
+.email-features {
+  width: 100%;
+}
+.email-features td {
+  width: 50%;
+}
+.email-features td table {
+  width: 100%;
+}
+.email-features td table td {
+  padding-left: 9px;
+  width: 30px;
+}
+.email-features td table td h3 {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+.email-features td table td p {
+  margin-bottom: 0;
+}
+.email-features td table td + td {
+  padding-left: 22.5px;
+  width: auto;
+}
+.email-features tr + tr > td {
+  padding-top: 18px;
+}
+.email-intro td {
+  padding-bottom: 18px;
+}
+.email-summary h1 {
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 9px;
+  padding-bottom: 9px;
+}
+.order-details {
+  width: 100%;
+}
+.order-details tr > .address-details,
+.order-details tr > .method-info {
+  padding: 9px 0 9px 9px;
+  width: 50%;
+}
+.order-details tr > .address-details h3,
+.order-details tr > .method-info h3 {
+  margin-top: 0;
+}
+.order-details tr + .method-info > td {
+  padding: 0 0 9px;
+}
+.order-details .payment-method {
+  margin-bottom: 9px;
+}
+.order-details .payment-method .title {
+  font-weight: 400;
+}
+.order-details .payment-method .data.table > caption {
+  display: none;
+}
+.order-details .payment-method .data.table th {
+  padding-left: 9px;
+}
+.shipment-track {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 100%;
+}
+.shipment-track th {
+  text-align: left;
+}
+.shipment-track > tbody > tr > th,
+.shipment-track > tfoot > tr > th,
+.shipment-track > tbody > tr > td,
+.shipment-track > tfoot > tr > td {
+  vertical-align: top;
+}
+.shipment-track > thead > tr > th,
+.shipment-track > thead > tr > td {
+  vertical-align: bottom;
+}
+.shipment-track > thead > tr > th,
+.shipment-track > tbody > tr > th,
+.shipment-track > tfoot > tr > th,
+.shipment-track > thead > tr > td,
+.shipment-track > tbody > tr > td,
+.shipment-track > tfoot > tr > td {
+  padding: 0 9px;
+}
+.shipment-track thead > tr > th,
+.shipment-track tbody > tr > th,
+.shipment-track thead > tr > td,
+.shipment-track tbody > tr > td {
+  background-color: #f5f5f5;
+  padding: 9px;
+  width: 50%;
+}
+.shipment-track thead > tr + tr th,
+.shipment-track tbody > tr + tr th,
+.shipment-track thead > tr + tr td,
+.shipment-track tbody > tr + tr td {
+  padding-top: 0;
+}
+.email-items {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 100%;
+}
+.email-items th {
+  text-align: left;
+}
+.email-items > tbody > tr > th,
+.email-items > tfoot > tr > th,
+.email-items > tbody > tr > td,
+.email-items > tfoot > tr > td {
+  vertical-align: top;
+}
+.email-items > thead > tr > th,
+.email-items > thead > tr > td {
+  vertical-align: bottom;
+}
+.email-items > thead > tr > th,
+.email-items > tbody > tr > th,
+.email-items > tfoot > tr > th,
+.email-items > thead > tr > td,
+.email-items > tbody > tr > td,
+.email-items > tfoot > tr > td {
+  padding: 0 9px;
+}
+.email-items tfoot > tr > th,
+.email-items tfoot > tr > td {
+  background-color: #f5f5f5;
+}
+.email-items > thead > tr > th,
+.email-items > tbody > tr > th {
+  padding: 9px;
+}
+.email-items > thead > tr > td,
+.email-items > tbody > tr > td {
+  padding: 9px;
+}
+.email-items > thead > tr > td.message-gift,
+.email-items > tbody > tr > td.message-gift {
+  border-top: none;
+  padding-top: 0;
+}
+.email-items > tbody > tr > th,
+.email-items > tbody > tr > td {
+  border-top: 1px solid #cccccc;
+}
+.email-items > tbody > tr + tr > th,
+.email-items > tbody > tr + tr > td {
+  border-top: 0;
+}
+.email-items p {
+  margin-bottom: 0;
+}
+.email-items .product-name {
+  font-weight: 700;
+  margin-bottom: 4.5px;
+}
+.email-items .has-extra .sku {
+  margin-bottom: 9px;
+}
+.email-items .item-info dl {
+  margin-bottom: 0;
+  padding-right: 18px;
+}
+.email-items .item-info dl dt,
+.email-items .item-info dl dd {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.email-items .item-info dl dd {
+  padding-right: 9px;
+}
+.email-items .item-qty {
+  text-align: center;
+}
+.email-items .item-price {
+  text-align: left;
+}
+.email-items .item-extra {
+  padding-top: 0;
+}
+.email-items .order-totals > tr > th {
+  font-weight: 400;
+}
+.email-items .order-totals > tr > th,
+.email-items .order-totals > tr > td {
+  padding: 9px;
+  text-align: left;
+}
+.email-items .order-totals > tr + tr th,
+.email-items .order-totals > tr + tr td {
+  padding-top: 0;
+}
+.email-items .order-totals .price {
+  white-space: nowrap;
+}

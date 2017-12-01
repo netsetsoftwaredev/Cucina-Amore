@@ -1,0 +1,230 @@
+/**
+ * Copyright © 2015 Ihor Vansach (ihor@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+.recipes-blog-post .page-wrapper .page-title-wrapper{
+    background: url("../images/recipes-banner.jpg");
+    display: block;
+    margin-bottom: 20px;
+}
+.recipes-blog-post .page-wrapper .page-title-wrapper .page-title{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top:36px;
+}
+.recipes-blog-post .page-wrapper > .breadcrumbs a,
+.recipes-blog-post .page-wrapper > .breadcrumbs a:hover,
+.recipes-blog-post .page-wrapper > .breadcrumbs a:focus,
+.recipes-blog-post .page-wrapper > .breadcrumbs {
+    background: none;
+    color: #555;
+    margin-bottom: 20px;
+    height: 30px !important;
+}
+.recipes-blog-post .breadcrumbs .items > li::after{
+    color: #555;
+}
+
+.breadcrumbs .items > li{font-size:18px;}
+.post-list .col-md-6{
+    margin-bottom: 50px; 
+}
+.post-list a,.post-list p{
+    color: #555;
+}
+.post-list p{
+    color: #555;
+    line-height: 32px;
+}
+.post-list .post-title a{
+    font-size: 30px;
+    line-height: 40px;
+    margin-top: 45px;
+	color: #000;
+}
+.post-list .post-info,.post-list .post-info a{
+    color:#c9c9c9;
+    margin-bottom: 30px;
+}
+.post-header img,.block-recent-post .post-image img{border: 2px solid #acacac;border-radius: 2px;}
+.post-info .item{display: inline-block;}
+.post-header h2.post-title{margin:15px 0 0;}
+.post-list a.post-read-more,
+.post-bottom .btn.post-read-more,
+.btn.add-to-cart{
+    border: 2px solid #bb9469;
+    color: #bb9469;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height:normal;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 200px;
+}
+.post-bottom .btn.post-read-more,
+.btn.add-to-cart{ border: 2px solid #000; color: #000;padding:10px 12px;}
+.post-list a.post-read-more:hover
+{
+    color: #fff;
+    background: #bb9469;
+}
+.post-bottom .btn.post-read-more:hover,
+.btn.add-to-cart:hover{
+    color: #fff;
+    background: #000;
+}
+#blog_search_list_form{
+    margin-bottom: 40px;
+}
+#blog_search_list_form .form-group{
+    width: 60%;
+}
+#blog_search_list_form input{
+    height: 52px;
+	line-height:52px;
+    width: 100%;
+    font-size: 18px;
+}
+#blog_search_list_form .btn {
+    margin-left: -5px;
+    color: #fff;
+    height: 53px;
+    background: #b89465;
+    font-size: 35px;
+}
+
+/***pagination**/
+.toolbar-blog-posts .pages strong.page {
+    background: #bb9469;
+    border: 1px solid #bb9469 !important;
+    color: #fff !important;
+}
+.toolbar-blog-posts .pages a.page,
+.toolbar-blog-posts .pages strong.page,
+.toolbar-blog-posts .pages .action {
+    width: 42px;
+    line-height: 38px;
+    border-radius: 50%;
+    font-size: 16px;
+    border: 1px solid #e2e2e2;
+    font-family: 'gotham_lightregular';
+    color: #575757;
+    height: 42px;
+}
+.toolbar-blog-posts .pages a.page:hover,
+.toolbar-blog-posts .pages .action:hover {
+    background: #bb9469;
+    border: 1px solid #bb9469;
+    color: #fff;
+}
+.post-directions-content h3{font-weight:bold;}
+.post-directions-content ol{padding-left:20px;}
+.post-bottom .block.related{padding-left:0px;margin-bottom:0px;margin-top:20px;}
+.related-Products-top-section ul{padding-left:20px;}
+.btn{
+    border: 2px solid #bb9469;
+    color: #bb9469;
+    padding: 12px 45px;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.post-ingredients-content{
+    display: block;
+    margin-bottom: 30px;
+}
+.post-ingredients-content .list-dots{padding-left: 15px;}
+.post-ingredients-content .product-reviews-summary,.post-ingredients-content .action.tocompare{display: none !important;}
+.post-ingredients-content .product-item .tocart:before{display: none;}
+.post-ingredients-content .products-grid .product-item-details .product-item-actions .tocart{
+    background: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: normal;
+    text-transform: uppercase;
+    border: 2px solid #000;
+    color: #000;
+    padding: 3px 12px;
+}
+.post-ingredients-content .block-products-list.grid{margin-bottom: 20px;}
+
+/***********SIDEBAR***********/
+.widget.blog-search{display: none;}
+.block .block-title{
+    font-size:30px;
+	color: #000;
+}
+.widget.block-categories li,
+.widget.block-archive .item{border:none;}
+.widget.block-categories li{padding: 12px 3px 12px 0px;}
+.widget.block-categories li,.widget.block-categories li > a,
+.widget.block-archive .item a{
+    color:#555555;
+    font-size:16px; 
+}
+.widget.block-categories ul li ul li:last-child{padding-bottom:0px;}
+.widget.block-archive .item{padding-left:0px;}
+.block-tagclaud span{
+    margin: 0px 5px 10px 0px;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 13px 19px;
+    background-color:#acacac;
+}
+.block-tagclaud span a{
+    color:#fff;
+    font-size: 14px;
+}
+.block-tagclaud span.largest{
+    background-color:#bb9469;
+}
+.block-recent-post .post-info,.block-recent-post .post-info a{
+    font-size: 12px;
+    color:#c9c9c9;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.block-recent-post .post-item-link{
+    font-size: 16px;
+    color: #555;
+    display: block;
+    margin-top: 5px;
+}
+.sidebar  .block .block-title{margin: 5px 0 20px;}
+
+.recipes-blog-post .widget.block-categories li > a:before,.recipes-blog-post .widget.block-archive .item a:before{display:none;}
+.recipes-blog-post .post-title-holder h1{font-size:19px;font-weight:bold;margin-bottom:18px;}
+.recipes-blog-post .post-details{line-height:32px;}
+.recipes-blog-post.page-layout-2columns-right .column.main{padding-right:40px;}
+.recipes-blog-post.page-layout-2columns-right .column.main{padding-right:60px;}
+.recipes-blog-post .easy-autocomplete{width:auto !important;} 
+.recipes-blog-post .widget.block-categories ul ul{margin:15px 0 0;}
+.recipes-blog-post  .post-details a{color:#000;}
+.suggestions-title h3{font-weight:bold;}
+.recipes-blog-post .block.related .product-items .product-item-actions{display:block;}
+.products-grid .product-item-details .product-item-actions{margin:auto;}
+.block-content .item .post-text-hld{margin-bottom:15px;}
+button:not(.primary){height:auto;padding:10px 12px;}
+.block.related .block-content{clear:both;overflow:hidden;}
+.recipes-blog-post .block .title strong{font-size:16px ;}
+.recipes-blog-post .post-bottom  a.post-item-link{color: #000;font-size: 18px;margin: 10px 0 0;display: block;font-weight:bold;
+}
+.blog-post-view h3{font-weight:bold;font-size:18px;}
+.recipes-blog-post .widget.block-categories li.parent-menu > a:after{font-family: fontawesome;content: "\f107";font-size: 20px;position: relative;left: 15px;top: 1px;}
+.recipes-blog-post .widget.block-categories li .sub-menu{display:none;}
+.recipes-blog-post .widget.block-categories li.parent-menu.open > a:after{content:"\f106";}
+.recipes-blog-post .page-wrapper > .breadcrumbs .items {color: #b89465;}
+.recipes-blog-post .products-related .product-image-photo{border: 1px solid #686868;}
+.recipes-blog-post .products-grid .product-item:hover{box-shadow: none;}
+/*.recipes-blog-post .post-details .post-ingredients-content a{min-height: 96px;display: block;}*/
+.recipes-blog-post .post-details .post-ingredients-content ul.list-unstyled a{min-height:auto;}
+.post-content .post-description img{margin: 0 15px 0 0px !important;display: block;}

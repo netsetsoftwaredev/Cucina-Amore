@@ -504,5 +504,5 @@ input.input-text:focus {box-shadow: 0 0 3px 1px #68a8e0 !important;}
 .catalogsearch-result-index .columns{padding:0px !important;}
 .o-list li.level0:nth-child(2){display:none !important;}
 .o-list li.level0:nth-child(3){display:none !important;}
-.subchildmenu.explore_sub_menu{margin-left:15px;}
+.subchildmenu.explore_sub_menu{margin-left:15px !important;}
 .catalog-product-view .breadcrumbs li.home a{margin-top:4px !important;}

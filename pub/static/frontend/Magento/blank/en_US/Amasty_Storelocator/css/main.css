@@ -1,0 +1,545 @@
+#amlocator_left span {
+    border: 1px solid #e6e6e6;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    padding: 10px 12px 0;
+	line-height: 22px;
+}
+#amlocator_window_template{
+    display: none;
+}
+#amlocator-map-canvas{
+    width: 100%;
+    height: 600px
+}
+.popup{
+    width: 250px
+}
+.popup img{
+    width: 100px;
+    clear: both;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.container.search-header {
+    background: #f4f4f4 none repeat scroll 0 0;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 0 0 0 20px;
+    width: 70%;
+}
+.btn.btn-dark {
+    background: #000 none repeat scroll 0 0;
+    border: medium none;
+    color: #fff;
+    height: 38px;
+    width: 70px;
+	font-size: 14px;
+	padding: 0 !important;
+}
+.search-header .input-box > span {
+    position: relative;
+    top: 10px;
+}
+.amlocator_input {
+    margin-top: 15px !important;
+}
+.search-header .col-md-3:last-child .amlocator_input {
+	border:15px solid #bb9469;
+	margin: 0 !important;
+	 border-radius: 4px;
+}
+#current-address .input-box {
+    margin-top: 0 !important;
+}
+.amlocator-index-index #maincontent {
+    max-width: 100%;
+    padding: 0;
+}
+.display-4 {
+    padding: 20px 0;
+	font-size: 26px;
+}
+.product_lis {
+    border-bottom: 1px solid #777;
+    border-top: 1px solid #777;
+    padding: 16px 0;
+}
+.amlocator-index-index .block {
+    margin: 0 !important;
+}
+#filters {
+    background: #ebebeb none repeat scroll 0 0;
+    padding: 9px 0 12px;
+}
+.price {
+    padding: 20px 0 0 !important;
+	text-transform: uppercase;
+}
+
+
+#amlocator_left .active{
+    background: #fff9e9;
+    border: 1px solid #eee2be;
+}
+.please-wait{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -150px;
+    width: 150px;
+    height: 100px;
+    background-color: white;
+}
+
+.amlocator_mapblock {
+    float: right;
+    width: 71%;
+}
+.amlocator_store_list {
+    float: left;
+    width: 29%;
+    margin-bottom: 20px;
+	
+}
+
+.col-md-10.for-addres-info {
+    padding-left: 75px;
+	color: #a1a1a1;
+ 
+}
+.col-md-1.for-miles {
+    left: 0;
+    position: absolute;
+    
+}
+.results-row {
+    position: relative;
+}
+.row.new1 {
+    padding: 15px 0;
+}
+.col-md-10.for-addres-info {
+    width: 100%;
+}
+.product_lis small {
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 15px;
+	
+}
+.sortByPrice {
+    height: 38px !important;
+	text-transform: uppercase;
+}
+#back_to_products {
+    width: 120px;
+	font-size: 8px;
+}
+input[type="text"]::-moz-placeholder, input[type="password"]::-moz-placeholder, input[type="url"]::-moz-placeholder, input[type="tel"]::-moz-placeholder, input[type="search"]::-moz-placeholder, input[type="number"]::-moz-placeholder, input[type="datetime"]::-moz-placeholder, input[type="email"]::-moz-placeholder {
+    color: #acacac !important;
+}
+.today_schedule > span {
+    font-size: 11px !important;
+}
+.print img {
+    margin-left: 22px;
+}
+/*.results {
+    height: 550px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}*/
+.catUl li {
+    display: inline-block;
+    float: left;
+    width: 270px !important;
+}
+.distance {
+    margin-top: 5px;
+}
+.bushead h1 {
+    text-transform: uppercase;
+}
+.popup a{
+    color: #bb9469;
+	font-weight: 600;
+}
+.popup h2 {
+    background: #ebebeb none repeat scroll 0 0;
+    font-size: 22px;
+    padding: 5px 0;
+}
+
+.amlocator_miles .col-md-4 {
+    background: #bb9469 none repeat scroll 0 0;
+    font-weight: 600;
+   line-height: 20px;
+  padding: 21px 18px;
+    text-transform: uppercase;
+}
+.amlocator_miles .col-md-8 > img {
+    border: 1px solid #acacac;
+    width: 60%;
+	min-height: 82px;
+	height: 82px;
+}
+.amlocator_link {
+    padding-bottom: 15px;
+}
+
+.career-page #mc_embed_signup .mc-field-group input{
+    border: 1px solid #bb9469 !important;
+}
+#mc_embed_signup .button {
+    background-color: #bb9469 !important;
+}
+
+.modal-popup .modal-title {
+    border-bottom: 1px solid #bb9469 !important;
+    font-size: 24px !important;
+    padding-bottom: 8px !important;
+	text-transform: uppercase;
+   
+}
+#mc_embed_signup .mc-field-group label {
+    margin-bottom: 8px !important;
+}
+.career-page .gm-style-iw {
+    height: 340px;
+    overflow: auto !important;
+}
+.sortByPrice {
+    padding: 0 12px !important;
+}
+.locator_arrow {
+    /*background-image: url("../images/arrow.png");*/
+    background-size: 14px 14px;
+    content: " ";
+    height: 7px;
+    left: 225px;
+    position: absolute;
+    top: 10px;
+    width: 9px;
+	border-left:5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #000;
+}
+.sortByPrice:hover {
+    background: #bb9469 none repeat scroll 0 0;
+    border: medium none #bb9469;
+}
+
+
+.location_category_dropdown {
+    padding: 13px;
+}
+#amlocator_left {
+    height: 550px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.sort_by label{font-size: 14px; text-transform: uppercase; float:right;}
+@media screen and (max-width: 1280px) {
+	.distance {
+    padding-left: 30px;
+}
+.sortByPrice {
+    margin-top: -1px;
+}
+}  
+@media screen and (max-width: 1200px) {
+.container {
+    width: 970px !important;
+}
+.amlocator_store_list{width:32%;}
+.amlocator_mapblock {
+    width: 68%;
+}
+	.distance {
+    padding-left: 15px;
+}
+}
+
+@media screen and (max-width: 1100px) {	
+.amlocator_store_list {
+    width: 35%;
+}
+.amlocator_mapblock {
+    padding-left: 30px;
+    width: 63%;
+}
+}
+@media screen and (max-width: 991px) {	
+
+.amlocator_store_list {
+    width: 45%;
+}
+.amlocator_mapblock {
+    padding-left: 30px;
+    width: 53%;
+}
+.container.search-header{padding-right: 20px;}
+.container {
+    width: 750px !important;
+}
+#sortByFilter {
+    margin-bottom: 15px;
+  
+}
+.amlocator_miles .col-md-8 {
+    float: right;
+    width: 67%;
+}
+.amlocator_miles .col-md-4 {
+    float: left !important;
+    width: 33%;
+}
+.sortByPrice {
+    margin-top: 0;
+}
+}
+@media screen and (max-width: 768px) {	
+.product_lis{padding: 16px 15px;}
+.amlocator_store_list {
+    width: 100%;
+}
+.amlocator_mapblock {
+    width: 100%;
+	padding: 0px;
+}
+.sortByPrice {
+    margin-top: 0;
+}
+}
+@media screen and (max-width: 600px) {	
+.amlocator_store_list {
+    width: 70% !important;
+}
+}
+@media screen and (max-width: 480px) {	
+.amlocator_store_list {
+    width: 100% !important;
+}
+.display-4 {
+    font-size: 18px;
+    padding: 20px 16px;
+	line-height: 27px;
+}
+}
+
+@media screen and (max-width: 360px) {	
+.distance {
+    margin-top: 5px;
+    padding-left: 30px;
+}
+.locator_arrow{left: 193px;}
+#amlocator_left span {
+    font-size: 12px;
+}
+.col-md-10.for-addres-info {
+    padding-left: 66px;
+}
+#mc_embed_signup .mc-field-group input {
+    padding: 0 15px !important;
+}
+.modal-popup .modal-title{font-size: 18px !important;}
+.locator_arrow{left: 195px;}
+.sort_by label{font-size: 13px;}
+}
+@media screen and (min-width: 600px) {
+    .amlocator_center {
+        display: flex;
+    }
+}
+
+.amlocator_center {
+    display: block;
+}
+
+.amlocator_group:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .amlocator_mapblock, .amlocator_store_list {
+        float: none;
+        width: auto;
+    }
+
+}
+
+#amasty_locator_filter ul{
+    margin-left: 10px;
+    list-style: outside none none;
+}
+
+.amlocator_default{
+    background: url(../../../images/amasty/amlocator/close.png) no-repeat;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-position: 0 0px;
+    cursor: pointer;
+    position: relative;
+    top: -10px;
+}
+.amlocator_default:hover{
+    background: url(../../../images/amasty/amlocator/close.png) no-repeat;
+    background-position: 0 -14px;
+    cursor: pointer;
+}
+
+#amasty_locator_filter .attributes {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+}
+#amasty_locator_filter .location-attribute {
+    flex-grow: 1;
+    margin-top: 15px;
+}
+
+.location-attribute {
+    margin-right: 10px;
+}
+
+#amasty_locator_filter .filter-attribute {
+    font-weight: bold;
+    margin: 15px 15px 0 0;
+}
+
+.today_schedule {
+    margin-left: 20px;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.today_schedule:before {
+    width: 18px;
+    content: " ";
+    background-image: url(../images/clock.png);
+    position: absolute;
+    left: -23px;
+    height:18px;
+	background-size: 100% auto;
+}
+#amlocator_left .today_schedule span {
+    display: inline;
+    border: none;
+    /*float: right;*/
+    padding: 0;
+    font-weight:bold;
+}
+.all_schedule {
+    display: none;
+    margin-left: 20px;
+	float:left;
+}
+.all_schedule div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#amlocator_left .all_schedule span {
+    display: inline;
+    border: none;
+    float: right;
+    padding: 0 20px 0 0 ;
+}
+
+#amasty_locator_filter {
+    display: flex;
+    flex-direction: row;
+}
+
+.column_left {
+    width: 48%;
+    padding-right: 35px;
+    order: 1;
+}
+.column_right {
+    order: 2;
+    padding-left: 35px;
+    width: 48%;
+}
+
+@media screen and (max-width: 600px) {
+    #amasty_locator_filter {
+        flex-direction: column;
+    }
+    .column_left {
+        width: 100%;
+        order: 1;
+    }
+    .column_right {
+        order: 2;
+        padding-left: 0px;
+        padding-top: 10px;
+        width: 100%;
+    }
+}
+
+.amlocator_input {
+    margin-top: 15px;
+}
+
+#locateNearBy {
+    margin-left: 25px;
+}
+
+.input-box {
+    margin-top: 5px;
+}
+
+/*.locator_arrow {
+    width: 14px; 
+    content: " ";
+    background-image: url(../images/arrow.png);
+    float:right;
+    left: -23px;
+    height:7px;
+    margin-left: 6px;
+    background-size: 14px 14px;
+    margin-right: 5px;
+    margin-top: 5px;
+    background-position-y: 7px;
+}*/
+
+
+.today_schedule {
+    position: relative;
+}
+
+.arrow_active {
+    background-position-y: 0;
+}
+
+.location_header {
+    font-family: 'gotham_mediumregular';
+    font-size: 16px;
+    /*margin-bottom: 10px;*/
+	color: #000;
+}
+
+.popup .header {
+    background-color: blue;
+}
+
+.amlocator-index-index {
+    overflow-x:hidden;
+}
+#amlocator_left .all_schedule{
+	width:100%;
+}
+.for-addres-info a {
+    color: #b39662;
+}

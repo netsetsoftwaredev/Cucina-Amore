@@ -1,0 +1,1 @@
+/var/www/html/vendor/mailchimp/mc-magento2/view/frontend/web/js/mailchimpjs.js

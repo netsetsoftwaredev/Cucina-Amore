@@ -1,0 +1,102 @@
+/**
+ * Copyright © 2015 Ihor Vansach (ihor@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+.blog-index-index .page-wrapper .page-title-wrapper,.blog-post-view .page-wrapper .page-title-wrapper{
+    background: url("../images/recipes-banner.jpg");
+    display: block;
+    margin-bottom: 20px;
+}
+.blog-index-index .page-wrapper .page-title-wrapper .page-title,.blog-post-view .page-wrapper .page-title-wrapper .page-title{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.page-wrapper > .breadcrumbs a, .page-wrapper > .breadcrumbs a:hover, .page-wrapper > .breadcrumbs a:focus,.page-wrapper > .breadcrumbs {
+    background: none;
+    color: #555;
+    margin-bottom: 20px;
+    height: 30px !important;
+}
+.post-list .col-md-6{
+    margin-bottom: 50px; 
+}
+.post-list a,.post-list p{
+    color: #555;
+}
+.post-list p{
+    color: #555;
+    font-size: 22px;
+    line-height: 42px;
+}
+.post-list .post-title a{
+    font-size: 32px;
+    line-height: 54px;
+    margin-top: 45px;
+}
+.post-list .post-info,.post-list .post-info a{
+    color:#c9c9c9;
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 30px;
+}
+.post-header img{border: 2px solid #acacac;border-radius: 2px;}
+.post-info .item{display: inline-block;}
+.post-list a.post-read-more{
+    border: 2px solid #bb9469;
+    color: #bb9469;
+    padding: 10px 45px;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.post-list a.post-read-more:hover{
+    color: #fff;
+    background: #bb9469;
+}
+#blog_search_list_form{
+    margin-bottom: 30px;
+}
+#blog_search_list_form .form-group{
+    width: 60%;
+}
+#blog_search_list_form input{
+    padding: 25px 10px;
+    width: 100%;
+    font-size: 18px;
+}
+#blog_search_list_form .btn {
+    margin-left: -5px;
+    color: #fff;
+    height: 53px;
+    background: #b89465;
+    font-size: 35px;
+}
+
+/***pagination**/
+.toolbar-blog-posts .pages strong.page {
+    background: #bb9469;
+    border: 1px solid #bb9469 !important;
+    color: #fff !important;
+}
+.toolbar-blog-posts .pages a.page, .toolbar-blog-posts .pages strong.page, .toolbar-blog-posts .pages .action {
+    width: 42px;
+    line-height: 38px;
+    border-radius: 50%;
+    font-size: 16px;
+    border: 1px solid #e2e2e2;
+    font-family: 'gotham_lightregular';
+    color: #575757;
+    height: 42px;
+}
+.toolbar-blog-posts .pages a.page:hover,.toolbar-blog-posts .pages .action:hover {
+    background: #bb9469;
+    border: 1px solid #bb9469;
+    color: #fff;
+}
