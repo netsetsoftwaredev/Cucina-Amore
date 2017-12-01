@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Sales:etc/sales.xsd">
+    <section name="quote">
+        <group name="totals">
+            <item name="mageworx_giftcards" instance="MageWorx\GiftCards\Model\Quote\Discount" sort_order="120">
+                <renderer name="adminhtml" instance="MageWorx\GiftCards\Block\Adminhtml\Order\Create\Totals\GiftCards"/>
+                <renderer name="frontend" instance="MageWorx\GiftCards\Block\Checkout\GiftCards"/>
+            </item>
+        </group>
+    </section>
+    <section name="order_invoice">
+        <group name="totals">
+            <item name="mageworx_giftcards" instance="MageWorx\GiftCards\Model\Sales\Order\Invoice\Discount" sort_order="120">
+                <renderer name="adminhtml" instance="MageWorx\GiftCards\Block\Adminhtml\Order\Create\Totals\GiftCards"/>
+                <renderer name="frontend" instance="MageWorx\GiftCards\Block\Checkout\GiftCards"/>
+            </item>
+        </group>
+    </section>
+</config>

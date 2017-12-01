@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+    		<css src="css/rcksearch.css" />
+    </head>
+    <body>
+    	<!-- <move element="catalog.leftnav" destination="content" before="-"/> -->
+        <attribute name="class" value="page-products"/>
+        <referenceBlock name="product_list_toolbar" display="false" />
+        <referenceBlock name="catalog.leftnav" display="false" />
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="mini.search" template="Magento_Search::form.mini.phtml" before="-" cacheable="false"/>
+        </referenceContainer>
+    </body>
+</page>

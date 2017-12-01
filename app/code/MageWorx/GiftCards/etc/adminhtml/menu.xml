@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="MageWorx_GiftCards::mageworx_giftcards" title="MageWorx Gift Cards" module="MageWorx_GiftCards" sortOrder="100" parent="Magento_Backend::marketing" dependsOnModule="MageWorx_GiftCards" resource="MageWorx_GiftCards::mageworx_giftcards"/>
+        <add id="MageWorx_GiftCards::mageworx_gifftcards_giftcards" title="Gift Cards List" module="MageWorx_GiftCards" sortOrder="10" parent="MageWorx_GiftCards::mageworx_giftcards" action="mageworx_giftcards/giftcards" resource="MageWorx_GiftCards::mageworx_giftcards_giftcards"/>
+        <add id="MageWorx_GiftCards::mageworx_gifftcards_generate" title="Gift Cards Generate" module="MageWorx_GiftCards" sortOrder="20" parent="MageWorx_GiftCards::mageworx_giftcards" action="mageworx_giftcards/generate/edit" resource="MageWorx_GiftCards::mageworx_giftcards_generate"/>
+    </menu>
+</config>

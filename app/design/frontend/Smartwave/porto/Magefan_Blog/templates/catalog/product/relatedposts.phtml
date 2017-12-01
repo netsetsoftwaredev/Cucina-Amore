@@ -1,0 +1,271 @@
+<?php
+/**
+ * Copyright © 2016 Ihor Vansach (ihor@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Product related posts template
+ *
+ * @var $block \Magefan\Blog\Block\Catalog\Product\RelatedPosts
+ */
+?>
+
+<?php if ($block->displayPosts()) { ?>
+    <?php $_postCollection = $block->getPostCollection(); ?> 
+    <?php if ($_postCollection->count()) { ?>
+        <div class="recipe-content">
+				<div class="recipe-title">
+					<h2><?php echo __('RECIPES') ?></h2>									   	
+				</div>
+				<div class="recipe-descp">
+					<p><?php echo __('Make it a Meal! We have combined this item with a few other simple ingredients and made it easy for you to get dinner and recipes shipped straight to your door! Now that\'s amore! ') ?></p>	
+				</div>
+            <div class="related-recipe row">
+                <?php $i=1; ?>
+                <?php foreach ($_postCollection as $_post) { ?>
+                    <div class="recipe_tab col-sm-3">
+                        <div class="recipe_tablink_content">
+							<button class="recipe_tablinks <?php if($i==1){echo ' active'; $i++;} ?>" onclick="openRecipies(event, '<?php echo $_post->getTitle() ?>')" title="<?php echo $_post->getTitle(); ?>">
+								<img class="post-feature-img" src="<?php echo $_post->getFeaturedImage(); ?>" alt="<?php echo $_post->getTitle(); ?>" />
+							</button>
+							<p class="recipe-capt"><?php echo $_post->getTitle(); ?></p>
+						</div>
+                    </div>
+                <?php } ?>
+            </div>
+            <div class="block-content-recepies">
+                <?php $i=1; ?>
+                <?php foreach ($_postCollection as $_post) { ?>
+                <div id="<?php echo $_post->getTitle() ?>" class="recipe_tabcontent" <?php if($i==1){echo 'style="display:block" '; $i++;} ?> >
+					<div class="recipe-tab-view">
+					  <div class="row">	
+						<div class="col-sm-7">
+							<div class="recipe-tab-title">
+								<h2><?php echo $_post->getTitle() ?></h2>
+								<p><?php echo $_post->getShortFilteredContent(); ?></p>
+							</div>
+							<div class="IngredientsContent meta-content">
+								<h3><?php echo __("Ingredients") ?></h3>
+								<?php $indrientsPdp=explode(",",$_post->getIngredientsPdp()); ?>
+								<div class="indrientsPdp">
+									<ul>
+										<?php foreach ($indrientsPdp as $indrients): ?>
+										<li><span><?php echo $indrients; ?></span></li>
+										<?php endforeach ?>
+									</ul>
+								</div>
+								<div class="IngredientsPdpOther">
+									<strong><?php echo __("Other Ingredients: ") ?></strong><span><?php echo $_post->getIngredientsPdpOther(); ?></span>
+								</div>
+							</div>
+							<div class="DirectionsContent meta-content">
+								<h3><?php echo __("Directions") ?></h3>
+								<p><?php echo $_post->getDirectionsContent(); ?></p>
+							</div>
+							<div class="post-bottom">
+								<div class="row">	
+									<div class="col-sm-4">
+											<?php $printUrl=str_replace("pub/media/","",$block->getMediaUrl())."recipes/index/print"; ?>
+											<span class="print-recipents"><a class="actions-primary" target="_blank" href="<?php echo $printUrl."?id=".$_post->getPostId()."&print=1"; ?>"><?php echo __("Print This recipe") ?></a></span>
+									</div>
+									<div class="col-sm-5">
+										<div class="social-btm">
+											<span class="fbs"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $_post->getPostUrl(); ?>" target="_blank">
+												<i class="fa fa-facebook" aria-hidden="true"></i>
+											</a></span>
+											<span class="twits"><a href="https://twitter.com/home?status=<?php echo $_post->getPostUrl(); ?>" target="_blank">
+												<i class="fa fa-twitter" aria-hidden="true"></i>
+											</a></span>
+											<span>Share this Recipe</span>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="dir-btms">
+											<a class="actions-primary" href="<?php echo $_post->getPostUrl(); ?>">READ MORE</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-5">
+                        <div class="post-related-product">						  
+							<div class="row">
+                            <?php $relatedProductArray=$_post->getRelatedProducts()->getData();?>
+                            <?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+                            $listBlock = $objectManager->get('\Magento\Catalog\Block\Product\ListProduct'); ?>
+                            <?php foreach ($relatedProductArray as $related) { ?>
+                                <?php $ProductRelated=$block->getProductById($related['entity_id']); ?>
+								
+								<div class="col-sm-6">
+                                <div class="product-related">
+                                    <div class="product-photo">
+                                        <a herf="<?php echo $ProductRelated->getProductUrl(); ?>">
+                                            <img style="max-width: 156px;" src="<?php echo $block->getMediaUrl().'catalog/product'.$ProductRelated->getImage();  ?>">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <strong><?php echo substr(trim($ProductRelated->getName()," "), 0, 15); ?></strong>
+                                    </div>
+                                        <?php $addToCartUrl =  $listBlock->getAddToCartUrl($ProductRelated); ?>
+
+                                        <form data-role="tocart-form" action="<?php echo $addToCartUrl; ?>" method="post"> 
+                                            <?php echo $block->getBlockHtml('formkey')?>
+                                            <?php 
+                                                if($_SERVER["REMOTE_ADDR"]=='43.243.39.90'){
+                                                    /*echo "<pre>";print_r(get_class_methods($ProductRelated));
+                                                    exit;*/
+                                                    if($ProductRelated->getTypeId()=="configurable")
+                                                    {
+                                                        $productTypeInstance = $objectManager->get('Magento\ConfigurableProduct\Model\Product\Type\Configurable');
+                                                        $productAttributeOptions = $productTypeInstance->getConfigurableAttributesAsArray($ProductRelated); 
+                                                        $childId=null;
+                                                        $_children = $ProductRelated->getTypeInstance()->getUsedProducts($ProductRelated);
+                                                        foreach ($_children as $child){
+                                                            $childId=$child->getID();
+                                                        }
+                                                        ?>
+                                                        <input name="product" value="<?php echo $ProductRelated->getId(); ?>" type="hidden">
+                                                        <input name="selected_configurable_option" value="<?php echo $childId; ?>" type="hidden">
+
+                                                    <?php }
+                                                    }
+                                                ?>
+
+                                             <div class="product-item-inner">
+                                                <div class="product actions product-item-actions">
+                                                    <div class="actions-primary">
+                                                        <button type="submit" title="Add to Cart" class="action tocart primary">
+                                                            <span>Add to Cart</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         </form>
+                                    </div>
+								</div>
+								
+                            <?php } ?>
+                            <!-- <br/>
+                            <div class="all-ingredients">
+                                <button class="actions-primary"><?php // echo __("ADD ALL INGREDIENTS TO BASKET") ?></button>
+                            </div> -->
+                            </div>
+                        </div>
+                    </div>
+					  </div>
+				   </div>
+				</div>
+                <?php } ?>
+            </div>
+        </div>
+    <?php } ?>
+<?php } ?>
+
+<script>
+function openRecipies(evt, recepiesName) {
+    var i, recipe_tabcontent, recipe_tablinks;
+    recipe_tabcontent = document.getElementsByClassName("recipe_tabcontent");
+    for (i = 0; i < recipe_tabcontent.length; i++) {
+        recipe_tabcontent[i].style.display = "none";
+    }
+    recipe_tablinks = document.getElementsByClassName("recipe_tablinks");
+    for (i = 0; i < recipe_tablinks.length; i++) {
+        recipe_tablinks[i].className = recipe_tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(recepiesName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+
+<style type="text/css">
+.block-tab
+{
+    position: relative;
+}
+div.recipe_tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+
+}
+.block-content-recepies {
+    display: -webkit-inline-box;
+    position: relative;
+}
+/* Style the buttons inside the recipe_tab */
+div.recipe_tab {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    width: 25%;
+    float:left;
+}
+
+/* Change background color of buttons on hover */
+div.recipe_tab :hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current recipe_tablink class */
+div.recipe_tab.active {
+    background-color: #ccc;
+}
+
+/* Style the recipe_tab content */
+.recipe_tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.insd-nutritn
+{
+    top: 58% !important;
+}
+img.post-feature-img
+{
+	min-height: 253px;
+	max-height: 253px;
+}
+.recipe-capt{min-height: 66px;}
+</style>
+
+<?php /* if ($block->displayPosts()) { ?>
+    <?php $_postCollection = $block->getPostCollection(); ?>
+    <?php if ($_postCollection->count()) { ?>
+        <div class="block related">
+            <div class="block-title title">
+                <strong id="block-relatedposts-heading" role="heading" aria-level="2">
+                    <?php echo __('Related posts') ?>
+                </strong>
+            </div>
+            <div class="block-content">
+                <?php foreach ($_postCollection as $_post) { ?>
+                    <div class="col-md-6 item">
+                        <?php if ($featuredImage = $_post->getFeaturedImage()) { ?>
+                            <div class="post-ftimg-hld">
+                                <a href="<?php echo $_post->getPostUrl(); ?>" title="<?php echo $_post->getTitle(); ?>">
+                                    <img src="<?php echo $featuredImage ?>" alt="<?php echo $_post->getTitle(); ?>" />
+                                </a>
+                            </div>
+                        <?php } ?>
+                        <a class="post-item-link"
+                           href="<?php echo $_post->getPostUrl() ?>">
+                               <?php echo $block->escapeHtml($_post->getTitle()); ?>
+                        </a>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    <?php } ?>
+<?php } */ ?>

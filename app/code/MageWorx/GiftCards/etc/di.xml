@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="MageWorx\Giftcards\Api\Data\GiftCardsInterface" type="MageWorx\GiftCards\Model\GiftCards" />
+    <preference for="MageWorx\Giftcards\Api\Data\GiftCardsOrderInterface" type="MageWorx\GiftCards\Model\Order" />
+
+    <virtualType name="GiftcardsGirdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="GiftcardsOrderGirdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    
+    <virtualType name="GiftcardsGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">MageWorx\GiftCards\Model\ResourceModel\GiftCards\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">GiftcardsGirdFilterPool</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="GiftcardsOrderGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">MageWorx\GiftCards\Model\ResourceModel\Order\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">GiftcardsOrderGirdFilterPool</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="MageWorx\GiftCards\Model\ResourceModel\GiftCards\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">mageworx_giftcards_card</argument>
+            <argument name="resourceModel" xsi:type="string">MageWorx\GiftCards\Model\ResourceModel\GiftCards</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="MageWorx\GiftCards\Model\ResourceModel\Order\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">mageworx_giftcard_order</argument>
+            <argument name="resourceModel" xsi:type="string">MageWorx\GiftCards\Model\ResourceModel\Order</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="giftcards_giftcards_listing_data_source" xsi:type="string">MageWorx\GiftCards\Model\ResourceModel\GiftCards\Grid\Collection</item>
+                <item name="giftcards_order_listing_data_source" xsi:type="string">MageWorx\GiftCards\Model\ResourceModel\Order\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

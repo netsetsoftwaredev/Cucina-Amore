@@ -1,0 +1,315 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Storelocator
+ */
+?>
+<div id="demo"></div>
+<?php /** @var \Amasty\Storelocator\Block\Location $block */ ?>
+<section class="business social_bannerarea">
+	
+	<img src="<?php echo $this->getViewFileUrl('Amasty_Storelocator::images/background.jpg'); ?>" alt="Amasty_Storelocator" />
+	<div class="container">
+		<div class="table_box_area">
+			<div class="table_box_inner">
+				<div class="bushead">
+					<h1>Where to find cucina & Amore</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<?php
+
+$productId = $this->getRequest()->getParam('product');
+
+if ($productId):
+    $product = $this->getProductById($productId);
+    ?>
+    <h1 style="text-align: center"><?php echo $product->getName(); ?><?= __(' can be found at the following stores:&nbsp;')?></h1>
+    <hr>
+    <?php
+endif;
+?>
+<div class="search-header1">
+<div class="container search-header">
+<div class="search-header1">
+   <div class="row">
+       <div class="col-md-3" ><div id="current-address" class="amlocator_input">
+                <!-- <label for="address"><?= __('Current Location')?></label> -->
+                <div class="input-box">
+                    <input type="text" value="" class="input-text" id="amlocator-search"
+                           name="address" placeholder="<?= __('Enter City or Zip ')?>" autocomplete="off">
+                </div> 
+            </div>
+	   </div>
+	  <div class="col-md-1" ><div id="Within" class="amlocator_input"><!-- <label for="address"><?= __('Within')?></label> --> 
+		  <div class="input-box"><span>   <span> WITHIN</span></span></div></div></div>
+	  
+    <div class="col-md-3"><div class="amlocator_input">
+                <!-- <label for="radius"><?= __('Search Radius')?></label> -->
+                <div class="input-box">
+					<input type="text" value="" class="input-text" id="amlocator-radius"
+                           name="radius" placeholder="<?= __('10 Miles')?>" autocomplete="off"> 
+                    <!-- <select title="" class="select" id="amlocator-radius" name="radius" >
+                        <option value=""><?= __('Everywhere')?></option>
+                        <option value="1">1</option>
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="500">500</option>
+                    </select> -->
+                </div>
+		 <?php if($this->getDistanceConfig()): ?>
+                <div class="amlocator_input">
+                    <label for="measurement"><?= __('Search Radius Measurement')?></label>
+                    <div class="input-box">
+						
+                        <select title="" class="select" id="amlocator-measurement" name="measurement">
+                            <option value="km"><?= __('km')?></option>
+                            <option selected="selected" value="mi"><?= __('mi')?></option>
+                        </select>
+                    </div>
+                </div>
+            <?php endif ?>
+            </div></div>
+    <div class="col-md-2">
+    <div class="amlocator_input">
+                <!-- <label for="radius">&nbsp;</label> -->
+                <div class="input-box">
+              <button class="btn btn-dark" title="Filter"  id="sortByFilter" type="button"  >
+                    <span>             <span>   <?= __('Find')?>
+                        </span>
+                    </span>
+                </button>      
+                </div>
+            </div>
+    
+    </div>
+            
+            <div class="col-md-3">
+    <div id="current-address" class="amlocator_input">
+                <!-- <label for="productselect"><?= __('Product Select')?></label> -->
+                <div class="input-box">
+					
+                    <input type="text" value="" class="input-text" id="productselect"
+                           name="address" placeholder="<?= __('Select Product')?>" disabled >
+
+			
+
+					   <input type="hidden" id="am_lat" >
+            			<input type="hidden" id="am_lng" >
+						<input type="hidden" name="cat_ids" id="cat_ids" >
+						
+                </div>
+            </div></div>
+  </div>
+</div>
+</div>
+</div>
+<div class="row">
+
+            <div class="col-md-12" align='center'><h4 class="display-4">Looking for a specific product? Select the product category below:</h4> </div>
+</div>
+<div class="product_lis">
+	<div class="container">
+
+
+	   <div class="row product-list" >
+		   <ul class="catUl">
+			   <?php 
+				$categories=$this->getStoreCategories();
+			 //echo '<pre>';
+				//print_r($categories->getData()); die;			
+			foreach($categories as $cat){ ?>
+			   <li ><input class='catCheckbox' type='checkbox' id='catCheckBox' name='catCheckBox[]'  value='<?php echo $cat->getProductCount();?>' catId="<?php echo $cat->getId();?>" >
+				
+				   <small><?php echo 	$cat->getName();?> </small>
+					</li>
+
+				<?php } ?>
+			   
+		   </ul>   
+		   
+		</div>  
+		
+		
+	</div>
+</div>
+
+ <div id="amasty_locator_filter" class="block" >
+   <!-- <div class="column_right">
+    <div class="block-title">
+            <strong><span><?= __('Filter')?></span></strong>
+        </div>
+      <div class="block-content">
+            <?php $attributes = $block->getAttributes();?>
+            <form id="attribute-form" class="attributes" action="#">
+            
+                <?php foreach ($attributes as $attribute): ?>
+                    <div class="location-attribute">
+                        <div class="attribute-label"><?php echo $attribute['label'];?></div>
+                        <input type="hidden" value="<?php echo $attribute['attribute_id'];?>" name="attribute_id[]">
+                        <div class="input-box">
+                            <select name="option[<?php echo $attribute['attribute_id'];?>]">
+                                <option value=""><?php echo __('Please Select'); ?></option>
+                                <?php foreach ($attribute['options'] as $valueId => $option): ?>
+                                    <option value="<?php echo $valueId ?>"><?php echo $option; ?></option>
+                                <?php endforeach;?>
+                            </select>
+                        </div>
+                    </div>
+                <?php endforeach;?>
+            </form>  
+
+            <button class="button filter-attribute" title="Filter"  id="filterAttribute" ><span><span><?= __('Filter')?></span></span></button>
+        </div> 
+    </div> -->
+  <!--  <div class="column_left">
+       <div class="block-title">
+            <strong><span><?= __('Search')?></span></strong>
+        </div>
+        <div class="block-content">
+
+            <div id="current-address" class="amlocator_input">
+                <label for="address"><?= __('Current Location')?></label>
+                <div class="input-box">
+                    <input type="text" value="" class="input-text" id="amlocator-search"
+                           name="address" placeholder="<?= __('Enter a location')?>" autocomplete="off">
+                </div>
+            </div>
+            <div class="amlocator_input">
+                <label for="radius"><?= __('Search Radius')?></label>
+                <div class="input-box">
+                    <select title="" class="select" id="amlocator-radius" name="radius" >
+                        <option value=""><?= __('Everywhere')?></option>
+                        <option value="1">1</option>
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="500">500</option>
+                    </select>
+                </div>
+            </div>
+            <?php if($this->getDistanceConfig()): ?>
+                <div class="amlocator_input">
+                    <label for="measurement"><?= __('Search Radius Measurement')?></label>
+                    <div class="input-box">
+                        <select title="" class="select" id="amlocator-measurement" name="measurement">
+                            <option value="km"><?= __('km')?></option>
+                            <option selected="selected" value="mi"><?= __('mi')?></option>
+                        </select>
+                    </div>
+                </div>
+            <?php endif ?>
+
+            <div class="amlocator_input">
+                <button class="button" title="Filter"  id="sortByFilter" >
+                    <span>
+                        <span>
+                            <?= __('Search')?>
+                        </span>
+                    </span>
+                </button>
+
+                <button id="locateNearBy" class="button" title="Sort" type="button">
+                    <span>
+                        <span><?= __('Locate Nearby')?></span>
+                    </span>
+                </button>
+            </div>
+
+            <input type="hidden" id="am_lat" >
+            <input type="hidden" id="am_lng" >
+        </div>
+    </div> -->
+</div> 
+
+<div class="amlocator_center">
+    <div class="amlocator_mapblock">
+		<div id="amlocator-map-canvas"></div>
+		<div id="directions"></div>
+	</div>
+    <div class="amlocator_store_list"><?= $block->getChildHtml('amlocator_left') ?></div>
+</div>
+
+<script>
+    var baloonTemplate = <?php echo $block->getBaloonTemplate() ?>;
+    var amMediaUrl = "<?php echo $block->getAmStoreMediaUrl() ?>";
+</script>
+
+<script language="javascript" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places<?php echo $block->getApiKey() ?>"></script>
+
+<script>
+  
+    require([
+        'jquery',
+        'Amasty_Storelocator/js/main',
+        'Amasty_Storelocator/js/cluster',
+        'domReady!'
+    ], function ($) {
+		
+		 $('#amlocator-map-canvas').amLocator({
+		    ajaxCallUrl: "<?php echo $this->getUrl('amlocator/index/ajax') . $this->getQueryString() ?>",
+            useGeo: "<?php echo $this->getGeoUse()?>",
+            jsonLocations: <?php echo $this->getJsonLocations() ?>,
+            imageLocations: "<?php echo $block->getViewFileUrl('Amasty_Storelocator::images/'); ?>",
+            filterAttributeUrl: "<?php echo $this->getUrl('amlocator/index/attribute') ?>"
+        })
+    });
+	
+	
+ require(['jquery', 'jquery/ui'], function($){ 
+
+   $(".catCheckbox").click(function(){
+  
+       var CatId=$(this).val();
+	// var catId=$(this).attr("catId");
+	//alert(catId); 	
+
+	var totalProduct = 0;
+	 var source = new Array();
+ 	$(".catCheckbox").each(function(index, element){
+  		if($(this).is(":checked"))
+     
+	//source.push($(this).attr("catId")))
+	  // var catId=$(element).attr("catId");
+	 // alert(catId);
+	
+       totalProduct = totalProduct + parseFloat($(element).val());
+
+ 	});
+ 	//alert(winners_array);
+ 
+ $("#productselect").val(totalProduct+' Products Selected');	 
+   var arr = [];
+	$('input.catCheckbox:checkbox:checked').each(function () {
+		//arr.push($(this).val());
+		arr.push($(this).attr("catId"));
+	});
+	  $("#cat_ids").val(arr);
+     // alert('testing'+arr);
+});
+   
+
+ 
+ }); 
+
+require(['jquery', 'jquery/ui'], function($){ 
+	$("#sortByFilter").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#amasty_locator_filter").offset().top
+		}, 2000);
+	});
+});	
+</script>
+

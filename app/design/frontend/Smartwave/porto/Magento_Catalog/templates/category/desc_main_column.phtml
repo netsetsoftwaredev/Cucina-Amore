@@ -1,0 +1,454 @@
+<?php
+$_category_desc = $this->helper('Smartwave\Porto\Helper\Data')->getConfig('porto_settings/category/category_description');
+$category = $block->getCurrentCategory();
+$isLanding = $category->getIsLanding();
+?>
+<?php if($isLanding == 1): ?>
+    <?php
+    $_category_desc = $this->helper('Smartwave\Porto\Helper\Data')->getConfig('porto_settings/category/category_description');
+    $category = $block->getCurrentCategory();
+    $isLanding = $category->getIsLanding();
+    $helper    = $this->helper('SR\CategoryImage\Helper\Category');
+    $iconsImg = ['preservatives' => array('img' => 'pub/media/wysiwyg/info1.png', 'title' => 'Preservative Free'),
+        'gluten' => array('img' => 'pub/media/wysiwyg/info2.png', 'title' => 'Gluten Free'),
+        'gmo' => array('img' => 'pub/media/wysiwyg/info1.png', 'title' => 'Not from GMO'),
+        'vegen' => array('img' => 'pub/media/wysiwyg/info1.png', 'title' => 'Vegan'),
+        'microwave' => array('img' => 'pub/media/wysiwyg/info1.png', 'title' => 'Microwavable')
+    ];
+    $icons = ['preservatives', 'gluten', 'gmo', 'vegen', 'microwave'];
+    $catIcons = explode(',', $category->getData('landing_nutrition_icons'));
+    $icons = array_intersect($icons, $catIcons);
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $productCreator = $objectManager->create('\Magento\Catalog\Api\ProductRepositoryInterface');
+    $relatedSkus = explode(',', $category->getData('landing_prods_related'));
+    $imageHelper  = $objectManager->get('\Magento\Catalog\Helper\Image');
+    $priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data'); // Instance of Pricing Helper
+    ?>
+
+    <?php $_category_desc = false; ?>
+    <div class="who-we-top-banner cat-top-banner" style="background-image: url(&quot;undefined&quot;);"><div class="img-descr"><div class="category-image" style="background:url(http://ec2-54-219-131-99.us-west-1.compute.amazonaws.com/pub/media/catalog/category/cat-bg.jpg)"><img src="http://ec2-54-219-131-99.us-west-1.compute.amazonaws.com/pub/media/catalog/category/cat-bg.jpg" alt="Test John" title="Test John" class="image"></div>    <div class="category-description no-margin">
+                <div class="who-we-top-banner-content">
+                    <h1><?php echo $category->getData('landing_headling') ?></h1>
+                    <p><?php echo $category->getData('landing_headling_desc') ?></p>
+                    <ul>
+                        <li><a href="<?php echo $category->getData('landing_headling_link') ?>" class="history-btn">SHOP PRODUCTS</a></li>
+                        <li><a href="#" class="tem-btn">WHERE TO BUY</a></li>
+                    </ul>
+                </div><!-- who-we-top-banner-content -->    </div>
+        </div></div>
+    <section class="cucina-difference-wrapper cat-cucina">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                    <div class="cucina-difference-heading">
+                        <h1>THE CUCINA DIFFERENCE</h1>
+                        <p>The Quinoa Meals are one-of-a-kind and made with love every step of the way!</p>
+                    </div>
+                </div>
+            </div><!-- row -->
+        </div>
+        <div class="cucina-difference-slide how-slider">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                        <div class="cucina-carousel owl-carousel owl-theme">
+                            <div class="item">
+                                <h1 class="for-mobile">HOW</h1>
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-6">
+                                        <img class="for-desktop" src="<?php echo $helper->getImageUrl($category->getData('landing_how_img1')) ?>" />
+                                        <img class="for-mobile" src="<?php echo $helper->getImageUrl($category->getData('landing_how_img2')) ?>" />
+                                    </div>
+                                    <div class="col-md-6 col-xs-6">
+                                        <h1 class="for-desktop">HOW</h1>
+                                        <p><?php echo $category->getData('landing_how_content1') ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <h1 class="for-mobile">HOW</h1>
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-6">
+                                        <img class="for-desktop" src="<?php echo $helper->getImageUrl($category->getData('landing_how_img3')) ?>" />
+                                        <img class="for-mobile" src="<?php echo $helper->getImageUrl($category->getData('landing_how_img4')) ?>" />
+                                    </div>
+                                    <div class="col-md-6 col-xs-6">
+                                        <h1 class="for-desktop">HOW</h1>
+                                        <p><?php echo $category->getData('landing_how_content1') ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- how-slider -->
+        <div class="cucina-difference-slide what-slider">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                        <div class="cucina-carousel owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-6">
+                                        <img class="for-desktop" src="<?php echo $helper->getImageUrl($category->getData('landing_what_img1')) ?>" />
+                                        <img class="for-mobile" src="<?php echo $helper->getImageUrl($category->getData('landing_what_img2')) ?>" />
+                                    </div>
+                                    <div class="col-md-6 col-xs-6">
+                                        <h1>WHAT</h1>
+                                        <p><?php echo $category->getData('landing_what_content1') ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-6">
+                                        <img class="for-desktop" src="<?php echo $helper->getImageUrl($category->getData('landing_how_img3')) ?>" />
+                                        <img class="for-mobile" src="<?php echo $helper->getImageUrl($category->getData('landing_how_img4')) ?>" />
+
+                                    </div>
+                                    <div class="col-md-6 col-xs-6">
+                                        <h1>WHAT</h1>
+                                        <p><?php echo $category->getData('landing_what_content2') ?> </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- what-slider -->
+        <div class="cucina-difference-slide where-slider">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                        <div class="cucina-carousel owl-carousel owl-theme">
+                            <div class="item">
+                                <h1 class="for-mobile">WHERE</h1>
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-6">
+                                        <img class="for-desktop" src="<?php echo $helper->getImageUrl($category->getData('landing_where_img1')) ?>" />
+                                        <img class="for-mobile" src="<?php echo $helper->getImageUrl($category->getData('landing_where_img2')) ?>" />
+                                    </div>
+                                    <div class="col-md-6 col-xs-6">
+                                        <h1 class="for-desktop">WHERE</h1>
+                                        <p><?php echo $category->getData('landing_where_content1') ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <h1 class="for-mobile">WHERE</h1>
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-6">
+                                        <img class="for-desktop" src="<?php echo $helper->getImageUrl($category->getData('landing_where_img1')) ?>" />
+                                        <img class="for-mobile" src="<?php echo $helper->getImageUrl($category->getData('landing_where_img1')) ?>" />
+                                    </div>
+                                    <div class="col-md-6 col-xs-6">
+                                        <h1 class="for-desktop">WHERE</h1>
+                                        <p><?php echo $category->getData('landing_where_content2') ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- row -->
+            </div><!-- container -->
+        </div><!-- where-slider -->
+    </section><!-- cucina-difference-wrapper -->
+
+    <section class="cucina-life-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                    <div class="cucina-difference-heading">
+                        <h1>CUCINA & YOUR LIFE</h1>
+                        <p><?php echo $category->getData('landing_life_head') ?></p>
+                    </div>
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+        <div class="healty-time">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                        <h2><?php echo $category->getData('landing_life_headline1') ?></h2>
+                        <p><?php echo $category->getData('landing_life_desc1') ?></p>
+                    </div>
+                </div><!-- row -->
+            </div><!-- container -->
+        </div><!-- healty-time -->
+    </section><!-- cucina-life-wrapper -->
+
+
+
+
+
+    <section class="yummy-wrapper">
+        <div class="half-col">
+            <ul>
+                <li><img src="pub/media/wysiwyg/first-half.png"/></li>
+                <li><img src="pub/media/wysiwyg/second-half.png"/></li>
+            </ul>
+        </div><!-- half-col -->
+        <div class="half-col orange-color">
+            <h2><?php echo $category->getData('landing_life_headline2') ?></h2>
+            <p><?php echo $category->getData('landing_life_desc2') ?></p>
+        </div><!-- half-col -->
+    </section><!-- yummy-wrapper -->
+
+
+    <!-- Nutrition -->
+    <div class="nutrition-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <h1>NUTRITION INFO</h1>
+                    <div class="insd-nutrition">
+                        <ul>
+                            <?php foreach($icons as $icon): ?>
+                                <li>
+                                    <a href="#"><img src="<?php echo $iconsImg[$icon]['img'] ?>"></a>
+                                    <h3><?php echo $iconsImg[$icon]['title'] ?></h3>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-5 col-md-5">
+                    <div class="nutrition-img for-mobile">
+                        <img src="pub/media/wysiwyg/info-txt-bg.png">
+                    </div>
+                    <div class="nutrition-txt">
+                        <h2><?php echo $category->getData('landing_nutrition_headline') ?></h2>
+                        <?php echo $category->getData('landing_nutrition_desc') ?>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-7 col-md-7">
+                    <div class="nutrition-img for-desktop">
+                        <img src="<?php echo $helper->getImageUrl($category->getData('landing_nutrition_facts')) ?>">
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- end Nutrition -->
+
+
+
+    <!-- flavour -->
+    <div class="flavor-box">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <h1>FIND YOUR FLAVOR</h1>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+
+                        <li role="presentation" class="active"><a href="#earthy" aria-controls="earthy" role="tab" data-toggle="tab">EARTHY</a></li>
+
+                        <li role="presentation"><a href="#savory" aria-controls="savory" role="tab" data-toggle="tab">SAVORY</a></li>
+
+                        <li role="presentation"><a href="#sweet" aria-controls="sweet" role="tab" data-toggle="tab">SWEET</a></li>
+
+                        <li role="presentation"><a href="#spicy" aria-controls="spicy" role="tab" data-toggle="tab">SPICY</a></li>
+
+
+                        <li role="presentation"><a href="#tangy" aria-controls="tangy" role="tab" data-toggle="tab">TANGY</a></li>
+
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="earthy">
+
+                            <div class="flavour-img">
+                                <div class="img-box">
+                                    <div class="img" style="background:url('pub/media/wysiwyg/flavor-1.jpg') no-repeat;"></div>
+                                <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+                            </div>
+                            <div class="img-box">
+                                <div class="img"  style="background:url('pub/media/wysiwyg/flavor-2.jpg') no-repeat;"></div>
+                            <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+                        </div>
+
+                        <div class="img-box">
+                            <div class="img" style="background:url('pub/media/wysiwyg/flavor-1.jpg') no-repeat;"></div>
+                        <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+                    </div>
+                    <div class="img-box">
+                        <div class="img"  style="background:url('pub/media/wysiwyg/flavor-2.jpg') no-repeat;"></div>
+                    <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div role="tabpanel" class="tab-pane" id="savory">
+            <div class="flavour-img">
+                <div class="img-box">
+                    <div class="img"  style="background:url('pub/media/wysiwyg/flavor-2.jpg') no-repeat;"></div>
+                <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+            </div>
+            <div class="img-box">
+                <div class="img" style="background:url('pub/media/wysiwyg/flavor-1.jpg') no-repeat;"></div>
+            <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+        </div>
+        <div class="img-box">
+            <div class="img"  style="background:url('pub/media/wysiwyg/flavor-2.jpg') no-repeat;"></div>
+        <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+    </div>
+    <div class="img-box">
+        <div class="img" style="background:url('pub/media/wysiwyg/flavor-1.jpg') no-repeat;"></div>
+    <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+    </div>
+
+    </div>
+    </div>
+
+
+    <div role="tabpanel" class="tab-pane" id="sweet">
+
+        <div class="flavour-img">
+            <div class="img-box">
+                <div class="img" style="background:url('pub/media/wysiwyg/flavor-1.jpg') no-repeat;"></div>
+            <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+        </div>
+        <div class="img-box">
+            <div class="img" style="background:url('pub/media/wysiwyg/flavor-1.jpg') no-repeat;"></div>
+        <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+    </div>
+    <div class="img-box">
+        <div class="img"  style="background:url('pub/media/wysiwyg/flavor-2.jpg') no-repeat;"></div>
+    <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+    </div>
+    <div class="img-box">
+        <div class="img"  style="background:url('pub/media/wysiwyg/flavor-2.jpg') no-repeat;"></div>
+    <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+    </div>
+
+    </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="spicy">
+
+        <div class="flavour-img">
+            <div class="img-box">
+                <div class="img"  style="background:url('pub/media/wysiwyg/flavor-2.jpg') no-repeat;"></div>
+            <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+        </div>
+        <div class="img-box">
+            <div class="img" style="background:url('pub/media/wysiwyg/flavor-1.jpg') no-repeat;"></div>
+        <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+    </div>
+    <div class="img-box">
+        <div class="img" style="background:url('pub/media/wysiwyg/flavor-1.jpg') no-repeat;"></div>
+    <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+    </div>
+    <div class="img-box">
+        <div class="img"  style="background:url('pub/media/wysiwyg/flavor-2.jpg') no-repeat;"></div>
+    <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+    </div>
+
+    </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="tangy">
+
+        <div class="flavour-img">
+            <div class="img-box">
+                <div class="img" style="background:url('pub/media/wysiwyg/flavor-1.jpg') no-repeat;"></div>
+            <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+        </div>
+        <div class="img-box">
+            <div class="img"  style="background:url('pub/media/wysiwyg/flavor-2.jpg') no-repeat;"></div>
+        <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+    </div>
+    <div class="img-box">
+        <div class="img"  style="background:url('pub/media/wysiwyg/flavor-2.jpg') no-repeat;"></div>
+    <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+    </div>
+    <div class="img-box">
+        <div class="img" style="background:url('pub/media/wysiwyg/flavor-1.jpg') no-repeat;"></div>
+    <h3>ARTICHOKE & PIQUILLO PEPPER QUINOA MEAL  ></h3>
+    </div>
+    </div>
+    </div>
+    <div class="flavor-slider" >
+        <div class="flavor-txt">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae auctor est, eget vestibulum nisi. Vestibulum finibus mauris vitae blandit rutrum. Morbi non metus lacinia, egestas eros eget,</p>
+        </div>
+        <div class="flavor-txt">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae auctor est, eget vestibulum nisi. Vestibulum finibus mauris vitae blandit rutrum. Morbi non metus lacinia, egestas eros eget,</p>
+        </div>
+        <div class="flavor-txt">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae auctor est, eget vestibulum nisi. Vestibulum finibus mauris vitae blandit rutrum. Morbi non metus lacinia, egestas eros eget,</p>
+        </div>
+
+    </div>
+    </div>
+
+    </div>
+
+    </div>
+    </div>
+
+    </div>
+    <!-- end flavour -->
+    
+    <div class="product-brBox">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <h3>PRODUCTS</h3>
+                    <h4>Click on any of the products to quickly shop or click view details to learn </h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <?php foreach ($relatedSkus as $sku): ?>
+                    <?php if($sku) $product = $productCreator->get($sku);
+		           if(isset($product)){
+		      ?>
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                        <div class="prod-box">
+                            <a href="<?php echo $product->getProductUrl(); ?>"><img src="<?php echo $imageHelper->init($product, 'product_page_image_small')->setImageFile($product->getFile())->resize(150, 150)->getUrl(); ?>"></a>
+                            <p><?php echo $product->getName(); ?></p>
+                            <span><?php echo $priceHelper->currency($product->getFinalPrice(), true, false); ?></span>
+                            <a href="<?php echo $product->getProductUrl(); ?>" class="butn">QUICK SHOP</a>
+                        </div>
+                    </div>
+                <?php } endforeach; ?>
+            </div>
+        </div>
+        <div class="pro-txt">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <?php echo $category->getData('landing_seo'); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #layer-product-list{display:none}
+        .page-main{padding:0}
+    </style>
+<?php endif; ?>
+<?php if ($_category_desc == "main_column" && $_description = $block->getCurrentCategory()->getDescription()): ?>
+    <div class="category-description">
+        <?php echo $this->helper('Magento\Catalog\Helper\Output')->categoryAttribute($block->getCurrentCategory(), $_description, 'description') ?>
+    </div>
+<?php endif; ?>
+

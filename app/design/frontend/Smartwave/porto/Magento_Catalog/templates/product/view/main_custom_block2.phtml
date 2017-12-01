@@ -1,0 +1,63 @@
+<?php
+$product = $block->getProduct();
+$productImageAttr = $product->getCustomAttribute('nutritional_facts');
+$productImage = '';
+if($product->getNutritionalFacts()) {
+    $productImage = $this->helper('Magento\Catalog\Helper\Image')
+        ->init($product, 'nutritional_facts')
+        ->setImageFile($productImageAttr->getValue());
+    $productImage = $productImage->getUrl();
+}
+$option = "";
+if($product->getNutritionalIcon() !="")
+{
+	$objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
+	
+	$attributeOptionCollection = $objectManager->create(\Magento\Eav\Model\ResourceModel\Entity\Attribute\Option\Collection::class);
+	
+	$nutritional_icon_attr_id = 203;
+	
+	$optionIds = $product->getUnitSize();
+
+	$option = $attributeOptionCollection
+		->setPositionOrder('asc')
+		->setAttributeFilter($nutritional_icon_attr_id)
+		->setIdFilter(explode(",",$product->getNutritionalIcon()))
+		->setStoreFilter()
+		->load();	
+}
+?>
+<div class="custom-block">    
+	<?php if(is_object($option) && $option->getSize()):?>
+	<ul class="new-icon-three">
+		<?php foreach($option as $opt ):?>
+        <li><img src="/pub/media/nutritional_icons/<?php echo $opt->getValue()?>.png" height="25" width="25"/><?php echo $opt->getValue()?></li>
+		<?php endforeach?>
+	
+    </ul>
+	<?php endif?>
+	<div class="nutris-lnk">
+		<a href="/amlocator" target="_blank" class="nutritional-store">Store Locator</a>
+	</div>
+    <div Class="nutris-cnt extra-content"> 
+        <a href="javascript:void(0)" class="nutritional-trigger">Nutritional Facts</a>
+    </div>
+
+
+    <!-- popup -->
+
+
+    <div class="nutritional-form"  style="display:none;">
+        <span class="form-layer"></span>
+        <div class="insd-nutritn">
+            <div class="insd-nutritn-top">
+                <a href="javascript:void(0)" class="nutritional-form-trigger"><img src="pub/media/wysiwyg/close-icon-nu.png" alt="" /></a>
+                <img width="300px" src="<?php echo $productImage ?>" alt="" />
+            </div>
+            <div class="insd-nutritn-bottom">
+                <p><?php echo $product->getShortDescription() ?></p>
+            </div>
+        </div>
+    </div>
+</div>
+

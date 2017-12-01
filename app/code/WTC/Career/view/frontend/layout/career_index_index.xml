@@ -1,0 +1,53 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+
+	<head>
+        <title>Career</title>
+        <!-- 
+		demo
+		<css src="WTC_Career::css/css.css"/>
+		<script src="WTC_Career::js/js.js"/>
+		<css src="jquery/fileUploader/css/jquery.fileupload-ui.css"/>
+		<script src="path/file.js" defer="defer"/>
+		<link src="http://url.com" src_type="url"/>
+		<remove src="path/remove/file.css"/>
+
+		-->
+		<css src="WTC_Career::css/career.css"/>
+		<css src="WTC_Career::css/selectric.css"/>
+		<script src="WTC_Career::js/career.js"/>
+		<script src="WTC_Career::js/parallax.min.js"/>
+		<script src="WTC_Career::js/jquery.selectric.js"/>
+		<script src="WTC_Career::js/selectric.js"/>
+    </head> 
+
+    <body>
+		<attribute name="class" value="career-page"/>
+		<referenceBlock name="page.main.title" remove="true" />
+        <referenceContainer name="sidebar.main">
+            <block class="WTC\Career\Block\Index\Sidebar" name="career_index_sidebar" before="-" template="WTC_Career::career_index_sidebar.phtml"/>
+        </referenceContainer>
+		
+		<referenceBlock name="breadcrumbs">
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Home</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Home</item>
+                    <item name="label" xsi:type="string">Home</item>
+                    <item name="link" xsi:type="string">{{baseUrl}}</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Careers</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Careers</item>
+                    <item name="label" xsi:type="string">Careers</item>
+                </argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="WTC\Career\Block\Index\Index" name="career_index_index" template="WTC_Career::index.phtml"/>
+        </referenceContainer>
+
+
+    </body>
+</page>

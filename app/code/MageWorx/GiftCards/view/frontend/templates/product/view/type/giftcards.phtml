@@ -1,0 +1,124 @@
+<?php
+/**
+ * Copyright © 2016 MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+?>
+<?php /* @var $block \Magento\Catalog\Block\Product\View\AbstractView */?>
+<?php $_product = $block->getProduct(); ?>
+<?php $_preValues = $_product->getPreconfiguredValues(); ?>
+<?php $_currency  = $block->getCurrency(); ?>
+<?php $_from = $block->getFromAmount(); ?>
+<?php $_to = $block->getToAmount(); ?>
+
+
+<script>
+    require([
+        'jquery', 
+        'jquery/ui', 
+        'jquery/validate', 
+        'mage/translate'
+    ], function($){ 
+        $.validator.addMethod(
+            'validate-float-range', function (value, element) { 
+                var reRange = new RegExp(/^float-range-[\d\.\,]+-[\d\.\,]+$/);
+                var el = element;
+                $w(element.className).each(function(name, index) {
+                    if (name.match(reRange)) {
+                        var min = parseFloat(name.split('-')[2]);
+                        var max = parseFloat(name.split('-')[3]);
+                        var val = parseFloat(value);
+                        result = !((value < min && min > 0) || (value > max && max > 0));
+                    }
+                });
+                return result;
+            }, $.mage.__('The value is not within the specified range'));
+
+    });
+</script>
+
+<br />
+
+<div class="giftcard-info">
+    <fieldset id="giftcard-fieldset" class="giftcard-fieldset">
+        <?php if ($block->getPriceStatus() == \MageWorx\GiftCards\Block\Product\View\Type\GiftCards::PRICE_TYPE_CUSTOMER) : ?>
+        <div class="field ">
+            <label for="card-amount" class="required"><?php echo __('Amount') ?><em>*</em>:</label><br/>
+            <input type="text" id="card-amount" name="card_amount" value="<?php echo $_preValues->getCardAmount(); ?>" 
+                   data-validate="{required: true, 'validate-float-range' : true}" 
+                   class="input-text float-range-<?php echo $_from;?>-<?php echo $_to;?>"/>&nbsp;(<?php echo $_currency->format($_from) ?> - <?php echo $_currency->format($_to) ?>)
+        </div>
+        <?php elseif ($block->getPriceStatus() == \MageWorx\GiftCards\Block\Product\View\Type\GiftCards::PRICE_TYPE_SELECTED) : ?>
+        <br/>
+        <label for="card-amount" class="required"><?php echo __('Select amount') ?><em>*</em>:</label><br/>
+        <select id="card-amount" name="card_amount" class="validate-select">
+            <?php foreach($block->getAdditionalPrices() as $additionalPrice) : ?>
+            <option value="<?php echo $additionalPrice;?>" <?php if ($_preValues->getCardAmount() == $additionalPrice ) { echo 'selected'; }; ?>><?php echo $additionalPrice;?></option>
+            <?php endforeach; ?>
+        </select>
+        <?php else: ?>
+            <h2><div class="price-box"><span class="regular-price"><?php echo $this->helper('Magento\Checkout\Helper\Data')->formatPrice($_product->getPrice()) ?></span></div></h2>
+        <?php endif; ?>
+        <div class="field">
+            <label for="mail-from"><?php echo __('From Name') ?>:</label><br/>
+            <input type="text" id="mail-from" name="mail_from" class="input-text" value="<?php echo $_preValues->getMailFrom();?>"/>
+        </div>
+        <div class="field">
+            <label for="mail-to"><?php echo __('To Name') ?>:</label><br/>
+            <input type="text" id="mail-to" name="mail_to" class="input-text" value="<?php echo $_preValues->getMailTo();?>"/>
+        </div>
+        <?php if ($block->getCardType() == 1): ?>
+            <div class="field">
+                <label for="mail-to-email" class="required"><?php echo __('To E-mail') ?><em>*</em>:</label><br/>
+                <input type="text" id="mail-to-email" name="mail_to_email" class="input-text required-entry validate-email" value="<?php echo $_preValues->getMailToEmail();?>"/>
+            </div>
+        <?php endif; ?>
+        <div class="field">
+            <label for="mail-message"><?php echo __('Message') ?>:</label><br/>
+            <textarea id="mail-message" name="mail_message" ><?php echo $_preValues->getMailMessage();?></textarea>
+        </div>
+        <?php if ($block->getCardType() == MageWorx\GiftCards\Model\GiftCards::TYPE_EMAIL) : ?>
+        <!--Preview-->
+        <br/>
+        <a href="#" id="card-preview"> <?php echo __('Preview my gift card'); ?>. </a>
+<script>
+    require(['jquery'], function ($) {
+            $('#card-preview').on('click', function() {
+                var product = <?php echo $_product->getId() ?>;
+                if ($('#card-amount')) {
+                    var price = $('card-amount').val();
+                }
+                if (!price) {
+                    var price = $('div.price-box span.regular-price span.price');
+                    price = price[0].innerHTML;
+                    price = price.slice(1);
+                } 
+                var mailFrom = $('#mail-from').val();
+                var mailTo = $('#mail-to').val();
+                var mailToEmail = $('#mail-to-email').val();
+                var mailMessage = $('#mail-message').val();
+                var cardType = '<?php echo $this->getCardType(); ?>';
+                var url = '<?php echo $this->getUrl('mageworx_giftcards/preview/preview'); ?>';
+                url = url.substring(0, url.length -1);
+                url += '/mail-from/' + mailFrom + '/mail-to/' + mailTo + '/mail-to-email/' + mailToEmail + '/mail-message/' + mailMessage+'/price/'+price+'/card-type/'+cardType+'/product/'+product;
+                window.open(url, '_blank');
+            })
+    });
+</script>
+        
+        <!--end preview-->
+        <?php endif; ?>
+    </fieldset>
+</div>
+
+<?php if ($block->displayProductStockStatus()): ?>
+    <?php if ($_product->isAvailable()): ?>
+        <div class="stock available" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
+            <span><?php /* @escapeNotVerified */ echo __('In stock') ?></span>
+        </div>
+    <?php else: ?>
+        <div class="stock unavailable" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
+            <span><?php /* @escapeNotVerified */ echo __('Out of stock') ?></span>
+        </div>
+    <?php endif; ?>
+<?php endif; ?>

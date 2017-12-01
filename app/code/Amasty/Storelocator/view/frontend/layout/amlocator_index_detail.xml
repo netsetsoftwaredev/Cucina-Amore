@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+        <!--
+        /**
+         * @author Amasty Team
+         * @copyright Copyright (c) 2016 Amasty (https://www.amasty.com)
+         * @package Amasty_Storelocator
+         */
+        -->
+        <!--
+        /**
+         * Copyright © 2015 Magento. All rights reserved.
+         * See COPYING.txt for license details.
+         */
+        -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+        <css src="Amasty_Storelocator::css/main.css"/>
+		<css src="Amasty_Storelocator::css/custom.css"/>
+    </head>
+    <body>
+         <referenceContainer name="main">
+            <block class="Amasty\Storelocator\Block\Location" name="amasty.locator.center.direction"
+                   template="Amasty_Storelocator::center_direction.phtml">
+                <block class="Amasty\Storelocator\Block\Location" name="amasty.locator.left.dir" as="amlocator_left_dir"
+                       template="Amasty_Storelocator::left_direction.phtml">
+                </block>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

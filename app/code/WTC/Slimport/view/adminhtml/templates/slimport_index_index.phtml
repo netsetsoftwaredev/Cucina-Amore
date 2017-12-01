@@ -1,0 +1,65 @@
+<div id="page:main-container" class="page-columns">
+   <div id="container" class="main-col">
+      <div class="admin__scope-old">
+         <div class="entry-edit form-inline">
+            <form id="edit_form" action="<?php echo $block->getUrl("slimport/index/save");?>" method="post" enctype="multipart/form-data" novalidate="novalidate" >
+			<?php echo $block->getBlockHtml('formkey'); ?>
+               <div id="videoimport_tabs_main_section_content" style="" data-ui-id="videoimport-videoimport-edit-tabs-tab-content-main-section" aria-labelledby="videoimport_tabs_main_section" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
+                  <div class="entry-edit form-inline">
+                     <fieldset class="fieldset admin__fieldset " id="page_base_fieldset">
+                        <legend class="admin__legend legend">
+                           <span>Import Stores</span>
+                        </legend>
+                        <br>
+                        <div class="messages"></div>
+                        <div class="admin__field field field-file  required _required" data-ui-id="videoimport-videoimport-edit-tab-main-fieldset-element-form-field-file">
+                           <label class="label admin__field-label" for="page_file" data-ui-id="videoimport-videoimport-edit-tab-main-fieldset-element-file-file-label"><span>Upload Csv</span></label>
+                           <div class="admin__field-control control">
+                              <input id="page_file" name="file" data-ui-id="videoimport-videoimport-edit-tab-main-fieldset-element-file-file" value="" title="Upload Csv" type="file" class="input-file" aria-required="true">                            
+                           </div>
+                        </div>
+						<button id="save" title="Save Videoimport" type="submit" class="action-default scalable save primary ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" data-ui-id="videoimport-videoimport-edit-save-button" role="button" aria-disabled="false"><span class="ui-button-text">
+					<span>Import Stores</span>
+				</span>
+				</button>
+                     </fieldset>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <script>
+            require([
+                'jquery',
+                'mage/backend/form',
+                'mage/backend/validation'
+            ], function($){
+            
+                $('#edit_form').form()
+                    .validation({
+                        validationUrl: '',
+                        highlight: function(element) {
+                            var detailsElement = $(element).closest('details');
+                            if (detailsElement.length && detailsElement.is('.details')) {
+                                var summaryElement = detailsElement.find('summary');
+                                if (summaryElement.length && summaryElement.attr('aria-expanded') === "false") {
+                                    summaryElement.trigger('click');
+                                }
+                            }
+                            $(element).trigger('highlight.validate');
+                        }
+                    });
+            
+            });
+         </script>
+         <script>
+            function toggleEditor() {
+                if (tinyMCE.getInstanceById('page_content') == null) {
+                    tinyMCE.execCommand('mceAddControl', false, 'content');
+                } else {
+                    tinyMCE.execCommand('mceRemoveControl', false, 'content');
+                }
+            };
+         </script>
+      </div>
+   </div>
+</div>

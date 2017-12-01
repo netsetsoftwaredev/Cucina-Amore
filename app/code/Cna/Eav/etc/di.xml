@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Magento\Eav\Model\Attribute\Data\Text" type="Cna\Eav\Model\Attribute\Data\Text" />
+	<preference for="Magento\Customer\Controller\Account\CreatePost" type="Cna\Eav\Controller\Rewrite\Customer\CreatePost" />
+	<preference for="\Magento\Checkout\Controller\Cart\Delete" type="Cna\Eav\Controller\Rewrite\Cart\Delete" />
+	<preference for="Magento\Checkout\Block\Cart\LayoutProcessor" type="Cna\Eav\Block\Cart\LayoutProcessor" />
+</config>

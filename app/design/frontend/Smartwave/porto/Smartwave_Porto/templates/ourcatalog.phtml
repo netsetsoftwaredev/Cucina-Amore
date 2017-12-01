@@ -1,0 +1,111 @@
+<section class="catlog-popup-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+						<a href="javascript:void(0)" class="catlog-trigger"><img src="<?php echo $block->getUrl().'pub/media/wysiwyg/btn-book.png'?>" /> <b>CLICK HERE</b> GET THE 2017 CUCINA & AMORE CATALOG</a>
+						<div class="catlog-form01 catlog-form">
+							<a href="javascript:void(0)" class="catlog-trigger-close"><img src="<?php echo $block->getUrl().'pub/media/wysiwyg/close-popup.png'?>" /></a>
+                                                              
+
+							<form action="out_catalog/index/index"  method="post" id="myform" name="myform" data-mage-init='{"validation": {}}'>
+								<img src="<?php echo $block->getUrl().'pub/media/wysiwyg/big-book.png'?>" />
+								<p>Enter your name and email and the catalog will be sent right to your inbox!</p>
+								<div class="form-group">
+									<label for="name">First name *</label>
+									<input name="name" type="text" class="form-control input-text required-entry" id="cName" placeholder=" ">
+									<span class="mage-error cName"></span>
+								</div>
+								<div class="form-group">
+									<label for="email">Email *</label>
+									<input type="email" name="email" class="form-control input-text required-entry validate-email" id="cEmail" placeholder="" >
+									<span class="mage-error cEmail"></span>
+								</div>
+								<div class="checkbox"> 
+									<label><input name="subscribe" type="checkbox" value="1">Yes, keep me updated with Cucina & Amore news, special offers and discounts!</label>
+								</div>
+								<button type="submit" id="btn-trigger-send" href="javascript:{}" class="btn-trigger">Yes, I want the catalog and special offers!</button>
+							</form>
+						</div><!-- catlog-form01 -->
+						<div class="catlog-form02 catlog-form">
+							<a href="javascript:void(0)" class="catlog-trigger-close"><img src="<?php echo $block->getUrl().'pub/media/wysiwyg/close-popup.png'?>" /></a>
+							<form action="http://ec2-54-219-131-99.us-west-1.compute.amazonaws.com/all-products.html/">
+								<img src="<?php echo $block->getUrl().'pub/media/wysiwyg/big-book.png'?>" />
+								<p>Thank you!</p>
+								<p>Your catalog has been sent to: <br><a href="mailto:email@gmail.com" class="sentmail"></a></p>
+								<button type="submit" class="btn-trigger">EXPLORE CUCINA & AMORE PRODUCTS</button>
+							</form>
+						</div><!-- catlog-form02 -->
+					</div>					
+				</div><!-- row -->
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+						<div class="callog-img-bottom">
+							<img src="<?php echo $block->getUrl().'pub/media/wysiwyg/callog-img.png'?>" />
+						</div><!-- callog-img -->
+					</div>
+				</div><!-- row -->
+			</div><!-- container -->
+		</section><!-- catlog-popup-wrapper -->
+			<style>.breadcrumbs{display:none;}</style>
+<script>
+// this is the id of the form
+jQuery(".catlog-trigger").click(function(){
+	jQuery(".catlog-form02").hide();
+});
+jQuery(".catlog-trigger-close").click(function(){
+jQuery(".catlog-form02").hide();
+});
+jQuery("#myform").submit(function(e) {
+	e.preventDefault();
+	var name=jQuery("#cName").val();
+	var email=jQuery("#cEmail").val();
+	var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	var e=0;
+	if(name=="")
+	{
+		e=1;
+		//jQuery(".mage-error.cName").html("This is a required Field.");
+	}else{jQuery(".mage-error.cName").html("");}
+	if(email==""){
+		e=1;
+	//	jQuery(".mage-error.cEmail").html("This is a required Field.");
+	}else if(!regex.test(email)){
+		e=1;
+	//	jQuery(".mage-error.cEmail").html("Invali Email Id.");
+	}else {
+	//	jQuery(".mage-error.cEmail").html("");
+	}
+	if(e==1){return false;}
+
+    var url = "out_catalog/index/index"; // the script where you handle the form input.
+    jQuery.ajax({
+       type: "POST",
+       showLoader:true,
+       url: url,
+       data: jQuery("#myform").serialize(), // serializes the form's elements.
+       success: function(data)
+       {
+       		jQuery(".catlog-form").removeClass('active');
+           jQuery("body").removeClass('catlog-open');
+           jQuery(".sentmail").text(email);
+           jQuery(".catlog-form02").show();
+       }
+     });
+    return false;
+     // avoid to execute the actual submit of the form.
+});
+</script>
+<style type="text/css">
+	button:not(.primary) {
+    padding: 0 !important;
+	}
+</style>
+<script type="text/javascript">
+
+require(['jquery','mage/mage'], function(){
+    var dataForm = jQuery('#myform');
+    dataForm.mage('validation', {});
+
+});   
+
+</script>

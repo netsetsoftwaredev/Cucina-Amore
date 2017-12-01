@@ -1,0 +1,24 @@
+<!--@subject Cucina & Amore - Store Details @-->
+<!--@vars {
+"var data.email":"Sender Email",
+} @-->
+
+Dear Customer, 
+<br/><br/>
+Please use the below link to get the direction.
+<br/><br/>
+
+<b>{{trans "%name" name=$data.name}}</b><br/>
+{{trans "%address" address=$data.address}}<br/>
+{{trans "%city" city=$data.city}}  
+{{trans "%zip" zip=$data.zip}}<br/>
+{{trans "%state" state=$data.state}},
+{{trans "%country" country=$data.country}}<br/>
+{{trans "%phone" phone=$data.phone}}<br/>
+{{trans "%hemail" hemail=$data.hemail}}<br/>
+{{trans "%website" website=$data.website}}<br/>
+{{trans "%description" description=$data.description}}
+<br/><br/>
+<a href="{{trans "%url" url=$data.url}}" >Get Direction</a>
+<br/><br/>
+Thanking You

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Rocktechnolabs_CLP::clp" title="CLP" module="Rocktechnolabs_CLP" sortOrder="1000" resource="Rocktechnolabs_CLP::clp" parent="Magento_Backend::content_elements"  />
+		
+		<add id="Rocktechnolabs_CLP::manage_clp" title="Manage CLP" module="Rocktechnolabs_CLP" sortOrder="50" parent="Rocktechnolabs_CLP::clp" action="clp/clp" resource="Rocktechnolabs_CLP::manage_clp"/> 	    
+   	    
+   	    <add id="Rocktechnolabs_CLP::manage_flavor" title="Manage Flavor" module="Rocktechnolabs_CLP" sortOrder="60" parent="Rocktechnolabs_CLP::clp" action="clp/flavor" resource="Rocktechnolabs_CLP::manage_flavor"/> 	    
+   	    
+
+		<!-- <add id="Rocktechnolabs_CLP::configuration" title="Configuration" module="Rocktechnolabs_CLP" sortOrder="50" parent="Rocktechnolabs_CLP::clp" action="adminhtml/system_config/edit/section/CLP/" resource="Rocktechnolabs_CLP::configuration" /> -->
+	</menu>
+</config>

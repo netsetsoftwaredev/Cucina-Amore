@@ -1,0 +1,79 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+$om = \Magento\Framework\App\ObjectManager::getInstance();
+$storeManager = $om->get('Magento\Store\Model\StoreManagerInterface');
+?>
+<?php $_order = $block->getOrder() ?>
+<?php if ($_order): ?>
+    <?php $_items = $_order->getAllItems(); ?>
+    <table class="email-items" cellspacing="0" cellpadding="0" style="width: 100%;margin: 0 auto;padding: 0 0 60px 0;">
+        <thead style="background:#231f20; line-height:44px; text-align:center;">
+            <tr style="text-align: center;">
+                <th class="item-info" style="color:#fff; font-size:18px; font-weight:normal; text-align:left; padding:0 0 0 40px;">
+                    <?= /* @escapeNotVerified */  __('Items'); ?>
+                </th>
+                <th class="item-qty" style="color:#fff; font-size:18px; font-weight:normal; text-align:left; padding:0 0 0 40px;">
+                    <?= /* @escapeNotVerified */  __('Qty'); ?>
+                </th>
+                <th class="item-price" style="color:#fff; font-size:18px; font-weight:normal; text-align:left; padding:0 0 0 40px;">
+                    <?= /* @escapeNotVerified */  __('Price'); ?>
+                </th>
+            </tr>
+        </thead>
+        <?php foreach ($_items as $_item): ?>
+            <?php
+                if ($_item->getParentItem()) {
+                    continue;
+                }
+            ?>
+            <tbody>
+                <?= $block->getItemHtml($_item) ?>
+            </tbody>
+        <?php endforeach; ?>
+        <tfoot class="order-totals">
+		<tr>
+			<td colspan="3">
+			<table style="width:100%">
+				<tr>
+					<td colspan="2" align="left" valign="top">
+					<a href="<?php echo $storeManager->getStore()->getBaseUrl().'all-products.html'; ?>" style="display:inline-block; padding:0; margin:0;">
+						<img style="width:100%;" src="<?php echo $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA).'email/freshipping.jpg'; ?>">
+					</a>
+					</td>
+					<td colspan="1" style="background:#f6f6f6; padding:5px 0 0 0;" width="50%" align="right" valign="top">
+						<table style="color: #4a4a4c;line-height: 24px;font-size: 15px;font-weight: bold;text-align: left;">
+							<?= $block->getChildHtml('order_totals') ?>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+        </tfoot>
+    </table>
+    <?php if ($this->helper('Magento\GiftMessage\Helper\Message')->isMessagesAllowed('order', $_order, $_order->getStore()) && $_order->getGiftMessageId()): ?>
+        <?php $_giftMessage = $this->helper('Magento\GiftMessage\Helper\Message')->getGiftMessage($_order->getGiftMessageId()); ?>
+        <?php if ($_giftMessage): ?>
+            <br />
+            <table class="message-gift">
+                <tr>
+                    <td>
+                        <h3><?= /* @escapeNotVerified */  __('Gift Message for this Order') ?></h3>
+                        <strong><?= /* @escapeNotVerified */  __('From:'); ?></strong> <?= $block->escapeHtml($_giftMessage->getSender()) ?>
+                        <br /><strong><?= /* @escapeNotVerified */  __('To:'); ?></strong> <?= $block->escapeHtml($_giftMessage->getRecipient()) ?>
+                        <br /><strong><?= /* @escapeNotVerified */  __('Message:'); ?></strong>
+                        <br /><?= $block->escapeHtml($_giftMessage->getMessage()) ?>
+                    </td>
+                </tr>
+            </table>
+        <?php endif; ?>
+    <?php endif; ?>
+<?php endif; ?>

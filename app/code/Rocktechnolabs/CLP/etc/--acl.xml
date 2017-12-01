@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Rocktechnolabs_CLP::config_Rocktechnolabs_clp" title="CLP Section" sortOrder="50">
+                            </resource>
+                        </resource>
+                    </resource>
+                </resource>
+                
+                <resource id="Magento_Catalog::catalog">
+                    <resource id="Rocktechnolabs_CLP::clp" title="CLP">
+                            <resource id="Rocktechnolabs_CLP::manage_attachment" title="Manage CLP" sortOrder="50" >
+                            	<resource id="Rocktechnolabs_CLP::CLP" title="Manage Record" sortOrder="10" />
+                                <resource id="Rocktechnolabs_CLP::save" title="Save Record" sortOrder="10" />
+                            </resource>
+                            <resource id="Rocktechnolabs_CLP::configuration" title="Configuration" sortOrder="50" />
+                    </resource>
+                </resource>
+        	</resource>
+        </resources>
+    </acl>
+</config>

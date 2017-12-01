@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Geoip
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Store/etc/config.xsd">
+    <default>
+        <amgeoip>
+            <general>
+                <location_file_url>https://amasty.com/media/downloads/geoip/amasty_geoip_location.sql</location_file_url>
+                <block_file_url>https://amasty.com/media/downloads/geoip/amasty_geoip_block.sql</block_file_url>
+            </general>
+        </amgeoip>
+    </default>
+</config>

@@ -1,0 +1,156 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+// @codingStandardsIgnoreFile
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$orderData = $objectManager->create('Magento\Sales\Model\Order')->loadByIncrementId($block->getOrderId());
+$shippAddr = $orderData->getShippingAddress();
+$billAddr = $orderData->getBillingAddress();
+$billStreet = preg_split ('/$\R?^/m', $billAddr->getData('street'));
+$shipStreet = preg_split ('/$\R?^/m', $shippAddr->getData('street'));
+
+$billStreet1 = (array_key_exists(1, $billStreet)) ? $billStreet[1] : 'Bill to Addr';
+$shipStreet1 = (array_key_exists(1, $shipStreet)) ? $shipStreet[1] : 'Ship to Addr';
+
+$createdAt = $orderData->getCreatedAt();
+$dateTime = explode(' ', $createdAt);
+$orderItems = $orderData->getAllItems();
+$products = array();
+$n = 1;
+$i = 0;
+foreach ($orderItems as $key=>$item) {
+    $products[$i]['LineNumber'] = "$n";
+    $products[$i]['Product_Id'] = $item->getData('sku');
+    $products[$i]['Product_Qty'] = $item->getData('qty_ordered');
+    $products[$i]['Product_UPrice'] = $item->getData('price');
+    $products[$i]['Product_EPrice'] = $item->getData('price') * $item->getData('qty_ordered');
+    $n++;
+    $i++;
+}
+
+$array = 
+array
+(
+    "Customer" => array
+        (
+            "Customer_Id" => $orderData->getData('customer_id'),
+            "Customer_Email" => $orderData->getData('customer_email'),
+            "Customer_FName" => $orderData->getData('customer_firstname'),
+            "Customer_LName" => $orderData->getData('customer_lastname'),
+            "Customer_BName" => $billAddr->getData('firstname').' '.$billAddr->getData('lastname'),
+            "Customer_BPhone" => $billAddr->getData('telephone'),
+            "Customer_BAddr1" => $billStreet[0],
+            "Customer_BAddr2" => $billStreet1,
+            "Customer_BCity" => $billAddr->getData('city'),
+            "Customer_BState" => $billAddr->getData('region'),
+            "Customer_BZip" => $billAddr->getData('postcode'),
+            "Customer_BCountry" => $billAddr->getData('country_id'),
+            "Customer_SName" => $shippAddr->getData('firstname').' '.$shippAddr->getData('lastname'),
+            "Customer_SPhone" => $shippAddr->getData('telephone'),
+            "Customer_SAddr1" => $shipStreet[0],
+            "Customer_SAddr2" => $shipStreet1,
+            "Customer_SCity" => $shippAddr->getData('city'),
+            "Customer_SState" => $shippAddr->getData('region'),
+            "Customer_SZip" => $shippAddr->getData('postcode'),
+            "Customer_SCountry" => $shippAddr->getData('country_id'),
+            "Customer_Status" => "Status",
+            "Customer_GroupType" => $orderData->getData('customer_group_id')
+        ),
+
+    "Shipment" => array
+        (
+            "Ship_Id" => $orderData->getShipmentsCollection()->getFirstItem()->getId(),
+            "Shipments" => "Shipment",
+            "Ship_TrackNum" => "Tracking Number",
+            "Ship_TransId" => "Transaction Id"
+        ),
+
+    "Order" => array
+        (
+            "Order_SubTotal" => $orderData->getData('subtotal'),
+            "Order_Tax" => $orderData->getData('tax_amount'),
+            "Order_Shipping" => $orderData->getData('shipping_amount'),
+            "Order_Discounts" => $orderData->getData('discount_amount'),
+            "Order_Total" => $orderData->getData('grand_total'),
+            "Order_Date" => $dateTime[0],
+            "Order_Time" => $dateTime[1]
+        ),
+
+    "Payment" => array
+        (
+            "Pmt_Method" => $orderData->getPayment()->getMethodInstance()->getTitle(),
+            "Pmt_Auth" => 'Null',
+            "Pmt_CCType" => 'Null',
+            "Pmt_CCNum" => 'Null',
+            "Pmt_Exp" => 'Null',
+            "Pmt_TransId" => 'Null'
+        )
+
+);
+
+$array['LineItems'] = $products;
+echo "<pre>";
+//print_r($array);
+$orderJSON = json_encode($array);
+$ch = curl_init('http://ltserver2.cloudapp.net/lagunab2b/api/ltserver2/laguna/Security/authenticate?username=Magento&password=123');                                                 
+
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                      
+curl_setopt($ch, CURLOPT_POSTFIELDS, $orderJSON);                       
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    'Content-Type: application/json',
+    'Accept: text/plain')
+);
+
+$result = curl_exec($ch);
+curl_close($ch);
+$id = ltrim($block->getOrderId(),0);
+//$url = "http://ltserver2.cloudapp.net/lagunab2b/api/ltserver2/laguna/po/$id?token=$result";
+
+$cp = curl_init("http://ltserver2.cloudapp.net/lagunab2b/api/ltserver2/laguna/po/$id?token=$result");
+//curl_setopt($cp, CURLOPT_URL, $url);
+curl_setopt($cp, CURLOPT_CUSTOMREQUEST, "POST");
+curl_setopt($cp, CURLOPT_POSTFIELDS, $orderJSON);
+curl_setopt($cp, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($cp, CURLOPT_HTTPHEADER, array(
+    'Content-Type: application/json',
+    'Accept: application/json')
+);
+
+$finalresult = curl_exec($cp);
+curl_close($cp);
+
+
+$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/d3.log');
+$logger = new \Zend\Log\Logger();
+$logger->addWriter($writer);
+$logger->info('Your Response: '.$finalresult);
+
+$writer1 = new \Zend\Log\Writer\Stream(BP . '/var/log/d3orders/'.$block->getOrderId().'.log');
+$logger1 = new \Zend\Log\Logger();
+$logger1->addWriter($writer1);
+$logger1->info('Your Response: '.$orderJSON);
+
+
+?>
+<?php /** @var $block \Magento\Checkout\Block\Onepage\Success */ ?>
+<div class="checkout-success">
+    <?php if ($block->getOrderId()):?>
+        <?php if ($block->getCanViewOrder()) :?>
+            <p><?php echo __('Your order number is: %1.', sprintf('<a href="%s" class="order-number"><strong>%s</strong></a>', $block->escapeHtml($block->getViewOrderUrl()), $block->escapeHtml($block->getOrderId()))) ?></p>
+        <?php  else :?>
+            <p><?php echo __('Your order # is: <span>%1</span>.', $block->escapeHtml($block->getOrderId())) ?></p>
+        <?php endif;?>
+            <p><?php /* @escapeNotVerified */ echo __('We\'ll email you an order confirmation with details and tracking info.') ?></p>
+    <?php endif;?>
+
+    <?php echo $block->getAdditionalInfoHtml() ?>
+
+    <div class="actions-toolbar">
+        <div class="primary">
+            <a class="action primary continue" href="<?php /* @escapeNotVerified */ echo $block->getUrl().'all-products.html'?>"><span><?php /* @escapeNotVerified */ echo __('Continue Shopping') ?></span></a>
+        </div>
+    </div>
+</div>

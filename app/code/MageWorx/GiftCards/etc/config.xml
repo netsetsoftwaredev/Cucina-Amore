@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mageworx_giftcards>
+            <main>
+                <orderstatus>complete</orderstatus>
+                <disable_multishipping>1</disable_multishipping>
+            </main>
+            <email>
+                <orderstatus>complete</orderstatus>
+                <email_template>mageworx_giftcards_email_email_template</email_template>
+                <print_template>mageworx_giftcards_email_print_template</print_template>
+                <offline_template>mageworx_giftcards_email_offline_template</offline_template>
+            </email>
+        </mageworx_giftcards>
+    </default>
+</config>

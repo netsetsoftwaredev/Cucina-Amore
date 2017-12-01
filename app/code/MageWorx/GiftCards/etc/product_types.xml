@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Catalog:etc/product_types.xsd">
+    <type name="mageworx_giftcards" label="MageWorx Gift Card" modelInstance="MageWorx\GiftCards\Model\Product\Type\GiftCards" indexPriority="90" sortOrder="90" isQty="true">
+        <priceModel instance="MageWorx\GiftCards\Model\Product\Type\Price" />
+        <customAttributes>
+            <attribute name="refundable" value="true"/>
+            <attribute name="taxable" value="false"/>
+            <attribute name="mageworx_gc_type" />
+            <attribute name="price" />
+            <attribute name="mageworx_gc_additional_price" />
+        </customAttributes>
+    </type>
+    <composableTypes>
+        <type name="mageworx_giftcards" />
+    </composableTypes>
+</config>

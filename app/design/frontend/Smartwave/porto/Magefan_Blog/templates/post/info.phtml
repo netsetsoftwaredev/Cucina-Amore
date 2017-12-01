@@ -1,0 +1,40 @@
+<?php
+/**
+ * Copyright © 2016 Ihor Vansach (ihor@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Blog post info template
+ *
+ * @var $block \Magefan\Blog\Block\Post\Info
+ */
+?>
+
+<?php $_post = $block->getPost() ?>
+
+<div class="post-info clear">
+    <?php if ($block->authorEnabled()) { ?>
+        <?php if ($_author = $_post->getAuthor()) { ?>            
+            <div class="item post-author">
+                <span class="label"><?php echo __('By') ?></span>
+                <span class="value">
+                    <?php if ($authorPageEnabled = $block->authorPageEnabled()) { ?>
+                        <a title="<?php echo $block->escapeHtml($_author->getTitle()) ?>" href="<?php echo $_author->getAuthorUrl() ?>">
+                        <?php } ?>
+                        <?php echo $block->escapeHtml($_author->getTitle()) ?>
+                        <?php if ($authorPageEnabled) { ?>
+                        </a>
+                    <?php } ?>
+                </span>
+                <span class="dash">/</span>
+            </div>            
+        <?php } ?>
+    <?php } ?>
+    <div class="item post-posed-date">
+        <span class="value"><?php echo $_post->getPublishDate('F d, Y') ?></span>
+    </div>
+</div>

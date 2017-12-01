@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="WTC_Bsc::parent" title="CUCINA AND AMORE" module="WTC_Bsc" sortOrder="20" resource="WTC_Bsc::parent"/>
+		<add id="WTC_Bsc::bsc" title="Business Customers" module="WTC_Bsc" sortOrder="20" parent="WTC_Bsc::parent" action="bsc/bsc" resource="WTC_Bsc::bsc"/>
+
+    </menu>
+</config>

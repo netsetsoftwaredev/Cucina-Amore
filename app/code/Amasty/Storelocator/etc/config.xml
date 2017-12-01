@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Storelocator
+ */
+-->
+<!--
+/**
+* Copyright © 2015 Amasty. All rights reserved.
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <amlocator>
+            <general>
+                <url>amlocator</url>
+            </general>
+            <locator>
+                <template>
+                    <![CDATA[
+                    <div class="popup" >
+                    <h2>{{name}}</h2>
+                    {{photo}}
+                    City: {{city}} <br>
+                    Zip: {{zip}} <br>
+                    Address: {{address}} <br>
+                    {{ifstate}}State: {{state}} <br>{{/ifstate}}
+                    Description: {{description}} <br>
+					<a href="#"> Get Directions</a>
+                    </div>
+                    ]]>
+                </template>
+                <attribute_template>
+                    <![CDATA[
+                    {{title}}: {{value}} <br>
+                    ]]>
+                </attribute_template>
+                <linktext>Available in Stores</linktext>
+                <new_page>0</new_page>
+            </locator>
+            <geoip>
+                <usebrowserip>1</usebrowserip>
+            </geoip>
+        </amlocator>
+    </default>
+</config>

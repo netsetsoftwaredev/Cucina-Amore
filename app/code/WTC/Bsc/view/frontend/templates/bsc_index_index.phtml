@@ -1,0 +1,31 @@
+<?php echo $this->getLayout()
+          ->createBlock('Magento\Cms\Block\Block')
+          ->setBlockId('business-customers')
+          ->toHtml(); ?>
+<section class="headoffice">
+	 <div class="container">
+		<div class="new_head">
+			 <center>
+				<h2 style="padding-bottom:30px;">Existing Business Customer Service Center</h2>
+				<hr></br></br>
+				<!--form class="" method="post" action="#">
+				<div class="form-group">
+					<a href="<?php //echo $block->getUrl('business-customers/enquiry'); ?>" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block submit-button">Click Here</a>
+				</div>
+				</form-->
+				<form class="" method="post" action="<?php echo $block->getUrl('business-customers/validate'); ?>">
+					<div class="form-group head_form">
+						<div class="cols-sm-12">
+							<div class="input-group">
+								<input type="password" class="form-control" id="InputPassword" placeholder="Enter business password" name="password">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary btn-lg btn-block submit-button" value="Submit" >
+					</div>
+				</form>
+			</center>
+		</div>
+	</div>	
+</section>	

@@ -1,0 +1,66 @@
+<?php
+/**
+ * Mageplaza
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mageplaza.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.mageplaza.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Mageplaza
+ * @package     Mageplaza_Blog
+ * @copyright   Copyright (c) 2016 Mageplaza (http://www.mageplaza.com/)
+ * @license     https://www.mageplaza.com/LICENSE.txt
+ */
+?>
+<div class="mp-sidebar mpcss">
+    <div class="row">
+        <div class="block-title col-xs-12 sidebar-categories">
+			<center>
+				<p>Discover how our food is</p>
+				<p>made, get inspired, see us in</p>
+				<p>the news or our the hstory of</p>
+				<p>our products!</p>
+			</center>
+        </div>
+        <div class="col-xs-12">		
+		 	<div class="blog-cats">
+            <ul class="menu-categories">
+                <li class="category-level2 category-item" >
+					<img src="<?php echo $this->getViewFileUrl('Mageplaza_Blog::media/images/education.png'); ?>" alt="Education" />
+					<a class="list-categories" href="<?php echo $block->getUrl("category/education"); ?>">
+						<span>Education &nbsp;</span>
+					</a>
+				</li>
+				<li class="category-level2 category-item">
+					<img src="<?php echo $this->getViewFileUrl('Mageplaza_Blog::media/images/inspiration.png'); ?>" alt="Inspiration" />
+					<a class="list-categories" href="<?php echo $block->getUrl("category/inspiration"); ?>">
+						<span>Inspiration</span>
+					</a>
+				</li>
+				<li class="category-level3 category-item">
+					<img src="<?php echo $this->getViewFileUrl('Mageplaza_Blog::media/images/news.png'); ?>" alt="In the News" />
+					<a class="list-categories" href="<?php echo $block->getUrl("category/in-the-news"); ?>">
+						<span>In the News</span>
+					</a>
+				</li>
+			</ul>
+			</div>			
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    require([
+            'Mageplaza_Blog/js/categorytree'
+        ],
+        function (categoryTree) {
+        }
+    );
+</script>

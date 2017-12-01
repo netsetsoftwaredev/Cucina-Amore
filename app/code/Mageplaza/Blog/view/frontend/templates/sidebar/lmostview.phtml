@@ -1,0 +1,72 @@
+<?php
+$mostViews = $block->getMosviewPosts();
+$postsRecent = $block->getRecentPost();
+?>
+<div class="mp-sidebar mpcss">
+	<div id="mostview">
+		<h2>Latest Posts</h2>
+		<?php if ($postsRecent != ''): ?>
+			<?php foreach ($postsRecent as $post): ?>
+				<div class="info">
+					<div class="" style="width: 100%; float: left; clear: both; position: relative;">
+						<a href="<?php echo substr($block->getUrlByPost($post),0,-1) ?>">
+						<?php if ($post->getImage()) :
+							?>
+							<img class="img-responsive" src="<?php echo $block->resizeImage($post->getImage(),500)?>" style="height:auto !important;width:100;">
+						<?php else:?>
+							<img class="img-responsive" src="<?php echo $block->getDefaultImageUrl(); ?>">
+						<?php endif; ?>
+						</a>
+					</div>
+					<div class="rmore-content" style="float: left; position: relative; clear: both; width: 100%; text-align: left;margin-top:20px;">
+						<h3><a href="<?php echo substr($block->getUrlByPost($post),0,-1) ?>" style=" color: #555555;font-size: 18px;"><?php echo $post->getName() ?></a></h3>
+						<div class="short_description">
+							<p><?php echo $post->getShortDescription(); ?></p>
+						</div>
+						<p class="read_more pull-right">
+							<a class="list-post-tabs" href="<?php echo substr($block->getUrlByPost($post),0,-1) ?>">
+								Read More >
+							</a>
+						</p>
+					</div>
+				</div>
+			<?php endforeach; ?>
+
+		<?php else: ?>
+			<div style="height: 50px;line-height: 50px;text-align: center;"><?php echo __('No Posts'); ?></div>
+		<?php endif; ?>
+	</div>
+	
+	<div id="latest_video">
+		<h2>Latest Video</h2>
+		<iframe width="260" src="https://www.youtube.com/embed/SkgAkGaDOuw" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<div id="mostrecent">
+		<h2>Popular Posts</h2>
+		<?php if ($mostViews != ''): ?>
+			<?php foreach ($mostViews as $post): ?>
+				<div class="list-post-tabs" style="padding-bottom:15px">
+					<?php /*<div class="post-left">
+						<?php if ($post->getImage()) : ?>							
+							<img class="img-responsive" src="<?php echo $block->resizeImage($post->getImage(),100)?>">
+						<?php else:?>
+							<img class="img-responsive" src="<?php echo $block->getDefaultImageUrl() ?>">
+						<?php endif; ?>
+					</div>
+					*/?>
+					<div class="list">
+						<p style=" color: #555555;font-size: 18px;padding-bottom: 20px;text-transform: uppercase;"><u><a href="<?php echo substr($block->getUrlByPost($post),0,-1) ?>"><?php echo $post->getName() ?></u></a></p>
+						<span class="create-at" style="color:#acacac !important">
+							By <?php echo $block->getAuthorByPost($post->getAuthorId())->getName(); ?>
+							 / <?php echo $block->getDateFormat($post->getPublishDate()); ?>
+						</span>
+					</div>
+				</div>
+
+			<?php endforeach; ?>
+
+		<?php else: ?>
+			<div style="height: 50px;line-height: 50px;text-align: center;"><?php echo __('No Posts'); ?></div>
+		<?php endif; ?>
+	</div>
+</div>

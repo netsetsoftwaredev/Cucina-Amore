@@ -1,0 +1,116 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Storelocator
+ */
+?>
+<?php /** @var \Amasty\Storelocator\Block\Location $block */ ?>
+<?php
+$locations = $block->getLocations();
+
+$currentDate = $block->timezoneInterface->date();
+$currentDay = $block->timezoneInterface->convertConfigTimeToUtc($currentDate, 'N');
+$dayNames = $block->dataHelper->getDaysNames();
+$i = 1;
+?>
+<div id="amlocator_left">
+<!-- <div class="container">
+		<div class="row">
+		<div class="col-md-4" style="margin-top: 20px !important;">
+		<button class="btn btn-dark btn-xs" title="Filter" id="sortByFilter" type="button" style='background-color:#b79565;'>Back to Products</button>   </div>
+		<div class="col-md-4"> <label for="sortby" style='font-size:10px;'>&nbsp;<?= __('Sort By')?></label> 
+                <button class="btn btn-dark btn-xs" title="Filter" id="sortBydistence" type="button" >Distance</button>  
+             
+            </div>
+			<div class="col-md-4" style="margin-top: 20px !important;">
+			<a onclick="printDiv('amlocator_left');" > <img width="30" src="<?php echo $this->getViewFileUrl('Mageplaza_Blog::media/images/print.png'); ?>"  /> </a>
+									<script>
+									function printDiv(divName){
+									  require(['jquery', 'jquery/ui'], function($){ 
+									 
+										//alert('testing');
+										var printContents = document.getElementById(divName).innerHTML;
+										var originalContents = document.body.innerHTML;
+										document.body.innerHTML = printContents;
+										window.print();
+										document.body.innerHTML = originalContents;
+									
+									   // write your code here
+									  }); 
+									}
+									
+									
+									
+									</script>
+			</div>
+			
+			
+			
+			</div>
+		</div>	-->
+    <?php foreach ($locations as $location): ?>
+        <span name="leftLocation" data-amid="<?php echo $i ?>">
+                <div class="location_header"><?php echo $this->escapeHtml($location->getName()); ?></div>
+            <?= __('Address') ?>: <?php echo $this->escapeHtml($location->getAddress()); ?>
+            <br/>
+            <?php echo $this->escapeHtml($location->getCity()); ?>
+            , <?php echo $this->escapeHtml($location->getZip()); ?>
+
+            <?php if ($this->getShowAttributes()) { ?>
+                <?php if (trim($location->getPhone())) { ?>
+                    <br/>
+                    <?php echo __('Phone') ?>: <?php echo $this->escapeHtml($location->getPhone()); ?>
+                <?php }?>
+                <?php if (trim($location->getEmail())) { ?>
+                    <br/>
+                    <?php echo __('E-mail') ?>: <?php echo $this->escapeHtml($location->getEmail()); ?>
+                <?php }?>
+                <?php if (trim($location->getWebsite())) { ?>
+                    <br/>
+                    <?php echo __('URL') ?>: <?php echo $this->escapeHtml($location->getWebsite()); ?>
+                <?php }?>
+            <?php }?>
+
+            <?php
+            if ($location->getScheduleArray() != false):
+                $schedule = $location->getScheduleArray();
+                ?>
+
+                <div class="today_schedule">
+                        <?= __('Work Time Today:')?>
+                    <span>
+                            <?php echo $schedule[$currentDay]['from'][0] ?>:<?php echo $schedule[$currentDay]['from'][1] ?>
+                        -
+                        <?php echo $schedule[$currentDay]['to'][0] ?>:<?php echo $schedule[$currentDay]['to'][1] ?>
+                        <div class="locator_arrow"></div>
+                        </span>
+
+                    </div>
+
+                <div class="all_schedule" id="schedule<?php echo $i ?>">
+                    <?php
+                    $scheduleDay = 1;
+
+                    foreach ($schedule as $key => $item) {
+                        ?>
+                        <div>
+                            <?php echo __($dayNames[$key]); ?>:
+                            <span>
+                                <?php echo $item['from'][0] ?>:<?php echo $item['from'][1] ?>
+                                -
+                                <?php echo $item['to'][0] ?>:<?php echo $item['to'][1] ?>
+                            </span>
+                        </div>
+                        <?php
+                        $scheduleDay++;
+                    }
+                    ?>
+                </div>
+                <?php
+            endif;
+            ?>
+            </span>
+        <?php $i++ ?>
+    <?php endforeach; ?>
+</div>

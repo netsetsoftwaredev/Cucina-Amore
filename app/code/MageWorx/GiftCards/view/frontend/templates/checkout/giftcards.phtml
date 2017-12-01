@@ -1,0 +1,30 @@
+<?php
+/**
+ * Copyright © 2016 MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var $block \MageWorx\GiftCards\Block\Checkout\Giftcards
+ * @see \MageWorx\GiftCards\Block\Checkout\Giftcards
+ */
+?>
+<?php
+    $_value = $block->getTotal()->getValue();
+    $_style = $block->getTotal()->getStyle();
+?>
+
+<?php
+    $attributes = 'class="totals-tax"';
+?>
+
+<tr <?php /* @escapeNotVerified */ echo $attributes; ?>>
+    <th style="<?php /* @escapeNotVerified */ echo $_style ?>" class="mark" colspan="<?php /* @escapeNotVerified */ echo $block->getColspan(); ?>" scope="row">
+        <?php /* @escapeNotVerified */ echo $block->getTotal()->getTitle() ?>
+    </th>
+    <td style="<?php /* @escapeNotVerified */ echo $_style ?>" class="amount" data-th="<?php echo $block->escapeHtml($block->getTotal()->getTitle()); ?>">
+        <?php /* @escapeNotVerified */ echo $this->helper('Magento\Checkout\Helper\Data')->formatPrice($_value) ?>
+    </td>
+</tr>

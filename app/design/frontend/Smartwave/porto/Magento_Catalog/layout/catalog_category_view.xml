@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 SW-THEMES. All rights reserved.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+		<referenceContainer name="catalog.leftnav" remove="true" />
+		<!--referenceContainer name="product_list_toolbar" remove="true" /-->
+		<!--referenceBlock name="product_list_toolbar_pager" remove="true" /-->
+		 
+		
+        <referenceContainer name="page.top">
+             <!--block class="Magento\Catalog\Block\Category\View" name="category_banner" template="category/banner.phtml" ifconfig="porto_settings/category/category_description" before="-"/-->
+			   <container name="category.view.container" htmlTag="div" htmlClass="who-we-top-banner cat-top-banner" after="-">
+			   <container name="category.view.container1" htmlTag="div" htmlClass="img-descr">
+					<block class="Magento\Catalog\Block\Category\View" name="category.image" template="Magento_Catalog::category/image.phtml" before="-"/>
+					<block class="Magento\Catalog\Block\Category\View" name="category_banner" template="category/banner.phtml" ifconfig="porto_settings/category/category_description" after="category.image"/>
+					<block class="Magento\Catalog\Block\Category\View" name="category.cms" template="Magento_Catalog::category/cms.phtml" after="category_banner"/>
+				</container>
+            </container>
+        </referenceContainer>
+		 
+        <referenceContainer name="content">
+            <block class="Magento\Catalog\Block\Category\View" name="category_desc_main_column" template="category/desc_main_column.phtml" ifconfig="porto_settings/category/category_description" before="category.products"/>
+        </referenceContainer>
+        <move element="category.cms" destination="content" before="category_desc_main_column"/>
+		<move element="category_banner" destination="category.view.container1" after="category.image"/>
+        <referenceContainer name="sidebar.main">
+           <!--block class="Smartwave\Porto\Block\Template" name="category_view_custom_block" after="-" template="Magento_Catalog::category/custom_block.phtml"/-->
+		  <block class="Sebwite\Sidebar\Block\Sidebar" name="category-sidebar" template="Sebwite_Sidebar::sidebar.phtml"/>
+        </referenceContainer>
+	 
+        <referenceContainer name="after.body.start">
+            <block class="Smartwave\Porto\Block\Template" name="category_view_config" after="-" template="Magento_Catalog::category/config.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

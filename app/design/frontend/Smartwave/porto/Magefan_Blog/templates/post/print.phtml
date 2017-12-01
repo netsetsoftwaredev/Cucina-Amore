@@ -1,0 +1,101 @@
+<?php 
+$postId=$this->getRequest()->getParam("id");
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$model=$objectManager->create("Magefan\Blog\Model\Post");
+$collection=$model->getCollection()
+			->addFieldToFilter("post_id",$postId);
+if(sizeof($collection)==1)
+{
+	foreach ($collection as $_blog) { ?>
+		<div class="print-header">
+			<img src="<?php echo $block->getLayout()->getBlock('logo')->getLogoSrc(); ?>" />
+		</div>		
+		<div class="prints-content">		
+			<div class="row">	
+				<div class="col-sm-10">
+					<div class="blog-title-holder">
+						<h2 class="blog-title">
+							<?php echo $_blog->getTitle(); ?>
+						</h2>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="print-recipe">
+						<button onclick="myFunction()">Print this Recipe</button>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="blog-top-content">
+			<div class="row">
+				<div class="col-sm-6">
+					<?php if ($featuredImage = $_blog->getFeaturedImage()) { ?>
+						<div class="blog-ftimg-hld">
+							<img src="<?php echo $featuredImage ?>" alt="<?php echo $_blog->getTitle(); ?>" />
+						</div>
+					<?php } ?>
+				</div>
+				<div class="col-sm-6">
+					<div class="blog-description clearfix">
+						<div class="blog-text-hld">
+							<?php echo $_blog->getContent(); ?>
+							<div class="clear"></div>					
+						</div>
+					</div>
+				</div>
+			</div>
+			
+	       
+			
+        </div>
+        <div class="blog-content">
+            
+			<?php $indrientsPdp=explode(",",$_blog->getIngredientsPdp()); ?>
+            <div class="indrientsPdp">
+            	<h3><?php echo __("Ingredients"); ?></h3>
+				
+				<ul>
+            <?php foreach ($indrientsPdp as $indrients): ?>
+               <li> <span><?php echo $indrients; ?></span></li>
+            <?php endforeach ?>
+			  </ul>
+			
+            </div>
+            <?php if($_blog->getIngredientsPdpOther()!=="") { ?>
+            <div class="IngredientsPdpOther">
+                <strong><?php echo __("Other Ingredients:") ?></strong><span><?php echo $_blog->getIngredientsPdpOther(); ?></span>
+            </div>
+			<?php } ?>
+
+			<?php $DirectionsContent=$_blog->getDirectionsContent();?>
+			<?php if($DirectionsContent):?>
+			<div class="blog-directions-content">
+			<h3>Directions</h3>
+			<?php echo $DirectionsContent; ?>
+			</div>
+			<?php endif;?>
+        </div>
+<?php }	
+}
+?>
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+<style type="text/css">
+	.page-header{display: none;}
+	.page-footer{display: none;}
+	.print-recipe{text-align:right;}
+	.print-header{text-align:right;}
+	.prints-content{margin-top:10px;}
+	.blog-title-holder .blog-title{font-family: gotham_mediumregular;}
+	.print-recipe button{font-family: gotham_mediumregular;}
+	.print-recipe button:hover{background:#000; color:#fff;}
+	.blog-text-hld p{font-size:16px; line-height:24px;}
+	.blog-directions-content ol{padding-left:20px;}
+	@media print {
+		.print-recipe{display:none !important;}
+	}
+	
+</style>

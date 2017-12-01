@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="checkout.cart.container">
+            <container name="custom-content" as="custom-content" label="Page Custom Content" htmlTag="div" htmlClass="custom-content" after="-">
+			<container name="custom-content-shipping" as="custom-content-shipping" label="Page Custom Content" htmlTag="div" htmlClass="custom-content-shipping tab-acc-content" after="-">
+                <block class="MageWorx\GiftCards\Block\Cart\GiftCards" name="checkout.cart.shippings" template="cart/shipping.phtml" after="-" />
+			</container>
+			<container name="custom-content-discount" as="custom-content-discount" label="Page Custom Content" htmlTag="div" htmlClass="custom-content-discount tab-acc-content" after="-">
+                <block class="MageWorx\GiftCards\Block\Cart\GiftCards" name="checkout.cart.discount" template="cart/discount.phtml" after="-" />
+			</container>
+			<container name="custom-content-giftcard" as="custom-content-giftcard" label="Page Custom Content" htmlTag="div" htmlClass="custom-content-giftcard tab-acc-content" after="-">
+                <block class="MageWorx\GiftCards\Block\Cart\GiftCards" name="checkout.cart.giftcards" template="cart/coupon-accordian.phtml" after="-" />
+			</container>
+            </container>
+        </referenceContainer>
+		
+        <referenceBlock name="checkout.cart.totals">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="block-totals" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="before_grandtotal" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="mageworx_giftcards" xsi:type="array">
+                                            <item name="component"  xsi:type="string">MageWorx_GiftCards/js/view/cart/totals/giftcardsdiscount</item>
+                                            <item name="sortOrder" xsi:type="string">20</item>
+                                            <item name="config" xsi:type="array">
+                                                <item name="title" xsi:type="string" translate="true">MageWorx</item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+         <referenceBlock name="checkout.cart.coupon" remove="true"/>
+         <move element="checkout.cart.shipping" destination="custom-content-shipping" after="-"/>
+         <move element="cart.summary" destination="checkout.cart.container" after="custom-content"/>
+    </body>
+</page>

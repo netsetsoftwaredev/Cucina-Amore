@@ -1,0 +1,70 @@
+<?php
+/**
+ * Category sidebar
+ *
+ * @var $block Sebwite\Sidebar\Block\Sidebar
+ */
+$categories = $block->getCategories();
+$brands     = $block->getBrands();
+   $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+   $category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');//get current category
+    if($category->getName()=='Kitchen and Love'){?>
+<div class="container">
+		<div class="kitchen_sidebarbox">
+			<p>Looking for Cucina & Amore Products? Click here:</p>
+			<a href="#" class="shop_btn">Shop Cucina & Amore</a>
+			<hr/>
+			<h3>Kitchen & Love</h3>
+			<ul>
+				<li><a href="/ready-to-eat-meals/quinoa-meals.html">Quinoa Meals</a></li>
+				<li><a href="#">Farro Meals</a></li>
+				<li><a href="#">Preserves - coming soon</a></li>
+			</ul>
+			<hr/>
+			<img src= "<?php echo $this->getUrl('pub/media/wysiwyg/').'kl_left_sidebar.jpg';?>">
+			<!--h2 class="kitchen_love_heading">Kitchen & Love is a sub-brand of <u>International Delicacies.</u></h2-->
+			<h2 class="kitchen_love_heading">KITCHEN &amp; LOVE and CUCINA &amp; AMORE are brands by <u>International Delicacies.</u></h2>
+			<a href="#" class="learn_more">Learn More ></a>
+		</div>
+	</div>
+<?php    }else{
+?>
+<div class="topcat-left">
+<h3><?php echo __('Categories'); ?></h3>
+<ul class="o-list">
+	<li><a href="/all-products.html">ALL</a></li>
+    <?php
+    // Loop through categories
+    foreach ( $categories as $category ) :
+        ?>
+        <li class="level0<?php echo($block->isActive($category) ? ' active' : ''); ?>">
+            <a href="<?php echo $block->getCategoryUrl($category); ?>" title="<?php echo $category->getName(); ?>" class="<?php echo($block->isActive($category) ? ' active' : ''); ?>">
+                <?php echo $category->getName(); ?>
+            </a>
+            <?php if ( $category->hasChildren() ) : ?>
+                <span class="expand"><?php echo $block->isActive($category) ? '<i class="fa fa-minus"></i>' : '<i class="fa fa-plus"></i>'; ?></span>
+            <?php endif; ?>
+
+            <?php echo $block->getChildCategoryView($category); ?>
+        </li>
+    <?php endforeach; ?>
+</ul>
+<a href="/" class="go-to-back">< go back to previous page</a>
+<?php } ?>
+</div>
+
+<script type="text/javascript">
+	/* Simply invoke iffe of sidebarmodule */
+	require(['jquery','sidebarmodule'], function ($) {});
+</script>
+
+<div class="mobile-cats visible-xs">
+	<select id="mob-cats">
+		<option value="">Browse Categories</option>		
+		<?php    
+			foreach ( $categories as $category ) :
+		?>
+        <option value="<?php echo $category->getName(); ?>"><?php echo $category->getName(); ?></option>
+    <?php endforeach; ?>		
+	</select>
+</div>

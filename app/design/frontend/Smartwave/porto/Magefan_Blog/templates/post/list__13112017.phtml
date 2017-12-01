@@ -1,0 +1,70 @@
+<?php
+
+/**
+ * Copyright © 2016 Ihor Vansach (ihor@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+use Magento\Framework\App\Action\Action;
+?>
+<?php
+/**
+ * Blog post list template
+ *
+ * @var $block \Magefan\Blog\Block\Post\PostList
+ * 
+ */
+?>
+<?php
+$_postCollection = $block->getPostCollection();
+$_postAllCollection = $block->getAllPostCollection();
+?>
+<?php if (!$_postCollection->count()): ?>
+    <div class="message info empty"><div><?php echo __('We can\'t find posts matching the selection.') ?></div></div>
+<?php else: ?>
+    <?php
+    $data = array();
+    foreach ($_postAllCollection as $_post):
+        $data[] = array('title' => $_post->getTitle(), 'post_url' => $_post->getPostUrl());
+    endforeach;
+    $data_post = json_encode($data);
+    ?>
+    <?php echo $block->getAdditionalHtml() ?>
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline" id="blog_search_list_form" action="http://ec2-54-219-131-99.us-west-1.compute.amazonaws.com/recipes/search/" method="get">
+                <div class="form-group">
+                    <input id="blog_list_search" type="text" name="q" value="<?php echo $block->escapeHtml($block->getQuery()) ?>" placeholder="<?php echo __('Search posts here...') ?>" class="form-control" maxlength="128" role="combobox" aria-haspopup="false" aria-autocomplete="both" autocomplete="off">
+                </div>
+                <button type="submit" onclick="return goBlogListSearch(this);" title="<?php echo __('Search') ?>" class="action search btn btn-default">
+                    <span class="fa fa-search" aria-hidden="true"></span>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="post-list-wrapper">
+        <?php $iterator = 1; ?>
+        <div class="row post-list">
+            <?php foreach ($_postCollection as $_post): ?>
+                <?php echo $block->getPostHtml($_post) ?>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <?php echo $block->getToolbarHtml() ?>
+    <script type="text/javascript">        
+        var options = {
+            data: <?php echo $data_post; ?>,
+            getValue: "title",
+            list: {
+                onClickEvent: function () {
+                    var post_url = jQuery("#blog_list_search").getSelectedItemData().post_url;
+                    //alert(post_url);
+                    window.location.href = post_url;
+                }
+            }
+        };
+
+        jQuery("#blog_list_search").easyAutocomplete(options);
+    </script>
+<?php endif; ?>

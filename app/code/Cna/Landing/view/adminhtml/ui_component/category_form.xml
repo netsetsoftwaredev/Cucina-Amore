@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="landing_page">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Landing Page</item>
+                <item name="collapsible" xsi:type="boolean">true</item>
+                <item name="sortOrder" xsi:type="number">500</item>
+            </item>
+        </argument>
+        <field name="is_landing">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">10</item>
+                    <item name="dataType" xsi:type="string">boolean</item>
+                    <item name="formElement" xsi:type="string">checkbox</item>
+                    <item name="label" xsi:type="string" translate="true">Is Landing Page?</item>
+                    <item name="prefer" xsi:type="string">toggle</item>
+                    <item name="valueMap" xsi:type="array">
+                        <item name="true" xsi:type="string">1</item>
+                        <item name="false" xsi:type="string">0</item>
+                    </item>
+                    <item name="default" xsi:type="number">0</item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_main_head">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="label" xsi:type="string" translate="true">Header Background Image</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">fileUploader</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="required" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="number">11</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="categoryimage/category_thumbnail/upload/attr/landing_main_head/"/>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_headling">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">30</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="label" xsi:type="string" translate="true">Banner Headline</item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_headling_desc">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="class" xsi:type="string">Magento\Catalog\Ui\Component\Category\Form\Element\Wysiwyg</item>
+                    <item name="formElement" xsi:type="string">wysiwyg</item>
+                    <item name="label" xsi:type="string" translate="true">Banner Description</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="sortOrder" xsi:type="number">40</item>
+                    <item name="rows" xsi:type="number">3</item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_headling_link">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">50</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="label" xsi:type="string" translate="true">Banner Link</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="landing_how_content1">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="class" xsi:type="string">Magento\Catalog\Ui\Component\Category\Form\Element\Wysiwyg</item>
+                    <item name="formElement" xsi:type="string">wysiwyg</item>
+                    <item name="label" xsi:type="string" translate="true">How Content 1</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="sortOrder" xsi:type="number">60</item>
+                    <item name="rows" xsi:type="number">3</item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_how_content2">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="class" xsi:type="string">Magento\Catalog\Ui\Component\Category\Form\Element\Wysiwyg</item>
+                    <item name="formElement" xsi:type="string">wysiwyg</item>
+                    <item name="label" xsi:type="string" translate="true">How Content 2</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="sortOrder" xsi:type="number">70</item>
+                    <item name="rows" xsi:type="number">3</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="landing_how_img1">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="label" xsi:type="string" translate="true">How Image 1</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">fileUploader</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="required" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="number">80</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="categoryimage/category_thumbnail/upload/attr/landing_how_img1/"/>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_how_img2">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="label" xsi:type="string" translate="true">How Image 2</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">fileUploader</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="required" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="number">90</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="categoryimage/category_thumbnail/upload/attr/landing_how_img2/"/>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_how_img3">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="label" xsi:type="string" translate="true">How Image 3</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">fileUploader</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="required" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="number">100</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="categoryimage/category_thumbnail/upload/attr/landing_how_img3/"/>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_how_img4">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="label" xsi:type="string" translate="true">How Image 4</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">fileUploader</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="required" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="number">110</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="categoryimage/category_thumbnail/upload/attr/landing_how_img4/"/>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_what_content1">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="class" xsi:type="string">Magento\Catalog\Ui\Component\Category\Form\Element\Wysiwyg</item>
+                    <item name="formElement" xsi:type="string">wysiwyg</item>
+                    <item name="label" xsi:type="string" translate="true">What Content 1</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="sortOrder" xsi:type="number">120</item>
+                    <item name="rows" xsi:type="number">3</item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_what_content2">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="class" xsi:type="string">Magento\Catalog\Ui\Component\Category\Form\Element\Wysiwyg</item>
+                    <item name="formElement" xsi:type="string">wysiwyg</item>
+                    <item name="label" xsi:type="string" translate="true">What Content 2</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="sortOrder" xsi:type="number">130</item>
+                    <item name="rows" xsi:type="number">3</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="landing_what_img1">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="label" xsi:type="string" translate="true">What Image 1</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">fileUploader</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="required" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="number">140</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="categoryimage/category_thumbnail/upload/attr/landing_what_img1/"/>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_what_img2">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="label" xsi:type="string" translate="true">What Image 2</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">fileUploader</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="required" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="number">150</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="categoryimage/category_thumbnail/upload/attr/landing_what_img2/"/>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_what_img3">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="label" xsi:type="string" translate="true">What Image 3</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">fileUploader</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="required" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="number">160</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="categoryimage/category_thumbnail/upload/attr/landing_what_img3/"/>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_what_img4">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="label" xsi:type="string" translate="true">What Image 4</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">fileUploader</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="required" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="number">170</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="categoryimage/category_thumbnail/upload/attr/landing_what_img4/"/>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_where_content1">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="class" xsi:type="string">Magento\Catalog\Ui\Component\Category\Form\Element\Wysiwyg</item>
+                    <item name="formElement" xsi:type="string">wysiwyg</item>
+                    <item name="label" xsi:type="string" translate="true">Where Content 1</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="sortOrder" xsi:type="number">180</item>
+                    <item name="rows" xsi:type="number">3</item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_where_content2">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="class" xsi:type="string">Magento\Catalog\Ui\Component\Category\Form\Element\Wysiwyg</item>
+                    <item name="formElement" xsi:type="string">wysiwyg</item>
+                    <item name="label" xsi:type="string" translate="true">Where Content 2</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="sortOrder" xsi:type="number">190</item>
+                    <item name="rows" xsi:type="number">3</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="landing_where_img1">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="label" xsi:type="string" translate="true">Where Image 1</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">fileUploader</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="required" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="number">200</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="categoryimage/category_thumbnail/upload/attr/landing_where_img1/"/>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_where_img2">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="label" xsi:type="string" translate="true">Where Image 2</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">fileUploader</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="required" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="number">210</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="categoryimage/category_thumbnail/upload/attr/landing_where_img2/"/>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_where_img3">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="label" xsi:type="string" translate="true">Where Image 3</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">fileUploader</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="required" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="number">220</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="categoryimage/category_thumbnail/upload/attr/landing_where_img3/"/>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_where_img4">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="label" xsi:type="string" translate="true">Where Image 4</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">fileUploader</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="required" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="number">230</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="categoryimage/category_thumbnail/upload/attr/landing_where_img4/"/>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_life_head">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">240</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="label" xsi:type="string" translate="true">Cucina and Your Life Subhead</item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_life_headline1">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">250</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="label" xsi:type="string" translate="true">Cucina and Your Life Headline 1</item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_life_desc1">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="class" xsi:type="string">Magento\Catalog\Ui\Component\Category\Form\Element\Wysiwyg</item>
+                    <item name="formElement" xsi:type="string">wysiwyg</item>
+                    <item name="label" xsi:type="string" translate="true">Cucina and Your Life Desc 1</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="sortOrder" xsi:type="number">260</item>
+                    <item name="rows" xsi:type="number">3</item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_life_headline2">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">270</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="label" xsi:type="string" translate="true">Cucina and Your Life Headline 2</item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_life_desc2">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="class" xsi:type="string">Magento\Catalog\Ui\Component\Category\Form\Element\Wysiwyg</item>
+                    <item name="formElement" xsi:type="string">wysiwyg</item>
+                    <item name="label" xsi:type="string" translate="true">Cucina and Your Life Desc 2</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="sortOrder" xsi:type="number">280</item>
+                    <item name="rows" xsi:type="number">3</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="landing_nutrition_icons">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">290</item>
+                    <item name="additionalClasses" xsi:type="string">admin__field-default</item>
+                    <item name="formElement" xsi:type="string">multiselect</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="label" xsi:type="string" translate="true">Nutrition Icons</item>
+                    <item name="tooltip" xsi:type="array">
+                        <item name="link" xsi:type="string">#</item>
+                        <item name="description" xsi:type="string" translate="true">Hold the CTRL key to select multiple icons</item>
+                    </item>
+                </item>
+                <item name="options" xsi:type="object">Cna\Landing\Setup\Cna\Landing\Model\Entity\Attribute\Source\Icons</item>
+            </argument>
+        </field>
+        <field name="landing_nutrition_headline">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">300</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="label" xsi:type="string" translate="true">Nutrition Headline</item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_nutrition_desc">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="class" xsi:type="string">Magento\Catalog\Ui\Component\Category\Form\Element\Wysiwyg</item>
+                    <item name="formElement" xsi:type="string">wysiwyg</item>
+                    <item name="label" xsi:type="string" translate="true">Nutrition Content</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="sortOrder" xsi:type="number">310</item>
+                    <item name="rows" xsi:type="number">3</item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_nutrition_facts">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="label" xsi:type="string" translate="true">Nutrition Facts Image</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">fileUploader</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="required" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="number">320</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="categoryimage/category_thumbnail/upload/attr/landing_nutrition_facts/"/>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_prods_related">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">330</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="label" xsi:type="string" translate="true">Related Products</item>
+                </item>
+            </argument>
+        </field>
+        <field name="landing_seo">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="class" xsi:type="string">Magento\Catalog\Ui\Component\Category\Form\Element\Wysiwyg</item>
+                    <item name="formElement" xsi:type="string">wysiwyg</item>
+                    <item name="label" xsi:type="string" translate="true">SEO Content</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="sortOrder" xsi:type="number">340</item>
+                    <item name="rows" xsi:type="number">3</item>
+                </item>
+            </argument>
+        </field>
+
+    </fieldset>
+</form>

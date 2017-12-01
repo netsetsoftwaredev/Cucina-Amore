@@ -1,0 +1,441 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=131393580687171";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<section class="business social_bannerarea">
+    <div class="instagram_images">
+        <ul>
+            <?php
+                $images = $this->getRecentImages();
+                $i =0;$j= 0;
+                    foreach($images as $Instagram){
+                         if($j < 10){
+                                ?>
+                                <li><img src="<?php echo $this->getMediaUrl($Instagram->getImage()); ?>" alt="<?php echo $Instagram->getTitle(); ?>" /></li>
+                                <?php
+                        }
+                        $j++;
+                   }
+            ?>
+        </ul>
+    </div>
+	<!--<img src="<?php //echo $this->getViewFileUrl('WTC_Social::images/banner_3.jpg'); ?>" alt="Social" />-->
+<div class="container">
+		<div class="table_box_area">
+			<div class="table_box_inner">
+				<div class="bushead">
+					<h1>Let's get Social</h1>
+					<p>Cucina & Amore is a growing community of people who love food that is not only<br/>
+					good for you but mighty tasty. Explore our posts and share us on Instagram to be<br/>
+					featured on this page!</p>
+					<a href="#">Follow Us</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="healthy margin-top-80">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 hc1">
+				<div class="inner_whitebox">
+					<center>
+						<h3>It makes a healthy difference</h3>
+						<p>We go to great lengths to ensure our food are delicious and satisfying, choosing only the freshest ingredients from trusted growers.</p>
+						<a href="<?php echo $block->getUrl() ;?>all-products.html"  class="btn btn-primary submit-button"> Shop Products</a>
+					</center>
+				</div>
+			</div>
+			<div class="col-md-5 hc2">
+				<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('social_block_1')->toHtml();?> 
+				
+				<p class="iglogo social">
+					<img src="<?php echo $this->getViewFileUrl('WTC_Social::images/ig-profile-pic.png'); ?>" alt="Social" />
+					<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('instagram_link')->toHtml();?> 
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="latest_videos margin-top-80">
+	<div class="container">
+		<h1 class="text-center">Watch our latest videos...</h1>
+                <div>
+   <?php for($i=0;$i<=1;$i++){ ?>
+
+<?php } ?>        
+<div class="row">
+    <div class="col-md-5 no-padding left_videos">
+      <?php
+        $sideVideos = $this->getSideVideo();
+        $i=10;
+        foreach($sideVideos as $vid){ ?>         
+            <div class="vide_outer">
+                <img src="<?php echo $this->getMediaUrl($vid->getImage()); ?>" alt="<?php echo $vid->getTitle(); ?>" />
+            <a href="#" id="click-me<?php echo $i; ?>"><img src="<?php echo $this->getViewFileUrl('WTC_Social::images/video-play-jar.png'); ?>" alt="Social" class="absolute video_icon video_icon1"/>
+	   </a>
+           </div>
+           <div id="popup-mpdal<?php echo $i; ?>" style="display:none;">
+           <iframe width="420" height="315" src="<?php echo $vid->getUrl(); ?>"></iframe> 
+    </div> 
+<?php $i++;  }  ?>
+</div>
+ <div class="col-md-7 no-padding">
+        <?php 
+                $mainVideo = $this->getMainVideo();
+                $sn=13;
+                foreach($mainVideo as $mnVid){
+                       //$mnVid = $mainVideo[0];
+                ?>
+               <div> 
+               <img src="<?php echo $this->getMediaUrl($mnVid->getImage()); ?>" alt="<?php echo $mnVid->getTitle(); ?>" />
+	       <a href="#" id="click-me<?php echo $sn; ?>"><img src="<?php echo $this->getViewFileUrl('WTC_Social::images/video-play-jar.png'); ?>" alt="Social" class="absolute video_icon video_icon1"/>
+              	</a>
+                </div>
+                 <div id="popup-mpdal<?php echo $sn; ?>" style="display:none;">
+                   <iframe width="420" height="315" src="<?php echo $mnVid->getUrl(); ?>"></iframe> 
+                     </div> 
+                      <?php } $sn++; ?>
+                   </div>
+</div>
+</div>
+</section>
+<section class="whats-cooking">
+
+	<div class="cooking_imagebox box4">
+		<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('social_block_2')->toHtml();?> 
+	</div>
+	<div class="social-share background-black box4">
+		<center>
+			<h1>What's Cooking?</h1>
+			<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('social_connect_link')->toHtml();?> 
+		</center>
+	</div>
+	<div class="cooking_imagebox box4">
+		<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('social_block_3')->toHtml();?> 
+	</div>
+	<div class="twitter-feed box4">
+		<img src="<?php echo $this->getViewFileUrl('WTC_Social::images/twitter-blue.png'); ?>" alt="Twitter" />
+		<div class="feed">
+			<?php 
+				$json = $this->getLatestTweets();
+			?>
+			 <div class="carousel slide">
+			 <div class="carousel-inner">
+			<?php
+			$i=1;
+				foreach(json_decode($json) as $status) {
+					// Convert links back into actual links, otherwise they're just output as text
+					$enhancedStatus = htmlentities($status->text, ENT_QUOTES, 'UTF-8');
+					$enhancedStatus = preg_replace('/http:\/\/t.co\/([a-zA-Z0-9]+)/i', '<a href="http://t.co/$1">http://$1</a><br/>', $enhancedStatus);
+					$enhancedStatus = preg_replace('/https:\/\/t.co\/([a-zA-Z0-9]+)/i', '<a style="color:#fff;" target="_blank" href="https://t.co/$1">http://$1</a>', $enhancedStatus);
+			?>
+				<div class="foot_text item <?php if($i==1) echo "active"; ?>">
+					<?php $twitterLink = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('twitter_link')->toHtml();?> 
+					<p><a target="_blank" href="<?php echo $twitterLink; ?>"><?php echo $enhancedStatus; ?></a></p>
+					
+				</div>		
+				<br/>
+			<?php $i++;
+				}			
+			?>
+			</div>
+		</div>	
+		<?php /*<script type="text/javascript">
+		require(['jquery', 'jquery/ui'], function($){ 
+		  jQuery(document).ready(function() {
+			$('.carousel').carousel({
+			  interval: 5000
+			})
+		  });
+		});
+</script> */ ?>
+		</div>
+		<img src="<?php echo $this->getViewFileUrl('WTC_Social::images/small_logo.png'); ?>" alt="logo" class="small_logo" />
+	</div>
+	<div class="clearfix"></div>
+</section>
+<section class="healthy margin-top-80 what-you-eat">
+	<div class="container">
+		<div class="col-md-5 hc2">
+			<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('social_block_4')->toHtml();?> 
+			<p class="iglogo">
+				<img src="<?php echo $this->getViewFileUrl('WTC_Social::images/ig-profile-pic.png'); ?>" alt="Social" />
+				<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('instagram_link')->toHtml();?> 
+			</p>
+		</div>
+		<div class="col-md-7 hc1">
+			<div class="inner_whitebox">
+				<center>
+					<h3>You are what you eat</h3>
+					<br/>
+					<p>We believe that regardless of who you are, every person deserves to eat good food.  That’s why we are passionate about creating delicious, high quality, convenient foods that are made from recognizable ingredients, minimally processed and GMO free.</p>
+					<br/><br/>
+					<a href="<?php echo $block->getUrl() ;?>all-products.html"  class="btn btn-primary submit-button"> Shop Products</a>
+				</center>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="facebook get_knowbox">
+	<div class="container">
+		<h1 class="text-center">Get to know us</h1>
+		<div class="row">
+	            <div class="col-md-8 col-md-offset-2">
+		       <div><?php $video = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('social_video')->toHtml();?>
+               <?php $videoImage = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('get_to_know_us')->toHtml();?>
+		   
+                  <?php echo $videoImage; ?> <a href="#" id="click-me12">
+                   <img src="<?php echo $this->getViewFileUrl('WTC_Social::images/video-play-jar.png'); ?>" alt="Social" class="absolute video_icon video_icon1"/>
+	       </a>
+             </div>
+               <div id="popup-mpdal12" style="display:none;">
+                  <iframe width="420" height="315" src="<?php echo $video; ?>"></iframe>
+              </div> 
+	     </div>
+	    </div>
+	   </div>
+</section>
+<section class="friends_cucinabox">
+<div class="container">
+    <img src="<?php echo $this->getViewFileUrl('WTC_Social::images/love_cucina.png'); ?>" alt="" />
+    <h1>Friends of Cucina & Amore</h1>
+    <p>For those who <i>really</i> love their food, become our friend and<br/>sign up for news, exclusive offers and more…</p>
+    <a href="#" class="border_btn" id="click-me">LET’S BECOME FRIENDS</a>
+</div>
+</section>
+<div id="popup-mpdal" style="display:none;">
+    <div class="newsletter">
+   <div class="row subscribe-block clearfix">
+		<!-- Begin MailChimp Signup Form -->
+		<link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+			/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+			   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+		</style>	
+		<div id="mc_embed_signup">
+			<form action="https://cucinaandamore.us12.list-manage.com/subscribe/post?u=f113fc663302acf63d23318d4&amp;id=6b343d5dc0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<div id="mc_embed_signup_scroll">
+				
+			
+			<div class="mc-field-group">
+				<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+			</label>
+			<div class="search_cl">
+				<div class="main_em"><input type="email" value="" name="EMAIL" class="required-entry email" id="mce-EMAIL"></div>
+				<div class="clear_1"><input type="button" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" onClick="submitNewsletter('https://cucinaandamore.us12.list-manage.com/subscribe/post?u=f113fc663302acf63d23318d4&amp;id=6b343d5dc0');"></div>
+			</div>
+			</div>
+			<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" ></div>
+					<div class="response" id="mce-success-response"></div>
+				</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f113fc663302acf63d23318d4_6b343d5dc0" tabindex="-1" value=""></div>
+				
+				</div>
+			</form>
+		</div>
+   </div>
+</div>
+</div>
+<script>
+    require(
+        [
+            'jquery',
+            'Magento_Ui/js/modal/modal'
+        ],
+        function(
+            $,
+            modal
+        ) {
+            var options = {
+                type: 'popup',
+                responsive: true,
+                innerScroll: true,
+                title: 'LET’S BECOME FRIENDS',
+                buttons: [{
+                    text: $.mage.__('Continue'),
+                    class: '',
+                    click: function () {
+                        this.closeModal();
+                    }
+                }]
+            };
+
+            var popup = modal(options, $('#popup-mpdal'));
+            $("#click-me").on('click',function(){ 
+				$("#mce-success-response").css("display","none");
+				$('.response').attr('style','display: none');
+				$('#mce-EMAIL').val("");
+                $("#popup-mpdal").modal("openModal");
+            });
+
+        }
+    );
+</script>
+<?php /* Video popup */ ?>
+<div class="modal embed-responsive embed-responsive-16by9" id="video-modal">
+	
+</div>
+<!-- Modal HTML -->
+<div id="myModal" class="modal hide" style="background:#000;padding:25px;z-index:1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onClick="closeModel();">&times;</button>
+                </div>
+                <div class="modal-body" id="social_video_model" style="clear:both;">
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+ 
+function popupYT(url){
+	require(['jquery', 'jquery/ui'], function(e){ 
+		var wrapper = jQuery("#social_video_model");
+		var myModal = jQuery("#myModal");
+		var  customFrame =  '<iframe width="560" height="315" src="'+url+'" frameborder="0" autoplay></iframe>';
+		jQuery(myModal).show();
+		jQuery(wrapper).append(customFrame).show(); 
+		jQuery("#myModal").removeClass('hide');
+	});	
+}
+
+function closeModel(){
+	require(['jquery', 'jquery/ui'], function($){ 
+		$("#myModal").addClass('hide');
+		$('#social_video_model').empty();
+	});	
+}
+
+
+/* require(['jquery', 'jquery/ui'], function($){ 
+	(function($)
+	{
+		window.fnames = new Array();
+		window.ftypes = new Array();
+		fnames[0]='EMAIL';
+		ftypes[0]='email';
+	}(jQuery));
+} */
+ require(['jquery', 'jquery/ui'], function($){ 
+    window.fnames = new Array();
+	window.ftypes = new Array();
+	fnames[0]='EMAIL';
+	ftypes[0]='email';
+ });
+<!--End mc_embed_signup-->
+function submitNewsletter(url){
+require(['jquery', 'jquery/ui'], function($){ 	 
+    var email = $("#mce-EMAIL").val();
+    if(!($.trim(email).length)){
+            alert("Please enter valid email id");
+    }else{
+            $.ajax({
+                    showLoader: true,
+                    url: url,
+                    data: $("#mc-embedded-subscribe-form").serialize(),
+                    type: "get",
+                    dataType: "json"
+            }).done(function (data) {
+                    $("#mce-success-response").html("We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you.");
+                    $("#mce-success-response").css("display","block !important");
+                    $('.response').attr('style','display: block !important;');
+            }).error(function(){
+                    $("#mce-success-response").html("We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you.");
+                    $("#mce-success-response").css("display","block !important");
+                    $('.response').attr('style','display: block !important;');
+            });
+         }
+    });	
+}
+</script>  
+<script>
+    require(
+        [
+            'jquery',
+            'Magento_Ui/js/modal/modal'
+        ],
+        function(
+            $,
+            modal
+        ) {
+            var options = {
+                type: 'popup',
+                responsive: true,
+                innerScroll: true,
+                title: 'Latest Video',
+                class: 'modal-dialog',
+                buttons: [{
+                    text: $.mage.__('Continue'),
+                    class: '',
+                    click: function () {
+                        this.closeModal();
+                       }
+                     }]
+                   };
+            var popup = modal(options, $('#popup-mpdal10'));
+               $("#click-me10").on('click',function(){ 
+                $("#popup-mpdal10").modal("openModal");
+            });
+            var popup = modal(options, $('#popup-mpdal11'));
+                $("#click-me11").on('click',function(){ 
+                $("#popup-mpdal11").modal("openModal");
+            });
+             var popup = modal(options, $('#popup-mpdal12'));
+                $("#click-me12").on('click',function(){ 
+                $("#popup-mpdal12").modal("openModal");
+              });
+             var popup = modal(options, $('#popup-mpdal13'));
+                $("#click-me13").on('click',function(){ 
+                $("#popup-mpdal13").modal("openModal");
+             });
+           }
+         );
+</script>
+<style>
+        .modal-dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.career-page a#click-me10,.career-page a#click-me11{position: absolute;
+    left: 0;
+    top: 28%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;}
+.career-page a#click-me13,.career-page a#click-me12{position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;}
+.career-page .modal-popup .modal-inner-wrap{width: 50%;}
+.career-page .modal-popup .modal-title{display:none;}
+.career-page .modal-slide .modal-inner-wrap, .modal-popup .modal-inner-wrap{background-color: #272727;}
+.career-page .modal-popup._inner-scroll .modal-content iframe{border:none;}
+
+
+.career-page .modal-slide .action-close {padding: 2px 5px; top: -18px; right: 1px; background: #222;}
+.career-page .modal-popup .modal-header { padding: 0;}
+.career-page .modal-custom .action-close:before, .modal-popup .action-close:before, .modal-slide .action-close:before { font-size: 18px; line-height: 18px; color: #ffffff;}
+.career-page .modal-popup .modal-inner-wrap { width: 50%; border-radius: 10px; background: transparent;}
+.career-page .modal-popup._inner-scroll .modal-content {border-radius: 5px; border: 1px solid #676767; box-shadow: inset 0px 0px 5px #000; padding: 15px 15px 10px; background: #222;}
+.career-page .modal-popup._inner-scroll .modal-content iframe {width: 100%; border: 0px none;}
+.career-page .modals-overlay {background-color: rgba(51, 51, 51, 0.85);}
+
+</style>

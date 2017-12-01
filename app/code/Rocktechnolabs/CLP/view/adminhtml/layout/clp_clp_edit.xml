@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <update handle="editor"/>
+    <body>
+        <referenceContainer name="content">
+            <block class="Rocktechnolabs\CLP\Block\Adminhtml\CLP\Edit" name="clp_clp_edit"/>
+        </referenceContainer>
+		
+        <referenceContainer name="left">
+            <block class="Rocktechnolabs\CLP\Block\Adminhtml\CLP\Edit\Tabs" name="clp_clp_edit_tabs">
+
+                <block class="Rocktechnolabs\CLP\Block\Adminhtml\CLP\Edit\Tabs\Main" name="clp_clp_edit_tabs_main"></block>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">main_section</argument>
+                    <argument name="block" xsi:type="string">clp_clp_edit_tabs_main</argument>
+                </action>
+
+                <!-- Top Section Start -->
+                <block class="Rocktechnolabs\CLP\Block\Adminhtml\CLP\Edit\Tabs\Sec1" name="clp_clp_edit_tabs_sec1"></block>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">top_section</argument>
+                    <argument name="block" xsi:type="string">clp_clp_edit_tabs_sec1</argument>
+                </action>
+                <!-- Top Section Start -->
+
+                <!-- who what and where Section Start -->
+                <block class="Rocktechnolabs\CLP\Block\Adminhtml\CLP\Edit\Tabs\Sec2" name="clp_clp_edit_tabs_sec2"></block>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">second_section</argument>
+                    <argument name="block" xsi:type="string">clp_clp_edit_tabs_sec2</argument>
+                </action>
+                <!-- Top Section Start -->
+
+                <!-- CICINA and Your Life Start -->
+                <block class="Rocktechnolabs\CLP\Block\Adminhtml\CLP\Edit\Tabs\Sec3" name="clp_clp_edit_tabs_sec3"></block>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">third_section</argument>
+                    <argument name="block" xsi:type="string">clp_clp_edit_tabs_sec3</argument>
+                </action>
+                <!-- CICINA and Your Life End -->
+
+                <!-- NUTRITION  Info Section Start -->
+                <block class="Rocktechnolabs\CLP\Block\Adminhtml\CLP\Edit\Tabs\Sec4" name="clp_clp_edit_tabs_sec4"></block>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">fourth_section</argument>
+                    <argument name="block" xsi:type="string">clp_clp_edit_tabs_sec4</argument>
+                </action>
+                <!-- NUTRITION  Info Section End -->
+
+                <!-- Flavor  Info Section Start -->
+                <block class="Rocktechnolabs\CLP\Block\Adminhtml\CLP\Edit\Tabs\Sec5" name="clp_clp_edit_tabs_sec5"></block>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">fifth_section</argument>
+                    <argument name="block" xsi:type="string">clp_clp_edit_tabs_sec5</argument>
+                </action>
+                <!-- NUTRITION  Info Section End -->
+
+
+                <!-- Featured Product Start -->				
+				<action method="addTab">
+                    <argument name="name" xsi:type="string">attachment_products</argument>
+                    <argument name="block" xsi:type="array">
+                        <item name="label" xsi:type="string">Featured Products</item>
+                        <item name="title" xsi:type="string">Featured Products</item>
+                        <item name="url" xsi:type="helper" helper="Rocktechnolabs\CLP\Helper\Data::getProductsGridUrl"></item>
+                        <item name="class" xsi:type="string">ajax</item>
+                    </argument>
+                </action> 
+                <!-- Featured Product End -->
+
+                <!-- Bottom Content Start -->
+                <block class="Rocktechnolabs\CLP\Block\Adminhtml\CLP\Edit\Tabs\Sec6" name="clp_clp_edit_tabs_sec6"></block>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">sixth_section</argument>
+                    <argument name="block" xsi:type="string">clp_clp_edit_tabs_sec6</argument>
+                </action>
+                <!-- Bottom Section End -->
+
+			</block>
+		</referenceContainer>
+    </body>
+</page>

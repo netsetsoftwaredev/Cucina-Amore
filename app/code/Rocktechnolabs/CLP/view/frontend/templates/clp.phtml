@@ -1,0 +1,483 @@
+<?php
+$clp_id=$this->getRequest()->getParam("clp_id");
+$mediaUrl=$block->getMediaUrl();
+$Collection=$block->getClpCollection($clp_id);
+$flavorCollection=$block->getFlavorCollection();
+$productCollection=$block->getProductCollection();
+//$clp_top_banner_bimage=$mediaUrl.$block->getTopBannerBackgroundImage($clp_id);
+?>
+<?php  foreach($Collection->getData() as $clpData){?>
+<section class="clp-top-banner" style="background-image: url(<?php echo $mediaUrl.$clpData['1bimage'] ?>)">
+	<div class="clp-top-banner-wrapper">
+		<div class="container">
+			<div class="row">
+			
+				<div class="breadcrumb-clp">
+					<ul class="list-inline">
+						<li class="home"><a href="/"><img src="<?php echo $mediaUrl ?>/wysiwyg/home-icon.png"></a></li>
+						<li><?php echo __($clpData['ctitle']) ?></li>
+					</ul>
+				</div>
+			
+				<div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+					<div class="clp-top-banner-content">
+						<h1><?php echo __($clpData['1title']) ?></h1>
+						<p><?php echo __($clpData['1description']) ?></p>
+						<div class="clp-banner-btn">
+							<ul class="list-inline">
+								<li><a href="<?php echo $clpData['1shoplink'] ?>" class="shop-btn white-fill"><?php echo __("SHOP PRODUCTS") ?></a></li>
+								<li><a href="<?php echo $clpData['1buylink'] ?>" class="buy-btn"><?php echo __("WHERE TO BUY") ?></a></li>
+							</ul>
+						</div>
+					</div><!-- clp-top-banner-content -->
+				</div>
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- clp-top-banner-wrapper -->
+</section>
+
+<section class="clp-difference">
+	<div class="clp-dufference-wrapper">
+		<div class="container">
+			<div class="clp-headers">
+				<h2><?php echo __($clpData['2title']) ?></h2>
+				<p><?php echo __($clpData['2description']) ?></p>
+			</div>
+		</div>
+		
+				<div id="how-owal" class="how-content">
+
+						<div class="how-content-1 bg-cover item" style="background-image: url(<?php echo $mediaUrl.$clpData['2hwbimage1'] ?>)">
+							<div class="container">
+							<div class="how-content-1-wrapper">
+								<div class="row">
+									<div class="col-sm-6">
+									   <div class="cuci-tops">
+											<h2><?php echo __("How"); ?></h2>
+											<div class="cuci-pics">
+												<img class="img-responsive" src="<?php echo $mediaUrl.$clpData['2hwimage1'] ?>" />
+											</div>
+									   </div>
+									</div>
+									<div class="col-sm-6 hows-content"><div class="how-desc"><h2><?php echo __("How"); ?></h2><?php echo __($clpData['2hwcontent1']) ?></div></div>
+								</div>
+							</div>
+							</div>
+						</div>
+						<?php if(sizeof($clpData['2hwbimage2'])>1 && sizeof($clpData['2hwimage2'])>1 &&  sizeof($clpData['2hwcontent2'])>1) { ?>
+						<div class="how-content-2 bg-cover item" style="background-image: url(<?php echo $mediaUrl.$clpData['2hwbimage2'] ?>)">
+							<div class="container">
+								<div class="how-content-2-wrapper">
+									<div class="row">	
+										<div class="col-sm-6">
+										<div class="cuci-tops">
+										  <h2><?php echo __("How"); ?></h2>
+										  <div class="cuci-pics">
+											<img src="<?php echo $mediaUrl.$clpData['2hwimage2'] ?>" />
+										  </div>
+										</div>
+										</div>
+										<div class="col-sm-6 hows-content"><div class="how-desc"><h2><?php echo __("How"); ?></h2><?php echo __($clpData['2hwcontent2']) ?></div></div>
+									</div>
+								</div>
+							</div>
+						</div>				
+						<?php } ?>
+				</div>
+				<div id="what-owal" class="what-content">
+					
+					<div class="what-content-1 bg-cover item" style="background-image: url(<?php echo $mediaUrl.$clpData['2wtbimage1'] ?>)">
+						<div class="container">						
+							<div class="what-content-1-wrapper">
+								<div class="row">
+								<div class="col-sm-6">
+									<div class="what-pic">
+										<div class="cuci-tops">
+											<h2><?php echo __("What"); ?></h2>										
+											<div class="cuci-pics">
+												<img src="<?php echo $mediaUrl.$clpData['2wtimage1'] ?>" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 hows-content"><div class="how-desc"><h2><?php echo __("What"); ?></h2><?php echo __($clpData['2wtcontent1']) ?></div></div>
+								</div>
+							</div>						
+						</div>
+					</div>
+					<?php if(sizeof($clpData['2wtbimage2'])>1 && sizeof($clpData['2wtimage2'])>1 &&  sizeof($clpData['2wtcontent2'])>1) { ?>
+					<div class="what-content-2 bg-cover item" style="background-image: url(<?php echo $mediaUrl.$clpData['2wtbimage2'] ?>)">
+						<div class="container">
+						<div class="what-content-2-wrapper">
+							<div class="row">
+								<div class="col-sm-6">
+								<div class="cuci-tops">
+									<h2><?php echo __("What"); ?></h2>
+									<div class="cuci-pics">
+										<img src="<?php echo $mediaUrl.$clpData['2wtimage2'] ?>" />
+									</div>
+								</div>
+								</div>
+								<div class="col-sm-6 hows-content"><div class="how-desc"><h2><?php echo __("What"); ?></h2><?php echo __($clpData['2wtcontent2']) ?></div></div>
+						    </div>	
+						</div>
+						</div>
+					</div>
+					<?php } ?>
+				</div>
+				<div id="where-owal" class="where-content">
+					
+					<div class="where-content-1 bg-cover item" style="background-image: url(<?php echo $mediaUrl.$clpData['2webimage1'] ?>)">
+						<div class="container">
+							<div class="where-content-1-wrapper">
+							   <div class="row">
+								<div class="col-sm-6">
+									<div class="cuci-tops">
+										<h2><?php echo __("Where"); ?></h2>
+										<div class="cuci-pics">
+											<img src="<?php echo $mediaUrl.$clpData['2weimage1'] ?>" />
+										</div>
+									</div>
+								</div>
+									
+									
+								<div class="col-sm-6 hows-content"><div class="how-desc"><h2><?php echo __("Where"); ?></h2><?php echo __($clpData['2wecontent1']) ?></div></div>
+							    </div>
+							</div>
+						</div>
+					</div>
+					<?php if(sizeof($clpData['2webimage2'])>1 && sizeof($clpData['2weimage2'])>1 &&  sizeof($clpData['2wecontent2'])>1) { ?>
+					<div class="where-content-2 bg-cover item" style="background-image: url(<?php echo $mediaUrl.$clpData['2webimage2'] ?>)">
+						<div class="container">
+						<div class="where-content-2-wrapper">
+							<div class="row">
+								<div class="col-sm-6"><h2><?php echo __("Where"); ?></h2><img src="<?php echo $mediaUrl.$clpData['2weimage2'] ?>" /></div>
+								<div class="col-sm-6 hows-content"><div class="how-desc"><h2><?php echo __("Where"); ?></h2><?php echo __($clpData['2wecontent2']) ?></div></div>
+							</div>
+						</div>
+						</div>
+					</div>										
+					<?php } ?>
+				</div>
+			
+		
+	</div><!-- clp-top-banner-wrapper -->
+</section>
+
+<section class="clp-your-life" >
+	<div class="clp-your-life-wrapper">
+	    <div class="container">
+			<div class="clp-headers">
+				<h2><?php echo __($clpData['3title1']) ?></h2>
+				<p><?php echo __($clpData['3description1']) ?></p>
+			</div>
+		</div>
+		<div class="clp-your-life-content">
+			<div class="life-content">
+				<div class="life-content-1 lifecontent-wrapper" style="background-image: url(<?php echo $mediaUrl.$clpData['3bimage2'] ?>)">
+					<div class="container">
+						<div class="life-content-1-wrapper">
+							<div class="row">
+								<div class="col-sm-6">
+								   <div class="life-desc">
+										<h2><?php echo __($clpData['3title2']) ?></h2>
+										<p><?php echo __($clpData['3description2']) ?></p>
+								   </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="life-content-2 life-content-btm">
+						<div class="life-content-2-wrapper">
+							<div class="row-life">
+								<div class="col-sm-3">
+									<img src="<?php echo $mediaUrl.$clpData['3image31'] ?>" />
+								</div>
+								<div class="col-sm-3">
+									<img src="<?php echo $mediaUrl.$clpData['3image32'] ?>" />
+								</div>								
+								<div class="col-sm-6 lifebtm-desc">
+									<div class="lifebtm-descontent">
+										<?php echo __($clpData['3description3']) ?>
+									</div>
+								</div>
+							</div>	
+						</div>					
+				</div>
+			</div>
+		</div><!-- clp-your-life-content -->
+	</div><!-- clp-your-life-wrapper -->
+</section>
+
+<section class="clp-nutrition-info">
+	<div class="container">
+	<div class="clp-nutrition-info-wrapper">
+		<h2><?php echo __("NUTRITION INFO"); ?></h2>
+				<div class="clp-nutrition-info-content">
+					<div class="nutrition-content-1" >
+						<div class="nutrition-content-2-wrapper">
+							<div class="row">
+							<?php $nutritionIconArray=explode(",", $clpData['4nutritionicon']); ?>
+							<?php foreach ($nutritionIconArray as $icon) { ?>
+								<div class="col-5">
+									<img src="<?php echo $mediaUrl."Rocktechnolabs/IteritionIcon/".$icon ?>">
+									<div class="nutri-capt"><?php  echo __(strtok($icon, '.')); ?></div>
+								</div>
+							<?php } ?>
+							</div>
+						</div>
+					</div>
+					<div class="nutrition-content-2" >
+						<div class="nutrition-content-2-wrapper">
+								<div class="nutri-content">
+								   <div class="row">
+									<div class="col-sm-6">
+										<h2><?php  echo __($clpData['4nutritiontitle']) ?></h2>
+										<p><?php  echo __($clpData['4nutritiondesc']) ?></p>
+									</div>									
+									<div class="col-sm-6">
+									  <div class="factpic-content">	
+									  	<div class="extra-content">
+									        <a href="javascript:void(0)" class="nutritional-trigger">Nutritional Facts</a>
+									    </div>
+										<!--<img class="fact-pic" src="<?php //echo $mediaUrl.$clpData['4nutritionfact'] ?>"> -->
+										<img src="<?php echo $mediaUrl.$clpData['4nutritionimage'] ?>">					
+									  </div>
+									</div>
+									</div>
+								</div>							
+						</div>
+					</div>
+				</div><!-- clp-nutrition-info-content -->				
+	 </div><!-- clp-nutrition-info-wrapper -->
+	</div>	
+</section>
+
+<section class="clp-flavor-info" >
+	<div class="clp-flavor-info-wrapper" >
+		<div class="container">
+			<h2><?php echo __("FIND YOUR FLAVOR"); ?></h2>
+			<div class="row">
+				<div class="clp-flavor-info-content">
+					<div class="flavor-content-1" >
+						<div class="flavor-content-2-wrapper">
+							<?php $flavorArray=explode(",", $clpData['5flavor_id']); ?>
+							<div class="tab">
+								<?php $i=1; ?>
+								<?php foreach ($flavorArray as $flavor) { ?>
+									<?php $dataF=$flavorCollection->load($flavor); ?>
+									<?php $flavorData=$dataF->getData(); ?>
+									<button class="tablinks <?php if($i==1){echo ' active'; $i++;} ?>" onclick="openFlavor(event, '<?php echo __($flavorData['fname']) ?>')">
+									<span><?php echo __($flavorData['fname']) ?></button></span>
+								<?php } ?>
+								<div class="flv-brd">&nbsp;</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="flavor-content-2 flv-cnt">
+						<?php $i=1; ?>
+						<?php foreach ($flavorArray as $flavor) { ?>
+							<?php $dataF=$flavorCollection->load($flavor); ?>
+							<?php $flavorData=$dataF->getData(); ?>
+							<div id="<?php echo $flavorData['fname'] ?>" class="tabcontent" <?php if($i==1){echo 'style="display:block" '; $i++;} ?> >
+							  <!--<h3><?php // echo __($flavorData['fname']) ?></h3>-->
+							  <?php $productArray=explode(",", $flavorData['product_id']); ?>
+							 <div class="row">	
+							 <?php foreach ($productArray as $productId) { ?>
+							  		<?php $product=$block->getProductById($productId); ?>
+							  		<div class="flavor-product col-sm-6 col-md-3 col-xs-6">									
+										<a href="<?php echo $product->getProductUrl(); ?>">
+							  			<img src="<?php echo $mediaUrl.'catalog/product'.$product->getImage(); ?>">
+										</a>
+							  			<p class="flavor-product-name"> <?php echo __($product->getName()); ?></p>
+							  		</div>
+							  <?php } ?>
+							  </div>
+							  <p class="flavor-descp"><?php echo __($flavorData['fdescription']) ?></p>
+							</div>
+						<?php } ?>
+					</div>
+				</div><!-- clp-nutrition-info-content -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- clp-nutrition-info-wrapper -->
+</section>
+
+<section class="clp-related-product" >
+	<div class="container">
+	<div class="clp-related-product-wrapper" >
+		<div class="clp-headers">
+			<h2><?php echo __("PRODUCTS"); ?></h2>
+			<p><?php echo __("Click on any of the product to quickly shop or click view details to learn"); ?></p>
+		</div>
+			<div class="clp-related-product-content">
+					<?php $productArray=explode(",", $clpData['product_id']); ?>
+					<div class="products wrapper grid columns4  products-grid">
+					    <ol class="products list items product-items">
+					    	<?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance(); // Instance of Object Manager ?>
+    						<?php $priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data'); // Instance of Pricing Helper ?>
+					    	<?php foreach ($productArray as $productId) { ?>
+							<?php $product=$block->getProductById($productId); ?>
+							<li class="item product product-item">
+					            <div class="product-item-info" data-container="product-grid">
+					                <div class="product photo product-item-photo">
+						                <a href="<?php echo $product->getProductUrl(); ?>" class="weltpixel-quickview clp-related-product" tabindex="-1">
+						                    <img class="product-image-photo_1 default_image" src="<?php echo $mediaUrl.'catalog/product'.$product->getImage(); ?>" alt="<?php echo $product->getName(); ?>" />
+						                </a>
+										<div class="cr-overlay">&nbsp;</div>
+					                </div>
+					                <div class="product details product-item-details">    
+					                    <strong class="product name product-item-name">
+					                        <a class="product-item-link" href="<?php echo $product->getProductUrl(); ?>">
+					                            <?php echo $product->getName(); ?>
+					                        </a>
+					                    </strong>
+					                    <div class="price-box price-final_price" data-role="priceBox" data-product-id="<?php echo $product->getId(); ?>">
+					                        <span class="price-container price-final_price tax weee">
+					                            <span id="product-price-774" data-price-amount="<?php echo $product->getFinalPrice(); ?>" data-price-type="finalPrice" class="price-wrapper ">
+					                                <span class="price"><?php echo $priceHelper->currency($product->getFinalPrice(), true, false); ?></span>    
+					                            </span>
+					                        </span>
+					                    </div>                                                                        
+					                    <div class="product-item-inner">
+					                        <div class="product actions product-item-actions">
+					                            <div class="actions-primary">
+					                                <a href="<?php echo $product->getProductUrl(); ?>" title="Add to Cart" class="action tocart primary"><span>Quick Shop</span></a>
+					                            </div>
+					                        </div>
+					                    </div>
+					                </div>
+								</div>
+					        </li>
+							<?php } ?>
+						</ol>
+					</div>
+				</div><!-- clp-nutrition-info-content -->			
+	</div><!-- clp-nutrition-info-wrapper -->
+  </div>
+</section>
+
+<section class="clp-bottom-content" >
+	<div class="clp-bottom-content-wrapper" >
+		<div class="container">
+			<div class="row">
+				<div class="clp-bottom-content-content">
+					<?php echo $clpData['6content'] ?>			
+				</div><!-- clp-nutrition-info-content -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- clp-nutrition-info-wrapper -->
+</section>
+
+<div class="nutritional-form-fact"  style="display:none;">
+    <span class="form-layer"></span>
+    <div class="insd-nutritn">
+        <div class="insd-nutritn-top">
+            <a href="javascript:void(0)" class="nutritional-form-trigger"><img class="close-fact" src="<?php echo $mediaUrl.'wysiwyg/close-icon-nu.png'?>" alt="" /></a>
+            <img width="300px" src="<?php echo $mediaUrl.$clpData['4nutritionfact'] ?>" alt="" />
+        </div>
+        <div class="insd-nutritn-bottom">
+            <p><?php // echo $product->getShortDescription() ?></p>
+        </div>
+    </div>
+</div>
+
+<?php } ?>
+<script>
+function openFlavor(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<script type="text/javascript">
+    require([
+        'jquery',
+        'owl.carousel/owl.carousel.min'            
+    ], function ($) {
+    	$(".nutritional-trigger").click(function(){
+    		// alert("click");
+    		$(".nutritional-form-fact").show();
+    	});
+    	$(".close-fact").click(function(){
+    		$(".nutritional-form-fact").hide();
+    	});
+
+        $("#how-owal").owlCarousel({
+			autoPlay: 3000, //Set AutoPlay to 3 seconds
+			items : 1,
+			itemsDesktop : [1199,1],
+			itemsDesktopSmall : [979,1]
+        });
+        $("#what-owal").owlCarousel({
+			autoPlay: 3000, //Set AutoPlay to 3 seconds
+			items : 1,
+			itemsDesktop : [1199,1],
+			itemsDesktopSmall : [979,1]
+        });
+        $("#where-owal").owlCarousel({
+			autoPlay: 3000, //Set AutoPlay to 3 seconds
+			items : 1,
+			itemsDesktop : [1199,1],
+			itemsDesktopSmall : [979,1]
+        });
+    });
+</script>
+
+<style type="text/css">
+.nutritionIcon { width: 20%; float: left; }
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.insd-nutritn
+{
+	top: 58% !important;
+}
+.product-image-photo_1.default_image:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease-in;
+}
+</style>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.form.content">
+            <block class="MageWorx\GiftCards\Block\Product\View\Type\GiftCards" name="mageworx.giftcards" as="mageworx_giftcards_data" template="product/view/type/giftcards.phtml" before="-"/>
+        </referenceContainer>
+        <referenceBlock name="product.price.final" remove="true" />
+    </body>
+</page>

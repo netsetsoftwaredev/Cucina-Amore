@@ -1,0 +1,71 @@
+<?php
+/**
+ * Copyright © 2016 MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+?>
+
+<?php $giftCard = $block->getGiftCard(); ?>
+<?php if ($giftCard) : ?>
+
+<table>
+    <tr class="email-intro">
+        <td>
+            <p class="greeting"><?php echo __('Hello')?><?php if ($giftCard->getMailTo()) : ?>, <?php echo $block->escapeHtml($giftCard->getMailTo());?><?php endif; ?>!</p>
+            <p><?php echo __('You have received a')?> <?php echo $block->getAmount() ?> <?php echo __('Gift Card')?><?php if ($giftCard->getMailFrom()) : ?> <?php echo __('from')?> <?php echo $block->escapeHtml($giftCard->getMailFrom());?><?php endif; ?>! <?php echo __('This card may be redeemed on')?> <a href="<?php echo $block->getBaseUrl(); ?>"><?php echo $block->getFrontendName(); ?></a> <?php echo __('website. Happy shopping')?>!</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="a-center">
+<?php
+          $order = $block->getOrder();
+          if ($order->getId()) {
+              foreach($order->getAllItems() as $item){
+                 if ($item->getProductType() == \MageWorx\GiftCards\Model\Product\Type\GiftCards::TYPE_CODE) {
+                     $picture = $block->getProductImageUrl($item);
+                 }
+              }
+          }
+?>
+            <img src="<?php echo $picture; ?>" />
+        </td>
+    </tr>
+    <tr class="email-information">
+        <td>
+            <?php if ($giftCard->getMailTo()) : ?><?php echo __('To')?>: <?php echo $block->escapeHtml($giftCard->getMailTo());?><br/><?php endif; ?>
+            <?php if ($giftCard->getMailFrom()) : ?><?php echo __('From')?>: <?php echo $block->escapeHtml($giftCard->getMailFrom());?><br/><?php endif; ?>
+            <?php if ($giftCard->getMailMessage()) : ?><?php echo __('Message')?>: <?php echo $block->escapeHtml($giftCard->getMailMessage());?><br/><?php endif; ?>
+            <?php echo __('Gift Card value')?>: <?php echo $block->getAmount() ?><br />
+            <?php echo __('Gift Card claim code')?>: <?php echo $giftCard->getCardCode();?><br />
+        </td>
+    </tr>
+    <tr class="email-information">
+        <td>
+            <p><?php echo __('To redeem and use you gift card')?>:
+                <ul>
+                    <li><?php echo __('Create an account and login into')?> <a href="<?php echo $block->getBaseUrl(); ?>"><?php echo $block->getBaseUrl(); ?></a>.</li>
+                    <li><?php echo __('Redeem the card in My Gift Cards page of My Account section')?>..</li>
+                    <li><?php echo __('Alternatively, you can redeem the card on My Cart page before proceeding to checkout')?>.</li>
+                </ul>
+            </p>
+        </td>
+    </tr>
+    <tr class="email-information">
+        <td>
+            <p><?php echo __('If you have any questions please contact us at')?> <a href="mailto:<?php echo $block->getSupportMail() ?>" ><?php echo $block->getSupportMail() ?></a></p>
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+window.print();
+</script>
+<?php else : ?>
+<table>
+    <tr>
+        <td>
+            <p><?php echo __('Sorry but such card does not exists')?>.
+            </p>
+        </td>
+    </tr>
+</table>
+<?php endif; ?>

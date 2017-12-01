@@ -1,0 +1,20 @@
+<?php
+/**
+ * Copyright © 2016 MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<?php $_source  = $block->getSource() ?>
+<?php $_order   = $block->getOrder() ?>
+<?php $block->setPriceDataObject($_source) ?>
+
+<?php if ((float) $_source->getMageworxGiftcardsAmount()): ?>
+    <tr>
+        <td class="label">
+            <?php /* @escapeNotVerified */ echo __('MageWorx ') . $_order->getMageworxGiftcardsDescription() ?>
+        </td>
+        <td><?php /* @escapeNotVerified */ echo $block->displayPriceAttribute('mageworx_giftcards_amount') ?></td>
+    </tr>
+<?php endif; ?>

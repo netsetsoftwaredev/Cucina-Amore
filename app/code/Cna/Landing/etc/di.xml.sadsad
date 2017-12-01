@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+ 
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">    
+    <preference for="Magento\Catalog\Controller\Adminhtml\Category\Image\Upload" type="Cna\Landing\Controller\Adminhtml\Category\Image\Upload" />
+    <preference for="Magento\Catalog\Controller\Adminhtml\Category\Save" type="Cna\Landing\Controller\Adminhtml\Category\Save" />
+    <preference for="Magento\Catalog\Model\Category" type="Cna\Landing\Model\Category" />
+    <preference for="Magento\Catalog\Model\Category\Attribute\Backend\Image" type="Cna\Landing\Model\Category\Attribute\Backend\Image" />
+    <preference for="Magento\Catalog\Model\Category\DataProvider" type="Cna\Landing\Model\Category\DataProvider" />
+</config>

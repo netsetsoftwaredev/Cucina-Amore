@@ -1,0 +1,28 @@
+<?php
+$posts = $block->getMediaByHashtag('cucinacounter', 20);
+//var_dump($posts);die;
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$_imagehelper = $objectManager->get('Magento\Catalog\Helper\Image');  
+?>
+
+<?php foreach($posts as $post): ?>
+    <?php 
+        /*$ownerName="";
+        if($_SERVER["REMOTE_ADDR"]=='122.179.137.68'){
+
+        }*/
+    ?>
+    <div class="item">
+        <div class="cucin-thumb">
+            <div class="top">
+                <div class="img"> <img width="25px" src="<?php //echo $post->owner->profile_pic_url ?>" alt="" /></div>
+                <div class="txt"><?php  // echo $ownerName; ?></div>
+            </div>
+            <div class="image"><a href="https://www.instagram.com/p/<?php echo $post->code ?>/?tagged=cucinacounter" target="_blank"><img src="<?php echo $post->display_src ?>" style="max-height:137px;min-height:137px;"/></a></div>
+            <div class="text-br"><span><?php echo $post->likes->count ?> likes</span>
+                <p><?php echo substr($post->caption, 0, 150)." ..."; ?></p>
+            </div>
+        </div>
+    </div>
+
+<?php endforeach; ?>

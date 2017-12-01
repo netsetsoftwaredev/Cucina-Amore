@@ -1,0 +1,413 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Storelocator
+ */
+?>
+<?php /** @var \Amasty\Storelocator\Block\Location $block */ ?>
+<?php
+$locations = $block->getAjaxLocations();
+$currentDate = $block->timezoneInterface->date();
+$currentDay = $block->timezoneInterface->convertConfigTimeToUtc($currentDate, 'N');
+$dayNames = $block->dataHelper->getDaysNames();
+$i = 1;
+$alpfaCount='A';
+?>
+<style>
+.amlocator_link{display:block !important;}
+.amlocator_miles .col-md-4{display:block !important;}
+</style>
+
+<div id="amlocator_left">
+		
+		
+		<div class="tab-content">
+    <div id="filters">
+	<div class="container">
+		<div class="row">
+		<div class="col-xs-3 sort_by" style="margin-top: 15px !important; padding-right: 0px;">
+		<label for="sortby">&nbsp;<?= __('Sort By')?></label> 
+		<!--button class="btn btn-dark btn-xs" title="Filter" id="back_to_products" type="button" style='background-color:#b79565;'>Back to Products</button-->   
+		</div>
+		<div class="col-xs-5 distance"> 
+                 <button  title="Filter" class="sortByPrice" type="button" >Distance</button>  
+             
+            </div>
+			<div class="col-xs-4 print" style="margin-top: 10px !important;">
+			<a onclick="printDiv('amlocator_left');" > <img width="30" src="<?php echo $this->getViewFileUrl('Mageplaza_Blog::media/images/print.png'); ?>"  /> </a>
+									
+									
+									<script>
+									function printDiv(divName){
+									  require(['jquery', 'jquery/ui'], function($){ 
+									 
+										var printContents = document.getElementById(divName).innerHTML;
+										var originalContents = document.body.innerHTML;
+										document.body.innerHTML = printContents;
+										window.print();
+										document.body.innerHTML = originalContents;
+									
+									   // write your code here
+									  }); 
+									}
+									
+									
+									
+									</script>
+			</div>
+			
+			
+			</div>
+		</div>
+       
+    </div>
+   
+        <div class="results">
+            <?php if(empty($locations)){
+					echo "<h4>No Matching store found.</h4>";
+				}  else {
+				?>
+				
+	<?php
+	
+	foreach ($locations as $location): ?>
+	<div class="results-row">
+	 	<span name="leftLocation" data-amid="<?php echo $i ?>">
+	 <div class="container">
+		<div class="row new1">
+		<div class="col-md-1 for-miles">
+		 <div style="width: 35px; height: 35px; border-radius: 50%; background-color: #b79565; padding-left: 12px; padding-top: 9px; color: white;"><?php echo $alpfaCount;  ?></div>
+		 
+		 <span class="price"  style="border:0!important; text-align: center;" ><strong><?php echo round($location['distance'],2); //$this->number_format_short($location['distance'], $precision = 1 ); //round($location['distance'],2); ?></strong> <br><small> Miles</small></span>
+	
+	 
+		</div>
+		
+		<div class="col-md-10 for-addres-info" style="">
+			
+                <div class="location_header"><?php echo $this->escapeHtml($location['name']); ?></div>
+            <?= __('Address') ?>: <?php echo $this->escapeHtml($location['address']); ?>
+            <br/>
+            <?php echo $this->escapeHtml($location['city']); ?>
+            , <?php echo $this->escapeHtml($location['zip']); ?>
+
+            <?php if ($this->getShowAttributes()) { ?>
+                <?php if (trim($location['phone'])) { ?>
+                    <br/>
+                    <?php echo __('Phone') ?>: <?php echo $this->escapeHtml($location['phone']); ?>
+                <?php }?>
+               <?php /* ?><?php if (trim($location['email'])) { ?>
+                    <br/>
+                    <?php echo __('E-mail') ?>: <?php echo $this->escapeHtml($location['email']); ?>
+                <?php }?>
+                <?php if (trim($location['website'])) { ?>
+                    <br/>
+                    <?php echo __('URL') ?>: <?php echo $this->escapeHtml($location['website']); ?>
+                <?php }?> <?php */ ?>
+            <?php }?>
+			  
+			<?php
+				
+                $schedule = unserialize($location['schedule']);
+				//echo '<pre>';print_r($schedule);die;
+                ?>
+
+                <div class="today_schedule">
+                        <?= __('Hours Today:')?>
+                    <span>
+                           <?php echo $schedule[$currentDay]['from'][0] ?>:<?php echo $schedule[$currentDay]['from'][1] ?>
+                        -
+                        <?php echo $schedule[$currentDay]['to'][0] ?>:<?php echo $schedule[$currentDay]['to'][1] ?>
+                        <div class="locator_arrow"></div> 
+                        </span> 
+<br>
+                    </div>
+
+                <div class="all_schedule" id="schedule<?php echo $i ?>">
+                    <?php
+                    $scheduleDay = 1;
+
+                    foreach ($schedule as $key => $item) {
+                        ?>
+                        <div>
+                            <?php echo __($dayNames[$key]); ?>:
+                            <span>
+                                <?php echo $item['from'][0] ?>:<?php echo $item['from'][1] ?>
+                                -
+                                <?php echo $item['to'][0] ?>:<?php echo $item['to'][1] ?>
+                            </span>
+                        </div>
+                        <?php
+                        $scheduleDay++;
+                    }
+                    ?>
+                </div>
+                <?php
+            
+            ?>
+		   <?php
+				$id= $location['id'];
+				$lat = $this->getRequest()->getPost('lat');
+				$lng = $this->getRequest()->getPost('lng');
+		   
+		   ?>
+		   <a href="#/" class="avaiable_products" style="color:#b79565">Available Products </a>  | 
+		   <a href="#/" class="show_direction_link" id="click-me" style="color:#b79565"> Get Directions</a>
+			<ul class="location_category_dropdown" style="display:none;">
+			<?php 
+				$actions_serialized = unserialize($location['actions_serialized']);
+				if(isset($actions_serialized['conditions'])){
+					foreach($actions_serialized['conditions'] as $cond){
+						if($cond['attribute'] == "category_ids"){
+							$values = explode(',',$cond['value']);
+							foreach($values as $categoryId){
+								$_objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+								$category = $_objectManager->create('Magento\Catalog\Model\Category')
+								->load($categoryId);
+								?>
+									<li><?php echo $category->getName(); ?></li>
+								<?php
+							}
+							
+						}
+					}
+				}
+			?>
+			</ul>
+           
+		</div>
+		
+		</div>
+	</div>	
+	  </span>
+         </div>
+	<?php $alpfaCount++; $i++ ?>
+    <?php endforeach; ?>
+	<?php
+	}
+	?>
+		
+           
+
+        </div>
+   
+</div>
+    
+	
+	
+</div>
+
+<!-- Begin MailChimp Signup Form -->
+		<link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+			/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+			   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+		</style>
+<div id="popup-mpdal" style="display:none;">
+    <div class="newsletter">
+   <div class="row subscribe-block clearfix">
+		<div id="mc_embed_signup">
+			<form action="<?php echo $block->getUrl('amlocator/index/direction');?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<div id="mc_embed_signup_scroll">
+				
+			
+			<div class="mc-field-group">
+				<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+			</label>
+			<div class="search_cl">
+				<div class="main_em"><input type="email" value="" name="EMAIL" class="required-entry email" id="mce-EMAIL"></div>
+				<div class="clear_1"><input type="button" value="Get Direction" name="subscribe" id="mc-embedded-subscribe" class="button" onClick="getDirection('<?php echo $block->getUrl('amlocator/index/direction');?>','<?php echo $location['id']; ?>');"></div>
+			</div>
+			</div>
+			<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" ></div>
+					<div class="response" id="mce-success-response"></div>
+				</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f113fc663302acf63d23318d4_6b343d5dc0" tabindex="-1" value=""></div>
+				
+				</div>
+			</form>
+		</div>
+   </div>
+</div>
+</div>
+
+
+
+
+   <script type="text/javascript">
+   
+ require(['jquery', 'jquery/ui'], function($){ 	 
+	 var ascending = false;
+	   $('.tab-content').on('click','.sortByPrice',function(){
+		   
+		var sorted = $('.results-row').sort(function(a,b){
+			return (ascending == (convertToNumber($(a).find('.price').html()) < convertToNumber($(b).find('.price').html()))) ? 1 : -1;	});
+			//ascending = ascending ? false : true;
+
+		$('.results').html(sorted);
+	});
+
+		var convertToNumber = function(value){
+			 return parseFloat(value.replace('$',''));
+		}
+   
+    });
+   
+       function getDir() {
+			require(['jquery', 'jquery/ui'], function($){ 	 
+				var geocoder;
+				var directionsService;
+				var directionsDisplay;
+				geocoder = new google.maps.Geocoder();
+				var latlng = new google.maps.LatLng(33.929011, -84.361);
+				var myOptions = {
+					zoom: 15,
+					center: latlng,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};
+
+				var map = new google.maps.Map(document.getElementById("amlocator-map-canvas"), myOptions);
+				var marker = new google.maps.Marker({
+					position: new google.maps.LatLng(33.929011, -84.361),
+					map: map,
+					title: 'Atlanta/Sandy Springs',
+					clickable: true
+				});
+				
+				 geocoder = new google.maps.Geocoder();
+				directionsService = new google.maps.DirectionsService();
+				directionsDisplay = new google.maps.DirectionsRenderer({
+					suppressMarkers: false
+				});
+				directionsDisplay.setMap(map);
+				directionsDisplay.setPanel(document.getElementById("directions"));
+				
+				geocoder.geocode({
+					'address': "340 ram lila gate adarsh nagar unnao"
+				},
+
+				function (results, status) {
+						var origin = results[0].geometry.location;
+						var destination = new google.maps.LatLng(33.929011, -84.361);
+
+						var request = {
+							origin: origin,
+							destination: destination,
+							travelMode: google.maps.DirectionsTravelMode.DRIVING
+						};
+
+						directionsService.route(request, function (response, status) {
+							if (status == google.maps.DirectionsStatus.OK) {
+								directionsDisplay.setDirections(response);
+							}
+						});
+				});
+			
+			});
+		}
+		
+		require(['jquery', 'jquery/ui'], function($){ 
+			$("#back_to_products").click(function() {
+				$('html, body').animate({
+					scrollTop: $("#current-address").offset().top
+				}, 2000);
+			});
+		});	
+        
+        </script>
+
+<script>
+    require(
+        [
+            'jquery',
+            'Magento_Ui/js/modal/modal'
+        ],
+        function(
+            $,
+            modal
+        ) {
+            var options = {
+                type: 'popup',
+                responsive: true,
+                innerScroll: true,
+                title: 'Get Direction',
+                buttons: [{
+                    text: $.mage.__('Continue'),
+                    class: '',
+                    click: function () {
+                        this.closeModal();
+                    }
+                }]
+            };
+
+            var popup = modal(options, $('#popup-mpdal'));
+            /* $("#click-me").on('click',function(){ 
+				$("#mce-success-response").css("display","none");
+				$('.response').attr('style','display: none');
+				$('#mce-EMAIL').val("");
+                $("#popup-mpdal").modal("openModal");
+            }); */
+			 $(".show_direction_link").on('click',function(){ 
+				$("#mce-success-response").css("display","none");
+				$('.response').attr('style','display: none');
+				$('#mce-EMAIL').val("");
+                $("#popup-mpdal").modal("openModal");
+            });
+			
+			
+
+        }
+    );
+	
+	function showDirPop(){
+		require(['jquery', 'jquery/ui'], function($){ 
+			$("#mce-success-response").css("display","none");
+			$('.response').attr('style','display: none');
+			$('#mce-EMAIL').val("");
+			$("#popup-mpdal").modal("openModal");
+		});
+	}
+	
+	
+	function getDirection(url,id){
+	 require(['jquery', 'jquery/ui'], function($){ 
+			var lat = document.getElementById("am_lat").value;
+			var lng = document.getElementById("am_lng").value;
+			var email = $("#mce-EMAIL").val();
+			if(!($.trim(email).length)){
+				alert("Please enter valid email id");
+			}else{
+				$.ajax({
+					showLoader: true,
+					url: url,
+					data: {email:email,lat:lat,lng:lng,id:id},
+					type: "get",
+					dataType: "html"
+				}).done(function (data) {
+					$("#mce-success-response").html(data);
+					$("#mce-success-response").css("display","block !important");
+					$('.response').attr('style','display: block !important;');
+				}).error(function(){
+					
+				});
+			}
+		});	
+}
+require(['jquery', 'jquery/ui'], function($){ 
+$( ".avaiable_products" ).click(function(event) {
+	//$(this).next(".location_category_dropdown").css('display','block');
+                $(this).next().next( ".location_category_dropdown" ).toggle( "slow", function() {
+                    // Animation complete.
+                });
+                //$(this).find( ".locator_arrow" ).toggleClass("arrow_active");
+                event.stopPropagation();
+            });
+});
+</script>
+
+       
+    

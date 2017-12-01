@@ -1,0 +1,41 @@
+<!--@subject {{trans "%store_name  Gift Card for You!"  store_name=$store.getFrontendName()}}@-->
+
+{{template config_path="design/email/header_template"}}
+
+<table>
+    <tr class="email-intro">
+        <td>
+            <p class="greeting">{{trans "%customer_name" customer_name=$email-to}},</p>
+            <p>
+                {{trans "You have received a %amount Gift Card" amount=$amount |raw}} {{depend email-from}} {{trans " from %email-from" email-from=$email-from}} {{/depend}} {{trans 'to <a href="%store_url" >' store_url=$this.getUrl($store,'/',[_nosid:1]) |raw}} {{trans "%store_name </a>" store_name=$store.getFrontendName() |raw}}.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="a-center">
+		<center><img src="{{var picture|raw}}" /></center>
+	</td>
+    </tr>
+    <tr class="email-information">
+	<td>
+	        {{trans "Gift Card details"}}:<br />
+                {{depend email-to}} {{trans "To: %email-to" email-to=$email-to}}<br />{{/depend}}
+                {{depend email-from}} {{trans "From: %email-from" email-from=$email-from}}<br />{{/depend}}
+                {{depend email-message}} {{trans "Message: %email-message" email-message=$email-message}}<br />{{/depend}}
+	        {{trans "Gift card value:"}}{{var amount |raw}}<br />
+		{{trans "Gift card claim code: %code" code=$code}}<br />
+	</td>
+    </tr>
+    <tr class="email-information">
+        <td>{{trans '<a href="%store_url" >' store_url=$this.getUrl($store,'/',[_nosid:1]) |raw}} {{trans "Start shopping now</a>, and apply your gift card code in shopping cart or during checkout" |raw}}.</td>
+    </tr>
+    <tr class="email-information">
+	<td>
+            <p>
+                {{trans 'If you have questions about your order, you can email us at <a href="mailto:%store_email">%store_email</a>' store_email=$store_email |raw}}{{depend store_phone}} {{trans 'or call us at <a href="tel:%store_phone">%store_phone</a>' store_phone=$store_phone |raw}}{{/depend}}.
+            </p>
+	</td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer_template"}}

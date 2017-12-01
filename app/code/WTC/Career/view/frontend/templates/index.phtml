@@ -1,0 +1,135 @@
+<section class="business career_banner parallax-window" data-parallax="scroll" data-image-src="<?php echo $this->getViewFileUrl('WTC_Career::images/work.jpg'); ?>">
+	<!-- <img src="<?php echo $this->getViewFileUrl('WTC_Career::images/work.jpg'); ?>" alt="Current openings" /> -->
+	<div class="container">
+		<div class="table_box_area">
+			<div class="table_box_inner">
+				<div class="bushead">
+					<h1>WORK AT CUCINA & AMORE</h1>
+					<a href="<?php echo $block->getUrl('career') ;?>"> Current Openings</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="passionate">
+	<div class="container">
+		<h4>We are passionate about building an amazing food brand.</h4>
+		<p class="small">We're driven by our mission to make delicious, quality foods affordable for to everyone. It takes a dedicated team of bright people to make that mission a reality. If you want to work for a company where you'll be challenged and where you may be pushed to go outside your comfort zone, then Cucina & Amore is the place for you. </p>
+	</div>
+</section>
+<section class="business passionate_bg parallax-window" data-parallax="scroll" data-image-src="<?php echo $this->getViewFileUrl('WTC_Career::images/passionate.jpg'); ?>">
+	<!-- <img src="<?php echo $this->getViewFileUrl('WTC_Career::images/passionate.jpg'); ?>" alt="Food Brand" /> -->
+</section>
+<section class="work-culture">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h3>We’re passionate about building an amazing work culture.</h3>
+			</div>
+			<div class="col-md-6" style="margin-top: 20px;">
+				<p class="small"> 
+					We believe in family and community, integrity and transparency, sustainability and equality. It guides all aspects of the company, from how we create our recipes to the service we provide to our customers and partners. 
+				</p>
+				<p class="small">
+					Our culture is about upholding the principles of honesty, trust, collaboration and celebrating each other's successes, and we have created a great work environment as a result.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="business work_culturebg parallax-window" data-parallax="scroll" data-image-src="<?php echo $this->getViewFileUrl('WTC_Career::images/culture.jpg'); ?>">
+	<!-- <img src="<?php echo $this->getViewFileUrl('WTC_Career::images/culture.jpg'); ?>" alt="Work Culture" /> -->
+</section>
+<section class="headoffice">
+	 <div class="container">
+		<center>
+			<h2 style="padding-bottom:30px;">If you think you<sup>,</sup>d be a good fit for our team, let<sup>,</sup>s talk.</h2>
+			<p class="thank_ful">
+				We're always searching for amazing people to join our team and we're accepting résumés from qualified applicants.
+			</p>
+		</center>
+		<div class="col-md-12 job-list-section">
+			<div class="col-md-12">
+				<center>					
+					<div class="jobcat-contents">
+						<form name="job_category" id="job_category" method="post" action="<?php echo $block->getUrl('career/jobs'); ?>">
+							<select name="job_category" id="job_category">
+								<option>Please Select Category</option>
+								<?php 
+									$categories = $this->getJobCategories();
+									foreach($categories as $value => $label){
+										?>
+											<option value="<?php echo $value; ?>"><?php echo $label; ?></option>
+										<?php
+									}
+								?>
+							</select>
+						</form>
+					</div>					
+				</center>
+			</div>
+		</div>
+		<div class="col-md-12 job-list-section hide" id="job_list_id">
+			<div class="col-md-5"><h3 class="category_heading" id="job_category"></h3></div>
+			<div class="job-list col-md-7">
+				<ul id="job_list">
+					
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-12 job-view-section hide" id="job_view_id">
+			
+		</div>
+		
+		
+	</div>
+</section>
+<section class="business bfooter">
+	<center>
+		<p>And if you don't see the kind of opportunity you're looking for, you can always email</p>
+		<p><a href="mailto:careers@cucinaamore.com" target="_top">careers@cucinaamore.com</a> to tell us more</p>
+	</center>
+</section>
+<script type="text/javascript">
+// script to on change of category
+ require(['jquery', 'jquery/ui'], function($){ 
+    $('#job_category').change(function () { 
+		$("#job_list_id").addClass('hide');
+		$("#job_view_id").addClass('hide');
+		var opt = $('#job_category option:selected').val();
+		var url = '<?php echo $block->getUrl("career/index/careerlist"); ?>';
+		$.ajax({
+			showLoader: true,
+			url: url,
+			data: {cat: opt},
+			type: "POST",
+			dataType: "html"
+		}).done(function (data) {
+			$('#job_list_id').removeClass('hide');
+			$('#job_list_id #job_category').html(opt);
+			$('#job_list').html(data);
+		});
+	});	
+ });
+ 
+
+ 
+
+
+function loadJob(url,category){
+	 require(['jquery', 'jquery/ui'], function($){ 
+			$.ajax({
+				showLoader: true,
+				url: url,
+				data: {cat: category},
+				type: "POST",
+				dataType: "html"
+			}).done(function (data) {
+				$("#job_list_id").addClass('hide');
+				$('#job_view_id').removeClass('hide');
+				$('#job_view_id').html(data);
+			});
+		});	
+}
+
+</script>

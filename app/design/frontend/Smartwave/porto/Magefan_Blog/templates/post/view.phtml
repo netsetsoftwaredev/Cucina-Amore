@@ -1,0 +1,59 @@
+<?php
+/**
+ * Copyright © 2015 Ihor Vansach (ihor@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Blog post view template
+ *
+ * @var $block \Magefan\Blog\Block\Post\View
+ */
+?>
+<?php
+$_post = $this->getPost();
+$_postUrl = $_post->getPostUrl();
+$_postName = $block->escapeHtml($_post->getTitle(), null, true);
+?>
+<div class="row post-details">
+    <div class="col-md-12 post-holder-<?php echo $_post->getId(); ?>">
+        <?php if ($featuredImage = $_post->getFeaturedImage()) { ?>
+            <div class="post-ftimg-hld">
+                <img src="<?php echo $featuredImage ?>" alt="<?php echo $_postName; ?>" />
+            </div>
+        <?php } ?>
+        <div class="post-title-holder">
+            <h3 class="post-title">
+                <?php echo $_postName; ?>
+            </h3>
+        </div>
+        <div class="post-content">
+            <div class="post-description clearfix">
+                <div class="post-text-hld">
+                    <?php echo $block->getContent(); ?>
+                    <div class="clear"></div>					
+                </div>
+            </div>
+			<?php $IngredientsContent=$block->getPost()->getIngredientsContent();?>
+			<?php if($IngredientsContent):?>
+			<div class="post-ingredients-content">
+			<h3>Ingredients</h3>
+			<?php echo $IngredientsContent; ?>
+			</div>
+			<?php endif;?>
+			<?php $DirectionsContent=$block->getPost()->getDirectionsContent();?>
+			<?php if($DirectionsContent):?>
+			<div class="post-directions-content">
+			<h3>Directions</h3>
+			<?php echo $DirectionsContent; ?>
+			</div>
+			<?php endif;?>
+        </div>
+        <div class="post-bottom">
+            <?php echo $this->getChildHtml('blog.post.bottom');?>
+        </div>
+    </div>
+</div>

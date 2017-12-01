@@ -1,0 +1,204 @@
+<?php
+namespace Iazel\RegenProductUrl\Console\Command;
+
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+use Magento\UrlRewrite\Service\V1\Data\UrlRewrite;
+use Magento\UrlRewrite\Model\UrlPersistInterface;
+use Magento\CatalogUrlRewrite\Model\ProductUrlRewriteGenerator;
+use Magento\Catalog\Model\ResourceModel\Product\Collection;
+use Magento\Store\Model\Store;
+use \Magento\Framework\App\State;
+
+class ModifyProductUrlCommand extends Command
+{
+    /**
+     * @var ProductUrlRewriteGenerator
+     */
+    protected $productUrlRewriteGenerator;
+
+    /**
+     * @var UrlPersistInterface
+     */
+    protected $urlPersist;
+
+    /**
+     * @var ProductRepositoryInterface
+     */
+    protected $collection;
+
+    /**
+     * @var \Magento\Framework\App\State
+     */
+    protected $state;
+
+    public function __construct(
+        State $state,
+        Collection $collection,
+        ProductUrlRewriteGenerator $productUrlRewriteGenerator,
+        UrlPersistInterface $urlPersist
+    ) {
+        $this->state = $state;
+        $this->collection = $collection;
+        $this->productUrlRewriteGenerator = $productUrlRewriteGenerator;
+        $this->urlPersist = $urlPersist;
+        parent::__construct();
+    }
+
+    protected function configure()
+    {
+        $this->setName('iazel:modifyurl')
+            ->setDescription('Modufy url for given products')
+            ->addArgument(
+                'pids',
+                InputArgument::IS_ARRAY,
+                'Products to modify'
+            )
+            ->addOption(
+                'store', 's',
+                InputOption::VALUE_REQUIRED,
+                'Use the specific Store View',
+                Store::DEFAULT_STORE_ID
+            )
+            ;
+        return parent::configure();
+    }
+
+    public function execute(InputInterface $inp, OutputInterface $out)
+    {
+        /* if (!$this->state->getAreaCode()) {
+            $this->state->setAreaCode('adminhtml');
+			$state->setAreaCode('frontend')
+        } */
+		$this->state->setAreaCode('frontend');
+
+        $store_id = $inp->getOption('store');
+		
+        $this->collection->addStoreFilter($store_id)->setStoreId($store_id);
+
+        $pids = $inp->getArgument('pids');
+        if( !empty($pids) )
+            $this->collection->addIdFilter($pids);
+
+        $this->collection->addAttributeToSelect(['url_path', 'url_key','unit_size','sku','name']);
+        $list = $this->collection->load();
+		
+		$objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
+		
+		$resource = $objectManager->get('Magento\Framework\App\ResourceConnection');
+		$connection = $resource->getConnection();
+		$tableName = $resource->getTableName('catalog_product_entity_varchar'); //gives table name with prefix
+ 
+ 
+		//Unit Size Attribute Id
+		$unit_size_attr_id = 161;
+		
+        foreach($list as $product)
+        {
+			$url_key = explode("-",$product->getUrlKey());
+			
+            try {
+				$attributeOptionCollection = $objectManager->create(\Magento\Eav\Model\ResourceModel\Entity\Attribute\Option\Collection::class);
+		
+				$optionId = $product->getUnitSize();
+				
+				$option = $attributeOptionCollection
+					->setPositionOrder('asc')
+					->setAttributeFilter($unit_size_attr_id)
+					->setIdFilter($optionId)
+					->setStoreFilter()
+					->load()
+					->getFirstItem();
+					
+					
+			//	if(is_numeric($url_key[count($url_key)-1]))
+                {
+					unset($url_key[count($url_key)-1]);
+					if($option->getValue() == "")
+					{
+						$new_url_key = $product->formatUrlKey($product->getName() . " ". $product->getSku() );
+					}
+					else
+					{
+						$new_url_key = $product->formatUrlKey($product->getName() . " " .$option->getValue());
+					}
+					if($store_id != 0)
+					{
+						
+						$product->setUrlKey($new_url_key );
+						$product->save();						
+						echo $new_url_key."={$optionId}\n";
+					}
+					else
+					{
+						$sql = "Update " . $tableName . " Set value = '".$new_url_key ."' where entity_id = ".$product->getId()." and attribute_id = 119 and store_id =".$store_id;
+						$connection->query($sql);
+					}
+					
+				}
+            }
+            catch(\Exception $e) {
+				try
+				{
+					$new_url_key = $product->formatUrlKey($product->getName() . " ". $product->getSku() . " ". $option->getValue() );
+					$product->setUrlKey($new_url_key );
+					$product->save();			
+					echo $new_url_key."={$optionId}\n";					
+				}
+				catch(\Exception $e) {
+					
+					$out->writeln('<error>Duplicated url for '. $product->getId() .' -> '.$new_url_key ." =".$e->getMessage().'</error>');
+				}
+				/* try {
+					$attributeOptionCollection = $objectManager->create(\Magento\Eav\Model\ResourceModel\Entity\Attribute\Option\Collection::class);
+		
+					$optionId = $product->getUnitSize();
+					
+					$option = $attributeOptionCollection
+						->setPositionOrder('asc')
+						->setAttributeFilter($unit_size_attr_id)
+						->setIdFilter($optionId)
+						->setStoreFilter()
+						->load()
+						->getFirstItem();
+					$url_key[] = preg_replace('/[^A-Za-z0-9\-]/', '', $option->getValue());
+					$new_url_key = $product->formatUrlKey($product->getName() . " " .$option->getValue());
+					if($store_id != 0)
+					{
+						$product->setUrlKey($new_url_key );
+						$product->save();						
+					}
+					else{
+						$sql = "Update " . $tableName . " Set value = '".$new_url_key ."' where entity_id = ".$product->getId()." and attribute_id = 119 and store_id =".$store_id;
+						$connection->query($sql);
+					}
+				}
+				catch(\Exception $e) 
+				{
+					try {
+						unset($url_key[count($url_key)-1]);
+						$url_key[] =  $product->getSku();
+						$new_url_key = $product->formatUrlKey($product->getName() . " " .$product->getSku());
+
+						if($store_id != 0)
+						{
+							$product->setUrlKey($new_url_key );
+							$product->save();						
+						}
+						else{
+							$sql = "Update " . $tableName . " Set value = '".$new_url_key ."' where entity_id = ".$product->getId()." and attribute_id = 119 and store_id =".$store_id;
+							$connection->query($sql);
+						}
+					}
+					catch(\Exception $e) 
+					{
+						$out->writeln('<error>Duplicated url for '. $product->getId() .' -> '.$e->getMessage().'</error>');
+					}					
+				} */
+            }
+        }
+    }
+}

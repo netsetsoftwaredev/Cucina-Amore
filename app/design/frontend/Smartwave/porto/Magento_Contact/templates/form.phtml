@@ -1,0 +1,138 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('port-contact-us')->toHtml();?>
+
+
+<form class="form contact"
+      action="<?php echo $block->getFormAction(); ?>"
+      id="contact-form"
+      method="post"
+      data-hasrequired="<?php echo __('* Required Fields') ?>"
+      data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset">
+        <!--<legend class="legend"><span><?php echo __('Customer Services') ?> </span></legend><br />-->
+        <fieldset class="fieldset row">
+            <div class="fields col-sm-6">
+        <div class="field name required">
+            <label class="label" for="name"><span><?php echo __('First Name') ?></span></label>
+            <div class="control">
+                <input name="name" id="name" title="<?php echo __('First Name') ?>" value="<?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getUserName()) ?>" class="input-text" type="text" data-validate="{required:true, 'validate-alpha':true}"/>
+            </div>
+        </div>
+		<div class="field lname required">
+            <label class="label" for="lname"><span><?php echo __('Last Name') ?></span></label>
+            <div class="control">
+                <input name="lname" id="lname" title="<?php echo __('Last Name') ?>" value="" class="input-text" type="text" data-validate="{required:true, 'validate-alpha':true}"/>
+            </div>
+        </div>
+		
+        <div class="field email required">
+            <label class="label" for="email"><span><?php echo __('Email') ?></span></label>
+            <div class="control">
+                <input name="email" id="email" title="<?php echo __('Email') ?>" value="<?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getUserEmail()) ?>" class="input-text" type="email" data-validate="{required:true, 'validate-email':true}"/>
+            </div>
+        </div>
+        <div class="field telephone required">
+            <label class="label" for="telephone"><span><?php echo __('Phone Number') ?></span></label>
+            <div class="control">
+                <input name="telephone" id="telephone" title="<?php echo __('Phone Number') ?>" value="" class="input-text" type="text" data-validate="{required:true}" minlength="10" maxlength="15" />
+            </div>
+        </div>
+            </div>
+	<div class="fields col-sm-6">
+        <div class="field reason required">
+            <label class="label" for="reason"><span><?php echo __('Reason for contacting us') ?></span></label>
+            <div class="control">
+                <input name="reason" id="reason" title="<?php echo __('Reason for contacting us') ?>" value="" class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+		<div class="field hear-about required">
+            <label class="label" for="hear-about"><span><?php echo __('How did you hear about us?') ?></span></label>
+            <div class="control">
+                <input name="hear-about" id="hear-about" title="<?php echo __('How did you hear about us?') ?>" value="" class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+		<div class="field zipcode required">
+            <label class="label" for="zipcode"><span><?php echo __('Zip code') ?></span></label>
+            <div class="control">
+                <input name="zipcode" id="zipcode" title="<?php echo __('Zipcode') ?>" value="" class="input-text" type="text" data-validate="{required:true}" minlength="5" maxlength="6"/>
+            </div>
+        </div>
+        <div class="field age required">
+            <label class="label" for="age"><span><?php echo __('Age Range') ?></span></label>
+            <div class="control">
+                <select name="age" id="age" data-validate="{required:true}">
+				<option value="25 and under">25 and under</option>
+				<option value="26-34">26-34</option>
+				<option value="35-44">35-44</option>
+				<option value="45-54">45-54</option>
+				<option value="55-64">55-64</option>
+				<option value="65 and over">65 and over</option>
+				</select>
+            </div>
+        </div>
+        
+    </div>
+            <div class="fields col-sm-12">
+        <div class="field comment required">
+            <label class="label" for="comment"><span><?php echo __('Please include your comment or question here. We will respond to you as soon as possible.') ?></span></label>
+            <div class="control">
+                <textarea name="comment" id="comment" title="<?php echo __('Please include your comment or question here. We will respond to you as soon as possible.') ?>" class="input-text" cols="5" rows="8" data-validate="{required:true}"></textarea>
+            </div>
+        </div>
+        <?php echo $block->getChildHtml('form.additional.info'); ?>
+            </div>
+        </fieldset>
+    </fieldset>
+	<div class="contact-submit">
+	<div class="container">
+    <div class="actions-toolbar">
+        <div class="primary">
+            <input type="hidden" name="hideit" id="hideit" value="" />
+            <button type="submit" title="<?php echo __('Submit') ?>" class="action submit primary">
+                <span><?php echo __('Submit') ?></span>
+            </button>
+        </div>
+    </div>
+	</div>
+	</div>
+</form>
+
+<script>
+ jQuery(document).ready(function(){
+  jQuery('body').on('keydown','#telephone',function(e){ 
+   
+   if (jQuery.inArray(e.keyCode, [46, 8, 9,189, 27, 13, 110, 190,8,9]) !== -1 || (e.keyCode === 67 && (e.ctrlKey === true || e.metaKey === true)) ||(e.keyCode === 86 && (e.ctrlKey === true || e.metaKey === true)) || (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) || 
+          // Allow: home, end, left, right, down, up
+         (e.keyCode >= 35 && e.keyCode <= 40)) {
+//      // let it happen, don't do anything
+      return;
+   }
+  
+   if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105) || (jQuery(this).val().length > 18)) {
+    e.preventDefault();
+   }
+ });
+ });
+ 
+ jQuery('body').on('keydown','#zipcode',function(e){ 
+   if (jQuery.inArray(e.keyCode, [46, 8, 9, 189, 27, 13, 110, 190,8,9]) !== -1 || (e.keyCode === 67 && (e.ctrlKey === true || e.metaKey === true)) ||(e.keyCode === 86 && (e.ctrlKey === true || e.metaKey === true)) || (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) || 
+             // Allow: home, end, left, right, down, up
+            (e.keyCode >= 35 && e.keyCode <= 40)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+  
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105) || (jQuery(this).val().length > 15)) {
+            e.preventDefault();
+        }
+    });
+</script>

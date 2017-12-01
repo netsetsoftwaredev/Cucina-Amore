@@ -1,0 +1,107 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $helper \Magento\Search\Helper\Data */
+$helper = $this->helper('Magento\Search\Helper\Data');
+?>
+<?php 
+$om = \Magento\Framework\App\ObjectManager::getInstance();
+$request = $om->get('Magento\Framework\App\RequestInterface');
+?>
+<div class="search-total">
+    <h1 class="page-title">
+    <span class="base" data-ui-id="page-title-wrapper"> <?php echo __('Search for ') ?> <span class="results-data"><?php echo '"'.$request->getParam('q').'"' ?></span></span>    </h1>
+</div>
+<div class="block block-search">
+    <div class="block block-title"><strong><?php /* @escapeNotVerified */ echo __('Search'); ?></strong></div>
+    <div class="block block-content">
+        <form class="form minisearch" id="search_mini_form" action="<?php /* @escapeNotVerified */ echo $helper->getResultUrl() ?>" method="get">
+            <div class="sub-search">
+			<div class="field search">
+                <label class="label" for="search" data-role="minisearch-label">
+                    <span><?php /* @escapeNotVerified */ echo __('Search'); ?></span>
+                </label>
+                <div class="control">
+                    <input id="search"
+                           data-mage-init='{"quickSearch":{
+                                "formSelector":"#search_mini_form",
+                                "url":"<?php /* @escapeNotVerified */ echo $block->getUrl('search/ajax/suggest', ['_secure' => $block->getRequest()->isSecure()]); ?>",
+                                "destinationSelector":"#search_autocomplete"}
+                           }'
+                           type="text"
+                           name="<?php /* @escapeNotVerified */ echo $helper->getQueryParamName() ?>"
+                           value="<?php /* @escapeNotVerified */ echo $helper->getEscapedQueryText() ?>"
+                           placeholder="<?php /* @escapeNotVerified */ echo __('Search entire store here...'); ?>"
+                           class="input-text"
+                           maxlength="<?php /* @escapeNotVerified */ echo $helper->getMaxQueryLength();?>"
+                           role="combobox"
+                           aria-haspopup="false"
+                           aria-autocomplete="both"
+                           autocomplete="off"/>
+					<div class="search-close"></div>
+                    <div id="search_autocomplete" class="search-autocomplete"></div>
+                    <?php echo $block->getChildHtml() ?>
+                </div>
+            </div>
+            <div class="actions">
+                <button type="submit"
+                        title="<?php echo $block->escapeHtml(__('Search')) ?>"
+                        class="action search">
+                    <span><?php /* @escapeNotVerified */ echo __('Search'); ?></span>
+                </button>
+            </div>
+			</div>
+      <?php
+        if (strpos($_SERVER["REQUEST_URI"], 'catalogsearch') !== false) {
+        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+        $blockObj= $block->getLayout()->createBlock('Magento\CatalogSearch\Block\SearchResult\ListProduct');
+        $prdCollection=$blockObj->getLoadedProductCollection();
+        $catArrayCollection=array();
+        $SelCatId=$block->getRequest()->getParam('cat'); 
+        foreach ($prdCollection as $prd) {
+          foreach ($prd->getCategoryCollection() as $cat) {
+           $catId=$cat->getId();
+           $subcategory = $objectManager->create('Magento\Catalog\Model\Category')->load($catId);
+           if($subcategory->getId()!=="54" && $subcategory->getIsActive())
+           {
+            $catArrayCollection[$subcategory->getId()]=$subcategory->getName();
+           }
+          }
+        } ?> 
+          <div class="category-filter" style="width:25%;position: absolute;margin-left: 40px;display: inline-flex;">
+            <select class="category-filter-options" name="category-filter">
+              <option value=""><?php echo __('--- Please Select Category ---') ?></option>
+              <?php foreach ($catArrayCollection as $key => $value) {   ?>
+                      <option value="<?php echo $key ?>" <?php if($SelCatId==$key){ echo "selected";} ?> > <?php echo $value; ?></option>
+              <?php } ?>
+            </select>
+          </div> <?php }  ?>
+      <?php 
+			$ser = $block->getRequest()->getParam('q'); 
+			$burl = $this->getUrl()."catalogsearch/result/?q=".$ser;
+			?>
+			<div class="toolbar-sort-by">
+				<a href="<?php echo $burl?>&product_list_order=name" >Product Name</a> 
+				<a href="<?php echo $burl?>&product_list_order=price" >Price</a> 
+				<a href="<?php echo $burl?>&product_list_order=relevance" >Relevance</a> 
+			</div>
+           
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+  require(['jquery', 'jquery/ui'], function($){
+
+    $('.category-filter-options').on('change', function() {
+      window.location='<?php  echo $burl."&cat=" ?>'+this.value;
+    });
+ });
+
+</script>

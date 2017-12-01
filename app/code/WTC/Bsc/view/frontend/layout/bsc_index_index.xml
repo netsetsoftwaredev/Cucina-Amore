@@ -1,0 +1,31 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+
+	<head>
+        <title>Business Customer</title>
+        <!-- 
+		demo
+		<css src="WTC_Bsc::css/css.css"/>
+		<script src="WTC_Bsc::js/js.js"/>
+		<css src="jquery/fileUploader/css/jquery.fileupload-ui.css"/>
+		<script src="path/file.js" defer="defer"/>
+		<link src="http://url.com" src_type="url"/>
+		<remove src="path/remove/file.css"/>
+
+		-->
+    </head> 
+
+    <body>
+
+		<referenceBlock name="page.main.title" remove="true" />
+		
+        <referenceContainer name="sidebar.main">
+            <block class="WTC\Bsc\Block\Index\Sidebar" name="bsc_index_sidebar" before="-" template="WTC_Bsc::bsc_index_sidebar.phtml"/>
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block class="WTC\Bsc\Block\Index\Index" name="bsc_index_index" template="WTC_Bsc::bsc_index_index.phtml"/>
+        </referenceContainer>
+
+
+    </body>
+</page>

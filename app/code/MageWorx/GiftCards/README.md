@@ -1,0 +1,1 @@
+# MageWorx Gift Cards Extension for Magento 2

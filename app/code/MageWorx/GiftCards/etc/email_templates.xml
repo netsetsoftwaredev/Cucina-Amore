@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="mageworx_giftcards_email_email_template" label="Email Gift Card" file="giftcard_email.html" type="html" module="MageWorx_GiftCards" area="frontend"/>
+    <template id="mageworx_giftcards_email_print_template" label="Print Gift Card" file="giftcard_print.html" type="html" module="MageWorx_GiftCards" area="frontend"/>
+    <template id="mageworx_giftcards_email_offline_template" label="Offline Gift Card" file="giftcard_offline.html" type="html" module="MageWorx_GiftCards" area="frontend"/>
+</config>

@@ -1,0 +1,32 @@
+<!--@subject {{var store.getFrontendName()}} Gift Card@-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"skin url=\"images/logo_email.gif\" _area='frontend'":"Email Logo Image",
+"var store.getFrontendName()":"Store Name"}
+@-->
+
+{{template config_path="design/email/header_template"}}
+
+<div>
+<table>
+<tr class="email-intro">
+    <td>
+        <table>
+            <tr class="email-intro">
+                <td>
+                    <p>Your order at {{var store.getFrontendName()}} has been successfully processed, and the Gift Card has been sent to its addressee.</p>
+		</td>
+            </tr>
+	    <tr class="email-information">
+	        <td>
+	            <p>If you have any questions please contact us at <a href="mailto:{{config path='trans_email/ident_support/email'}}">{{config path='trans_email/ident_support/email'}}</a>{{depend data.store-phone}} or call us at <span class="nobr">{{var data.store-phone}}</span> Monday - Friday, 8am - 5pm PST.{{/depend}}</p>
+	        </td>
+	    </tr>
+        </table>
+    </td>
+</tr>
+</table>
+</div>
+
+{{template config_path="design/email/footer_template"}}
+

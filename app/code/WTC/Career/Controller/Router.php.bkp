@@ -1,0 +1,209 @@
+<?php
+/**
+ * Mageplaza
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mageplaza.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.webtechnologycodes.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Web Technology Codes
+ * @package     WTC_Career
+ * @copyright   Copyright (c) 2016 Web Technology Codes (http://www.webtechnologycodes.com/)
+ * @license     https://www.webtechnologycodes.com/LICENSE.html
+ */
+namespace WTC\Career\Controller;
+
+/**
+ * Class Router
+ * @package Mageplaza\Blog\Controller
+ */
+class Router implements \Magento\Framework\App\RouterInterface
+{
+    /**
+     * @var \Magento\Framework\App\ActionFactory
+     */
+    public $actionFactory;
+
+    /**
+     * @var \Mageplaza\Blog\Helper\Data
+     */
+    public $helper;
+
+    protected $_request;
+
+    /**
+     * @param \Magento\Framework\App\ActionFactory $actionFactory
+     * @param \Mageplaza\Blog\Helper\Data $helper
+     */
+    public function __construct(
+        \Magento\Framework\App\ActionFactory $actionFactory,
+		\WTC\Career\Helper\Data $helper,
+		\Mageplaza\Blog\Helper\Data $bloghelper
+    ) {
+    
+
+        $this->actionFactory = $actionFactory;
+        $this->helper        = $helper;
+		$this->bloghelper        = $bloghelper;
+    }
+	
+	
+	 /**
+     * @param $controller
+     * @param $action
+     * @param array $params
+     * @return \Magento\Framework\App\ActionInterface
+     */
+    public function _forward($controller, $action, $params = [])
+    {
+        $this->_request->setControllerName($controller)
+            ->setActionName($action)
+            ->setPathInfo('/mpblog/' . $controller . '/' . $action);
+
+        foreach ($params as $key => $value) {
+            $this->_request->setParam($key, $value);
+        }
+
+        return $this->actionFactory->create('Magento\Framework\App\Action\Forward');
+    }
+	
+    /**
+     * Validate and Match Cms Page and modify request
+     *
+     * @param \Magento\Framework\App\RequestInterface $request
+     * @return bool
+     */
+    public function match(\Magento\Framework\App\RequestInterface $request)
+    {
+		$identifier = trim($request->getPathInfo(), '/');
+        $routePath  = explode('/', $identifier);
+		if(in_array("career", $routePath)){
+			if(isset($routePath[1])){
+				$url = $routePath[1];
+				$params     = [];
+				$controller = array_shift($routePath);
+
+				if (!$controller) {
+					return $this->_forward('career', 'index');
+				}
+				$career = $this->helper->getJobByUrl($url);
+				$action = 'view';
+				$id = $career->getId();
+				if($id)
+				{
+					$request->setModuleName('career')->setControllerName('index')->setActionName("view")->setParam('id', $id);
+				}elseif($url == "jobs"){
+					$request->setModuleName('career')->setControllerName('index')->setActionName("jobs")->setParam('category', $_POST['job_category']);
+				}
+				else{
+					$request->setModuleName('career')->setControllerName('index')->setActionName("careerlist")->setParam('category', $url);
+				}
+				
+				return $this->actionFactory->create(
+					'Magento\Framework\App\Action\Forward',
+					['request' => $request]
+				);
+			}
+		}else{
+			
+			$identifier = trim($request->getPathInfo(), '/');
+			$routePath  = explode('/', $identifier);
+			$urlPrefix = $this->bloghelper->getBlogConfig('general/url_prefix') ?: \Mageplaza\Blog\Helper\Data::DEFAULT_URL_PREFIX;
+			$routeSize  = sizeof($routePath);
+			$urlPrefix	= urlencode($urlPrefix);
+			/* die;
+			if (!$this->bloghelper->isEnabled() ||
+				!$routeSize || ($routeSize > 3) ||
+				(array_shift($routePath) != $urlPrefix)
+			) {
+				return null;
+			}
+			die('test'); */
+			//echo $controller = array_shift($routePath);die;
+			if($identifier == "blog.html"){
+				$controller = "post";
+			}
+			$request->setModuleName('mpblog')
+				->setAlias(\Magento\Framework\Url::REWRITE_REQUEST_PATH_ALIAS, $identifier);
+
+			$this->_request = $request;
+			$params     = [];
+
+			if (!$controller) {
+				return $this->_forward('post', 'index');
+			}
+
+			switch ($controller) {
+				case 'post':
+					$request->setModuleName('blog')->setControllerName('post')->setActionName("index");
+
+					break;
+				case 'category':
+					$path = array_shift($routePath);
+					$action = $path ?: 'index';
+
+					if (!in_array($action, ['index', 'rss'])) {
+						$category = $this->bloghelper->getCategoryByParam('url_key', $action);
+
+						$action = 'view';
+						$params = ['id' => $category->getId()];
+					}
+
+					break;
+				case 'tag':
+					$path = array_shift($routePath);
+					$tag    = $this->bloghelper->getTagByParam('url_key', $path);
+
+					$action = 'view';
+					$params = ['id' => $tag->getId()];
+
+					break;
+				case 'topic':
+					$path = array_shift($routePath);
+					$topic  = $this->bloghelper->getTopicByParam('url_key', $path);
+
+					$action = 'view';
+					$params = ['id' => $topic->getId()];
+
+					break;
+				case 'sitemap':
+					$action = 'index';
+
+					break;
+				case 'author':
+					$path = array_shift($routePath);
+					$author  = $this->bloghelper->getAuthorByParam('url_key', $path);
+
+					$action = 'view';
+					$params = ['id' => $author->getId()];
+
+					break;
+				case 'month':
+					$path = array_shift($routePath);
+					$author  = $this->bloghelper->getAuthorByParam('url_key', $path);
+
+					$action = 'view';
+					$params = ['id' => $author->getId()];
+
+					break;
+				default:
+					$post = $this->bloghelper->getPostByUrl($controller);
+
+					$controller = 'post';
+					$action     = 'view';
+					$params     = ['id' => $post->getId()];
+			}
+			return $this->actionFactory->create(
+					'Magento\Framework\App\Action\Forward',
+					['request' => $request]
+				);
+		}
+    }
+}

@@ -1,0 +1,63 @@
+<?php
+use Magento\Framework\App\Action\Action;
+/* 
+ *	@Custom view file for product listing
+ */
+?>
+<?php
+$_productCollection = $block->getLoadedProductCollection();
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+$_imagehelper = $this->helper('Magento\Catalog\Helper\Image');
+$_category_config = $this->helper('Smartwave\Porto\Helper\Data')->getConfig('porto_settings/category');
+$move_actions = "";
+$flex_grid = "";
+?>
+<?php if (!$_productCollection->count()): ?>
+    <div class="message info empty"><div><?php echo __('We can\'t find products matching the selection.') ?></div></div>
+<?php else: ?>
+    <?php
+        $viewMode = 'grid';
+        $image = 'category_page_grid';
+        $hover_image = 'category_page_grid-hover';
+		$image_width = ($_category_config['ratio_width'])?$_category_config['ratio_width']:300;
+		$image_height = ($_category_config['ratio_height'])?$_category_config['ratio_height']:300;
+		$prod_cnt = 0;
+    ?>
+<div class="row">
+	<?php foreach ($_productCollection as $_product): ?>
+		<?php if($prod_cnt++ > 3) continue; ?>
+	<div class="col-xs-6 col-sm-3 col-md-3">
+		<div class="prod-box">
+			  <a href="<?php echo $_product->getProductUrl() ?>" tabindex="-1">
+					<?php
+						if($_category_config['aspect_ratio'])
+							$productImage = $_imagehelper->init($_product, $image)->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize($image_width);
+						else
+							$productImage = $_imagehelper->init($_product, $image)->resize($image_width, $image_height);
+						$productImageUrl = $productImage->getUrl();
+					?>
+						<img class="product-image-photo default_image" src="<?php echo $productImageUrl; ?>" alt="<?php echo $productImage->getLabel(); ?>"/>
+					<?php if($_category_config['alternative_image']): ?>
+					<?php
+						if($_category_config['aspect_ratio'])
+							$productHoverImage = $_imagehelper->init($_product, $hover_image)->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize($image_width);
+						else
+							$productHoverImage = $_imagehelper->init($_product, $hover_image)->resize($image_width, $image_height);
+						$productHoverImageUrl = $productHoverImage->getUrl();
+					?>
+						<?php if($productImageUrl != str_replace("/thumbnail/","/small_image/",$productHoverImageUrl)): ?>
+						<img class="product-image-photo hover_image" src="<?php echo $productHoverImageUrl; ?>" alt="<?php echo $productHoverImage->getLabel(); ?>"/>
+						<?php endif; ?>
+					<?php endif; ?>
+			</a>
+			<p><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?></p>
+			<span>
+				<?php if($_category_config['product_price']): ?>
+                        <?php echo $block->getProductPrice($_product) ?>
+                        <?php endif; ?>
+				</span>
+		</div>
+	</div>
+	<?php endforeach; ?>
+</div>
+<?php endif; ?>

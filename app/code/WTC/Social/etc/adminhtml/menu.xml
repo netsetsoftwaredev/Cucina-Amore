@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+		<add id="WTC_Social::social" title="Social" module="WTC_Social" sortOrder="20" parent="WTC_Bsc::parent" action="social/social" resource="WTC_Social::social"/>
+
+    </menu>
+</config>

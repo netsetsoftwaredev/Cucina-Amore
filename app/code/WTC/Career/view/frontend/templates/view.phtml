@@ -1,0 +1,70 @@
+<?php
+	$job = $this->getJob();
+?>
+<section class="business">
+	<img src="<?php echo $this->getViewFileUrl('WTC_Career::images/work.jpg'); ?>" alt="Current openings" />
+	<div class="container">
+		<div class="table_box_area">
+			<div class="table_box_inner">
+				<div class="bushead">
+					<h1>WORK AT CUCINA & AMORE</h1>
+					<a href="<?php echo $block->getUrl('career') ;?>"> Current Openings</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="passionate">
+	<div class="container">
+		<h4>We are passionate about building an amazing food brand.</h4>
+		<p class="small">We're driven by our mission to make delicious, quality foods affordable for to everyone. It takes a dedicated team of bright people to make that mission a reality. If you want to work for a company where you'll be challenged and where you may be pushed to go outside your comfort zone, then Cucina & Amore is the place for you. </p>
+	</div>
+</section>
+<section class="business">
+	<img src="<?php echo $this->getViewFileUrl('WTC_Career::images/passionate.jpg'); ?>" alt="Food Brand" />
+</section>
+<section class="work-culture">
+	<div class="container">
+		<div class="col-md-6">
+			<h3>We are passionate about building an amazing work culture</h3>
+		</div>
+		<div class="col-md-6" style="margin-top: 20px;">
+			<p class="small"> 
+				We believe in family and community, integrity and transparency, sustainability and equality. It guides all aspects of the company, from how we create our recipes to the service we provide to our customers and partners. 
+			</p>
+			<p class="small">
+				Our culture is about upholding the principles of honesty, trust, collaboration and celebrating each other's successes, and we have created a great work environment as a result.
+			</p>
+		</div>
+	</div>
+</section>
+<section class="business">
+	<img src="<?php echo $this->getViewFileUrl('WTC_Career::images/culture.jpg'); ?>" alt="Work Culture" />
+</section>
+<section class="headoffice">
+	 <div class="container">
+		<center>
+			<h2 style="padding-bottom:30px;">If you think you'd be a good fit for our team, let's talk.</h2>
+			<p class="thank_ful">
+				We're always searching for amazing people to join our team and we're accepting resumes from qualified applicants.
+			</p>
+		</center>
+		<div class="col-md-12">
+			<h3 class="category_heading"><?php echo $job->getCategory(); ?></h3>
+			<div class="job-content">
+				<h4><?php echo $job->getPosition(); ?></h4>
+				<br/>
+				<p class="location"> <?php echo $job->getLocation(); ?></p>
+				<div class="description"><?php echo $job->getDescription(); ?></div>
+				<p class="contact-us">Please send your resume and cover letter to <a href="mailto:careers@cucinaamore.com" target="_top">careers@cucinaamore.com</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="business bfooter">
+	<center>
+		<p>And if you don't see the kind of opportunity you're looking for, you can always email</p>
+		<p><a href="mailto:careers@cucinaamore.com" target="_top">careers@cucinaamore.com</a> to tell us more</a></p>
+
+	</center>
+</section>

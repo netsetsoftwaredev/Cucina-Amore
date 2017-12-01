@@ -1,0 +1,31 @@
+<section class="business">
+	<img src="<?php echo $this->getViewFileUrl('Mageplaza_Blog::media/images/top-banner.jpg'); ?>" alt="Learning Center" />
+	<div class="container">
+		<div class="table_box_area">
+			<div class="table_box_inner">
+				<div class="bushead">
+					<h1>Learning Center</h1>
+					<p>Welcome to our Learning Center Blog!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+ <?php 
+	$moduleName = $this->getRequest()->getModuleName();
+    $controller = $this->getRequest()->getControllerName();
+    $action     = $this->getRequest()->getActionName();
+    $route      = $this->getRequest()->getRouteName();
+?>
+<?php if($controller != "category" && $action !="view"){ ?>
+<div class="container">
+	<div class="breadcrumbs">
+		<ul class="items">
+			<li class="item Home" ><a href="<?php echo $block->getUrl(); ?>" title="Home"><img src="<?php echo $this->getViewFileUrl('Mageplaza_Blog::media/images/home.png'); ?>" alt="Learning Center" /></a></li>
+			<!-- <li class="item Home">Home</li>-->
+			<li class="item Kitchen of Love"><a href="<?php echo $block->getUrl("kitchen_and_love");?>"  >Kitchen of Love</a></li>
+			<li class="item Learning Center">Learning Center</li>
+		</ul>
+	</div>
+</div>
+<?php } ?>
